@@ -8,14 +8,31 @@
 
 ## 安装
 
-```bash
-git clone git@github.com:iceakweng-wq/marx-rag-skill.git
-cd marx-rag-skill
-pip install sentence-transformers chromadb
-python setup.py
-```
+### 方式一：自动配置（推荐）
 
-`setup.py` 会从 GitHub Release 下载向量数据库（约 600MB）并自动解压。
+在 Claude Code 中加载本 skill，agent 会自动读取 `SKILL.md` 完成配置。如果检测到 `chroma_db/` 不存在，会自动从 GitHub Release 下载并解压。
+
+### 方式二：手动下载数据库
+
+如果 agent 无法自动下载，可以手动操作：
+
+1. 下载依赖：
+   ```bash
+   pip install sentence-transformers chromadb
+   ```
+
+2. 下载向量数据库：
+   打开 https://github.com/iceakweng-wq/marx-rag-skill/releases/tag/v1.0 ，下载 `chroma_db.zip`，解压到 skill 根目录，使 `chroma_db/` 文件夹出现在 `scripts/` 同级。
+
+完成后目录结构应为：
+```
+marx-rag-skill/
+├── chroma_db/       ← 解压后得到的文件夹
+├── scripts/
+├── data/
+├── README.md
+└── SKILL.md
+```
 
 首次运行还会自动下载嵌入模型（BAAI/bge-large-zh-v1.5，约 1.3GB），只需下载一次。
 
@@ -103,11 +120,10 @@ marx-rag-skill/
 ├── scripts/
 │   ├── search.py        # 检索工具（核心文件）
 │   └── utils.py         # 卷次解析、篇章名查询
-├── chroma_db/           # 向量数据库（setup.py 自动下载）
+├── chroma_db/           # 向量数据库（从 Release 下载）
 ├── data/
 │   ├── toc/             # 60 卷目录文件
 │   └── search_cache/    # 搜索缓存
-├── setup.py             # 安装脚本
 ├── README.md            # 本文件
 └── SKILL.md             # Claude Code Skill 配置
 ```
