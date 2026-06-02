@@ -30,7 +30,7 @@ python scripts/search.py --page 46上 207 208 209   # 按页码取页
 
 1. **检查缓存**：先看 `data/search_cache/{关键词}_expand.json` 是否存在
 2. **有缓存** → 子 agent 读取缓存返回摘要
-3. **无缓存** → 启动子 agent 执行 expand 搜索
+3. **无缓存** → 启动子 agent 执行 expand 搜索，搜索完成后将结果保存到 `data/search_cache/{关键词}_expand.json`
 
 ### 翻页扩展算法
 
@@ -65,7 +65,7 @@ python scripts/search.py --page 46上 207 208 209   # 按页码取页
 
 ### 缓存管理
 
-缓存文件保存在 `data/search_cache/`，格式为 `{主题}_expand.json`。
+子 agent 的搜索结果保存到缓存文件中，缓存文件保存在 `data/search_cache/`，格式为 `{主题}_expand.json`。
 
 清除缓存：
 - `清除文献缓存` — 删除所有
