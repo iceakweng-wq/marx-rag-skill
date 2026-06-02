@@ -23,9 +23,15 @@ import re
 import sys
 import time
 
+# 项目根目录：自动适配 scripts/ 或根目录运行
+_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+_PROJECT_ROOT = os.path.dirname(_SCRIPT_DIR) if os.path.basename(_SCRIPT_DIR) == "scripts" else _SCRIPT_DIR
+if _PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, _PROJECT_ROOT)
+
 from scripts.utils import extract_volume_info, lookup_chapter
 
-_CHROMA_DIR = os.path.join("chroma_db")
+_CHROMA_DIR = os.path.join(_PROJECT_ROOT, "chroma_db")
 _COLLECTION_NAME = "marx_engels"
 _MODEL_NAME = "BAAI/bge-large-zh-v1.5"
 _QUERY_PREFIX = "为这个句子生成表示以用于检索相关段落: "
@@ -336,7 +342,7 @@ def print_db_info():
         return
 
     # 从 chunks.jsonl 读取统计（避免 ChromaDB SQL 变量限制）
-    chunks_path = os.path.join(os.path.dirname(__file__), "data", "chunks.jsonl")
+    chunks_path = os.path.join(_PROJECT_ROOT, "data", "chunks.jsonl")
     if not os.path.exists(chunks_path):
         print("\n⚠ 未找到 chunks.jsonl")
         return
@@ -364,7 +370,7 @@ def print_db_info():
             print(f"  {vl}: {cnt} 页（第{pr[0]}-{pr[1]}页）")
 
         # 目录覆盖情况
-        toc_dir = os.path.join(os.path.dirname(__file__), "data", "toc")
+        toc_dir = os.path.join(_PROJECT_ROOT, "data", "toc")
         if os.path.isdir(toc_dir):
             toc_files = [f for f in os.listdir(toc_dir) if f.endswith(".json")]
             print(f"\n目录文件: {len(toc_files)} 卷")

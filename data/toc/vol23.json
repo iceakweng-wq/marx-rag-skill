@@ -1,0 +1,427 @@
+{
+  "volume": "第23卷",
+  "title": "第23卷",
+  "_comment": "从目录页自动生成，请人工检查",
+  "sections": [
+    {
+      "name": "卡尔·马克思 第一版序言",
+      "page_start": 7,
+      "page_end": 13
+    },
+    {
+      "name": "第二版跋卡尔·马克思 ",
+      "page_start": 14,
+      "page_end": 25
+    },
+    {
+      "name": "法文版序言卡尔·马克思 ",
+      "page_start": 26,
+      "page_end": 26
+    },
+    {
+      "name": "法文版跋卡尔·马克思 ",
+      "page_start": 29,
+      "page_end": 29
+    },
+    {
+      "name": "第三版序言弗里德里希·恩格斯 ",
+      "page_start": 30,
+      "page_end": 32
+    },
+    {
+      "name": "英文版序言弗里德里希·恩格斯 ",
+      "page_start": 33,
+      "page_end": 37
+    },
+    {
+      "name": "第四版序言弗里德里希·恩格斯 ",
+      "page_start": 38,
+      "page_end": 44
+    },
+    {
+      "name": "第一章 商品",
+      "page_start": 47,
+      "page_end": 101
+    },
+    {
+      "name": "4．商品的拜物教性质及其秘密",
+      "page_start": 87,
+      "page_end": 87
+    },
+    {
+      "name": "第二章 交换过程",
+      "page_start": 102,
+      "page_end": 111
+    },
+    {
+      "name": "第三章 货币或商品流通",
+      "page_start": 112,
+      "page_end": 166
+    },
+    {
+      "name": "1．价值尺度",
+      "page_start": 112,
+      "page_end": 112
+    },
+    {
+      "name": "2．流通手段",
+      "page_start": 122,
+      "page_end": 122
+    },
+    {
+      "name": "3．货币",
+      "page_start": 149,
+      "page_end": 149
+    },
+    {
+      "name": "第四章 货币转化为资本",
+      "page_start": 167,
+      "page_end": 200
+    },
+    {
+      "name": "2．总公式的矛盾",
+      "page_start": 177,
+      "page_end": 177
+    },
+    {
+      "name": "3．劳动力的买和卖",
+      "page_start": 189,
+      "page_end": 189
+    },
+    {
+      "name": "第五章 劳动过程和价值增殖过程",
+      "page_start": 201,
+      "page_end": 224
+    },
+    {
+      "name": "第六章 不变资本和可变资本",
+      "page_start": 225,
+      "page_end": 237
+    },
+    {
+      "name": "第七章 剩余价值率",
+      "page_start": 238,
+      "page_end": 257
+    },
+    {
+      "name": "1．劳动力的剥削程度",
+      "page_start": 238,
+      "page_end": 238
+    },
+    {
+      "name": "3．西尼耳的“最后一小时”",
+      "page_start": 251,
+      "page_end": 251
+    },
+    {
+      "name": "第八章 工作日",
+      "page_start": 258,
+      "page_end": 335
+    },
+    {
+      "name": "1．工作日的界限",
+      "page_start": 258,
+      "page_end": 258
+    },
+    {
+      "name": "2．对剩余劳动的贪欲。工厂主和领主",
+      "page_start": 263,
+      "page_end": 263
+    },
+    {
+      "name": "3．在剥削上不受法律限制的英国工业部门",
+      "page_start": 272,
+      "page_end": 272
+    },
+    {
+      "name": "4．日工和夜工。换班制度",
+      "page_start": 286,
+      "page_end": 286
+    },
+    {
+      "name": "末叶关于延长工作日的强制性法律",
+      "page_start": 294,
+      "page_end": 294
+    },
+    {
+      "name": "的影响",
+      "page_start": 330,
+      "page_end": 330
+    },
+    {
+      "name": "第九章 剩余价值率和剩余价值量",
+      "page_start": 336,
+      "page_end": 345
+    },
+    {
+      "name": "第十章 相对剩余价值的概念",
+      "page_start": 347,
+      "page_end": 357
+    },
+    {
+      "name": "第十一章 协作",
+      "page_start": 358,
+      "page_end": 372
+    },
+    {
+      "name": "第十二章 分工和工场手工业",
+      "page_start": 373,
+      "page_end": 407
+    },
+    {
+      "name": "1．工场手工业的二重起源",
+      "page_start": 373,
+      "page_end": 373
+    },
+    {
+      "name": "2．局部工人及其工具",
+      "page_start": 376,
+      "page_end": 376
+    },
+    {
+      "name": "和有机的工场手工业",
+      "page_start": 379,
+      "page_end": 379
+    },
+    {
+      "name": "4．工场手工业内部的分工和社会内部的分工",
+      "page_start": 389,
+      "page_end": 389
+    },
+    {
+      "name": "5．工场手工业的资本主义性质",
+      "page_start": 398,
+      "page_end": 398
+    },
+    {
+      "name": "第十三章 机器和大工业",
+      "page_start": 408,
+      "page_end": 553
+    },
+    {
+      "name": "1．机器的发展",
+      "page_start": 408,
+      "page_end": 408
+    },
+    {
+      "name": "2．机器的价值向产品的转移",
+      "page_start": 423,
+      "page_end": 423
+    },
+    {
+      "name": "3．机器生产对工人的直接影响",
+      "page_start": 432,
+      "page_end": 432
+    },
+    {
+      "name": "5．工人和机器之间的斗争",
+      "page_start": 468,
+      "page_end": 468
+    },
+    {
+      "name": "6．关于被机器排挤的工人会得到补偿的理论",
+      "page_start": 479,
+      "page_end": 479
+    },
+    {
+      "name": "机",
+      "page_start": 489,
+      "page_end": 489
+    },
+    {
+      "name": "8．大工业所引起的工场手工业、手工业和家庭劳动的革命",
+      "page_start": 503,
+      "page_end": 503
+    },
+    {
+      "name": "加速",
+      "page_start": 515,
+      "page_end": 515
+    },
+    {
+      "name": "9．工厂法（卫生条款和教育条款）。它在英国的普遍实行",
+      "page_start": 527,
+      "page_end": 527
+    },
+    {
+      "name": "10．大工业和农业",
+      "page_start": 551,
+      "page_end": 551
+    },
+    {
+      "name": "第十四章 绝对剩余价值和相对剩余价值",
+      "page_start": 555,
+      "page_end": 566
+    },
+    {
+      "name": "第十五章 劳动力价格和剩余价值的量的变化",
+      "page_start": 567,
+      "page_end": 579
+    },
+    {
+      "name": "第十六章 剩余价值率的各种公式",
+      "page_start": 580,
+      "page_end": 584
+    },
+    {
+      "name": "第十七章 劳动力的价值或价格转化为工资",
+      "page_start": 585,
+      "page_end": 593
+    },
+    {
+      "name": "第十八章 计时工资",
+      "page_start": 594,
+      "page_end": 602
+    },
+    {
+      "name": "第十九章 计件工资",
+      "page_start": 603,
+      "page_end": 612
+    },
+    {
+      "name": "第二十章 工资的国民差异",
+      "page_start": 613,
+      "page_end": 618
+    },
+    {
+      "name": "第二十一章 简单再生产",
+      "page_start": 621,
+      "page_end": 634
+    },
+    {
+      "name": "第二十二章 剩余价值转化为资本",
+      "page_start": 635,
+      "page_end": 671
+    },
+    {
+      "name": "转变为资本主义占有规律",
+      "page_start": 635,
+      "page_end": 635
+    },
+    {
+      "name": "2．政治经济学关于规模扩大的再生产的错误见解",
+      "page_start": 645,
+      "page_end": 645
+    },
+    {
+      "name": "3．剩余价值分为资本和收入。节欲论",
+      "page_start": 648,
+      "page_end": 648
+    },
+    {
+      "name": "5．所谓劳动基金",
+      "page_start": 668,
+      "page_end": 668
+    },
+    {
+      "name": "第二十三章 资本主义积累的一般规律",
+      "page_start": 672,
+      "page_end": 780
+    },
+    {
+      "name": "1．资本构成不变，对劳动力的需求随积累的增长而增长",
+      "page_start": 672,
+      "page_end": 672
+    },
+    {
+      "name": "减少",
+      "page_start": 682,
+      "page_end": 682
+    },
+    {
+      "name": "规律",
+      "page_start": 703,
+      "page_end": 703
+    },
+    {
+      "name": "5．资本主义积累一般规律的例证",
+      "page_start": 711,
+      "page_end": 711
+    },
+    {
+      "name": "第二十四章 所谓原始积累",
+      "page_start": 781,
+      "page_end": 832
+    },
+    {
+      "name": "1．原始积累的秘密",
+      "page_start": 781,
+      "page_end": 781
+    },
+    {
+      "name": "2．对农村居民土地的剥夺",
+      "page_start": 784,
+      "page_end": 784
+    },
+    {
+      "name": "的法律",
+      "page_start": 802,
+      "page_end": 802
+    },
+    {
+      "name": "形成",
+      "page_start": 813,
+      "page_end": 813
+    },
+    {
+      "name": "7．资本主义积累的历史趋势",
+      "page_start": 829,
+      "page_end": 829
+    },
+    {
+      "name": "第二十五章 现代殖民理论",
+      "page_start": 833,
+      "page_end": 843
+    },
+    {
+      "name": "注释",
+      "page_start": 847,
+      "page_end": 878
+    },
+    {
+      "name": "人名索引",
+      "page_start": 879,
+      "page_end": 910
+    },
+    {
+      "name": "本卷中引用和提到的著作索引",
+      "page_start": 911,
+      "page_end": 960
+    },
+    {
+      "name": "名目索引",
+      "page_start": 961,
+      "page_end": 982
+    },
+    {
+      "name": "计量单位和货币名称表",
+      "page_start": 983,
+      "page_end": 984
+    },
+    {
+      "name": "卡尔·马克思像（1867年）",
+      "page_start": 2,
+      "page_end": 3
+    },
+    {
+      "name": "马克思1867年8月16日给恩格斯的信",
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "name": "《资本论》第一卷德文第一版的扉页",
+      "page_start": 9,
+      "page_end": 9
+    },
+    {
+      "name": "《资本论》第一卷俄文第一版的扉页",
+      "page_start": 21,
+      "page_end": 21
+    },
+    {
+      "name": "马克思给《资本论》第一卷法文本出版者拉沙特尔的信",
+      "page_start": 27,
+      "page_end": 27
+    }
+  ]
+}
