@@ -275,7 +275,7 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
     padding: 0 16px 12px;
     margin: 0 8px 8px;
     border-bottom: 1px solid #e1e4e8;
-    color: #24292e;
+    color: #8b0000;
   }}
   .sidebar ul {{ list-style: none; }}
   .sidebar li {{ padding: 0; }}
@@ -284,7 +284,7 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
   }}
   .sidebar li.vol-header a {{
     font-weight: 600;
-    color: #0969da;
+    color: #8b0000;
     font-size: 13px;
     padding: 4px 16px 2px;
   }}
@@ -296,7 +296,7 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
     font-size: 13px;
     transition: color 0.12s;
   }}
-  .sidebar a:hover {{ color: #0969da; }}
+  .sidebar a:hover {{ color: #8b0000; }}
 
   /* ── 主内容区 ── */
   .main {{
@@ -309,10 +309,11 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
   .main h1 {{
     font-size: 2em;
     font-weight: 600;
-    border-bottom: 1px solid #eaecef;
+    border-bottom: 2px solid #8b0000;
     padding-bottom: 8px;
     margin-top: 24px;
     margin-bottom: 16px;
+    color: #8b0000;
   }}
   .main h2 {{
     font-size: 1.5em;
@@ -330,14 +331,14 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
 
   /* ── 页码标记 ── */
   .page-marker {{
-    background: #f1f8ff;
-    border: 1px solid #c8e1ff;
+    background: #fff0f0;
+    border: 1px solid #e8c8c8;
     border-radius: 3px;
     padding: 4px 8px;
     margin: 16px 0 8px 0;
     font-weight: 600;
     font-size: 0.9em;
-    color: #0969da;
+    color: #8b0000;
   }}
 
   /* ── 原文正文 ── */
@@ -357,8 +358,8 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
   .raw-text {{
     display: inline-block;
     text-align: left;
-    font-family: "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", serif;
-    font-size: 16px;
+    font-family: inherit;
+    font-size: inherit;
     line-height: 1.8;
     white-space: pre-wrap;
     word-wrap: break-word;
