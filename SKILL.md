@@ -199,7 +199,7 @@ python scripts/read_raw_text.py -v 3 3-6 48-51 -v 42 125-130 167-170
 python scripts/read_raw_text.py -v 42 127 128 129 130 -v 3 4 5 6
 ```
 
-### 使用规则
+## 使用规则
 
 1. **先检索再回答**：用户问到马恩理论、概念、原文表述时，先用 search.py 检索
 2. **标注出处**：回答时标注【第X卷，第X页】
