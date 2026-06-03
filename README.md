@@ -124,7 +124,7 @@ mega-rag-skill/
 ├── chroma_db/           # 向量数据库（从 Release 下载）
 ├── data/
 │   ├── toc/             # 60 卷目录文件
-│   └── review_sessions/ # 评审 agent session（按主题持久化）
+│   └── review_sessions.json # 评审 agent session（按主题持久化）
 ├── README.md            # 本文件
 └── SKILL.md             # Claude Code Skill 配置
 ```

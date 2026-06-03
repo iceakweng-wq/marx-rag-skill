@@ -67,37 +67,48 @@ python scripts/search.py --page 46上 207 208 209   # 按页码取页
 - 按卷次和页码排序，合并连续的页码范围
 - 将汇总结果传给评审 agent
 
-#### ③ 评审 agent（按主题分别持久化）
+#### ③ 评审 agent（按主题持久化 session）
 
-评审 agent 按**主题**（即用户查询的核心概念）分别保存评审进度，每个主题一个 session 文件：
+所有评审 session 统一存储在一个 JSON 文件中：
 
 ```
-data/review_sessions/
-├── 感性活动.md    ← 主题 "感性活动" 的评审进度
-├── 一般智力.md
-└── 资本积累.md
+data/review_sessions.json
 ```
 
 **每次启动评审 agent 时：**
 
-1. **读取已有 session**：检查 `data/review_sessions/{主题}.md` 是否存在
-2. **结合新结果**：把主 agent 传来的新页码与 session 中已有的页码合并去重
-3. **拉取原文阅读**：用 `python scripts/search.py --page {卷次} {页码1} {页码2} ...` 拉取所有页码的原文（优先只拉取新页码，但如有必要可重读全部）
+1. **读取 sessions**：检查 `data/review_sessions.json` 是否存在，存在则加载
+2. **结合新结果**：把主 agent 传来的新页码与 session 中该主题已有的页码合并去重
+3. **拉取原文阅读**：用 `python scripts/search.py --page {卷次} {页码1} {页码2} ...` 拉取原文（优先只拉取新页码，但如有必要可重读全部）
 4. **判断是否足够**：
    - 内容是否足够回答用户问题
    - 覆盖范围是否多样（不同文本、不同时期的论述）
    - 是否需要补充搜索其他关键词
-5. **如果不够**：更新 session 文件（记录已看了哪些页），告诉主 agent 还需要搜索哪些关键词，主 agent 启动新的搜索 agent，更新汇总后再次传给评审 agent
-6. **如果够了**：输出**结构化摘要**（格式见下文），更新 session 文件，返回给主 agent
+5. **如果不够**：更新 session，告诉主 agent 还需要搜索哪些关键词，主 agent 启动新的搜索 agent，更新汇总后再次传给评审 agent
+6. **如果够了**：输出**结构化摘要**（格式见下文），更新 session，返回给主 agent
 
 **Session 文件格式：**
 
-```markdown
-# 评审 session：感性活动
-- 最后更新：2026-06-03
-- 已覆盖页码范围：第42卷 127-130，第3卷 4-6
-- 已确认概念方向：感性作为实践、感性作为科学基础
-- 待补充方向：无
+```json
+{
+  "感性活动": {
+    "last_updated": "2026-06-03",
+    "covered_pages": {
+      "42": [127, 128, 129, 130],
+      "3": [4, 5, 6]
+    },
+    "search_keywords": ["人的感性活动", "感性活动 实践"],
+    "saturated": false
+  },
+  "一般智力": {
+    "last_updated": "2026-06-03",
+    "covered_pages": {
+      "46上": [207, 208, 209, 210, 211, 212, 213, 214]
+    },
+    "search_keywords": ["一般智力", "general intellect"],
+    "saturated": true
+  }
+}
 ```
 
 #### ④ 主 agent 呈现
@@ -190,5 +201,5 @@ data/review_sessions/
 - 分块策略：按页分块，34,540 页
 - 数据库路径：`chroma_db/`
 - Collection 名称：`marx_engels`
-- 评审 session 路径：`data/review_sessions/`（按主题分别持久化）
+- 评审 session 路径：`data/review_sessions.json`（单个 JSON 文件管理所有主题）
 - 运行环境：Python 3.10+，需安装 `sentence-transformers`、`chromadb`
