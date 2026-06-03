@@ -38,6 +38,8 @@ import os; os.remove("chroma_db.zip")
 
 子 agent 的具体任务说明在 `sub_agent/` 下的文件中，启动子 agent 时读取并传入指令。
 
+**重要：sub_agent/*.md 中的 `{python_path}` 是占位符，启动子 agent 时必须替换为实际的 Python 解释器路径。** 路径来源：CLAUDE.md 中的记录、全局记忆或本地记忆中记录的路径。替换后再将指令传给子 agent。
+
 ---
 
 ### 一、查询任务工作流

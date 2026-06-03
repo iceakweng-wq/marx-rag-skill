@@ -5,12 +5,10 @@
 
 ## 执行步骤
 
-### 0. 获取python调用路径，这一路径可能在全局记忆中，也可能在本地记忆中。如果你的全局记忆或本地记忆已经有记录，则不需要再额外搜索调取。
-
 ### 1. 语义搜索
 运行：
 ```bash
-python scripts/search.py "{关键词}" --mode expand --top_k 3
+{python_path} scripts/search.py "{关键词}" --mode expand --top_k 3
 ```
 搜索命中的前三个结果块。
 

@@ -5,11 +5,9 @@
 
 ## 执行
 
-### 0. 获取python调用路径，这一路径可能在全局记忆中，也可能在本地记忆中。如果你的全局记忆或本地记忆已经有记录，则不需要再额外搜索调取。
-
 ### 1. 调用 read_raw_text.py 脚本，传入卷次和页码。
 ```bash
-python scripts/read_raw_text.py -v {卷次} {页码1} {页码2} ...
+{python_path} scripts/read_raw_text.py -v {卷次} {页码1} {页码2} ...
 ```
 
 支持多卷次混合：
