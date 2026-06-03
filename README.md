@@ -22,11 +22,11 @@
    ```
 
 2. 下载向量数据库：
-   打开 https://github.com/iceakweng-wq/marx-rag-skill/releases/tag/v1.0 ，下载 `chroma_db.zip`，解压到 skill 根目录，使 `chroma_db/` 文件夹出现在 `scripts/` 同级。
+   打开 https://github.com/iceakweng-wq/mega-rag-skill/releases/tag/v1.0 ，下载 `chroma_db.zip`，解压到 skill 根目录，使 `chroma_db/` 文件夹出现在 `scripts/` 同级。
 
 完成后目录结构应为：
 ```
-marx-rag-skill/
+mega-rag-skill/
 ├── chroma_db/       ← 解压后得到的文件夹
 ├── scripts/
 ├── data/
@@ -116,7 +116,7 @@ python scripts/search.py --info
 ## 目录结构
 
 ```
-marx-rag-skill/
+mega-rag-skill/
 ├── scripts/
 │   ├── search.py        # 检索工具（核心文件）
 │   └── utils.py         # 卷次解析、篇章名查询

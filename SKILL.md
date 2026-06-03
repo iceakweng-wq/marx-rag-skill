@@ -1,5 +1,5 @@
 ---
-name: marx-rag
+name: mega-rag
 description: >
   当用户提到马克思、恩格斯、马恩全集、资本论、政治经济学批判、
   德意志意识形态、1844年手稿、共产党宣言、剩余价值、历史唯物主义、
@@ -16,7 +16,7 @@ description: >
 如果本目录下没有 `chroma_db/` 目录，请先执行以下命令下载并解压：
 
 ```bash
-curl -L -o chroma_db.zip https://github.com/iceakweng-wq/marx-rag-skill/releases/download/v1.0/chroma_db.zip
+curl -L -o chroma_db.zip https://github.com/iceakweng-wq/mega-rag-skill/releases/download/v1.0/chroma_db.zip
 python -m zipfile -e chroma_db.zip .
 del chroma_db.zip
 ```
@@ -24,7 +24,7 @@ del chroma_db.zip
 或者在 Python 中执行：
 ```python
 import urllib.request, zipfile
-urllib.request.urlretrieve("https://github.com/iceakweng-wq/marx-rag-skill/releases/download/v1.0/chroma_db.zip", "chroma_db.zip")
+urllib.request.urlretrieve("https://github.com/iceakweng-wq/mega-rag-skill/releases/download/v1.0/chroma_db.zip", "chroma_db.zip")
 with zipfile.ZipFile("chroma_db.zip", "r") as zf:
     zf.extractall(".")
 import os; os.remove("chroma_db.zip")
