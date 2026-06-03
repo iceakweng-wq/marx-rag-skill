@@ -664,14 +664,14 @@
       "page_end": 662
     },
     {
-      "name": "“法兰西内战”初稿",
-      "page_start": 535,
-      "page_end": 620
-    },
-    {
       "name": "国防政府",
       "page_start": 535,
       "page_end": 572
+    },
+    {
+      "name": "“法兰西内战”初稿",
+      "page_start": 535,
+      "page_end": 620
     },
     {
       "name": "公社",
@@ -679,34 +679,14 @@
       "page_end": 579
     },
     {
-      "name": "2．为工人阶级，但主要是为中等阶级采取的措施",
-      "page_start": 574,
-      "page_end": 575
-    },
-    {
-      "name": "3．一般措施",
-      "page_start": 575,
-      "page_end": 577
-    },
-    {
-      "name": "4．公安措施",
-      "page_start": 577,
-      "page_end": 579
-    },
-    {
-      "name": "5．财政措施",
-      "page_start": 579,
-      "page_end": 579
+      "name": "公社的产生和中央委员会",
+      "page_start": 580,
+      "page_end": 583
     },
     {
       "name": "公社",
       "page_start": 580,
       "page_end": 611
-    },
-    {
-      "name": "公社的产生和中央委员会",
-      "page_start": 580,
-      "page_end": 583
     },
     {
       "name": "公社的性质",
@@ -754,6 +734,11 @@
       "page_end": 620
     },
     {
+      "name": "（1）国防政府。巴黎的议员特罗胥、法夫尔、皮卡尔、费里",
+      "page_start": 621,
+      "page_end": 625
+    },
+    {
       "name": "“法兰西内战”二稿",
       "page_start": 621,
       "page_end": 662
@@ -764,11 +749,6 @@
       "page_end": 629
     },
     {
-      "name": "（3）地主议会",
-      "page_start": 629,
-      "page_end": 632
-    },
-    {
       "name": "（5）内战的开始。3月18日的革命。克列芒·托马。　　勒康特。旺多姆广场事件",
       "page_start": 632,
       "page_end": 641
@@ -777,11 +757,6 @@
       "name": "（6）公社",
       "page_start": 641,
       "page_end": 647
-    },
-    {
-      "name": "（7）结束语",
-      "page_start": 647,
-      "page_end": 650
     },
     {
       "name": "片断",

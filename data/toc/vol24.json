@@ -9,6 +9,11 @@
       "page_end": 25
     },
     {
+      "name": "《资本论》第二卷德文第一版的扉页",
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
       "name": "弗·恩格斯。第二版序言",
       "page_start": 26,
       "page_end": 28
@@ -34,9 +39,19 @@
       "page_end": 46
     },
     {
+      "name": "马克思《资本论》第二卷手稿的一页",
+      "page_start": 57,
+      "page_end": 57
+    },
+    {
       "name": "．总循环",
       "page_start": 60,
       "page_end": 60
+    },
+    {
+      "name": "恩格斯编辑和重抄的《资本论》第二卷手稿的一页",
+      "page_start": 61,
+      "page_end": 61
     },
     {
       "name": "第二章 生产资本的循环",
@@ -149,39 +164,19 @@
       "page_end": 434
     },
     {
-      "name": "2．斯密把交换价值分解为ｖ＋ｍ",
-      "page_start": 410,
-      "page_end": 410
-    },
-    {
-      "name": "3．不变资本部分",
-      "page_start": 413,
-      "page_end": 413
-    },
-    {
-      "name": "4．亚·斯密所说的资本和收入",
-      "page_start": 419,
-      "page_end": 419
-    },
-    {
-      "name": "5．总结",
-      "page_start": 427,
-      "page_end": 427
-    },
-    {
       "name": "．以后的经济学家",
       "page_start": 432,
       "page_end": 432
     },
     {
-      "name": "第二十章 简单再生产",
-      "page_start": 435,
-      "page_end": 550
-    },
-    {
       "name": "．问题的提出",
       "page_start": 435,
       "page_end": 435
+    },
+    {
+      "name": "第二十章 简单再生产",
+      "page_start": 435,
+      "page_end": 550
     },
     {
       "name": "．社会生产的两个部类",
@@ -234,21 +229,6 @@
       "page_end": 502
     },
     {
-      "name": "1．损耗的价值部分在货币形式上的补偿",
-      "page_start": 506,
-      "page_end": 506
-    },
-    {
-      "name": "2．固定资本的实物补偿",
-      "page_start": 512,
-      "page_end": 512
-    },
-    {
-      "name": "3．结论",
-      "page_start": 524,
-      "page_end": 524
-    },
-    {
       "name": "．货币材料的再生产",
       "page_start": 527,
       "page_end": 527
@@ -269,21 +249,6 @@
       "page_end": 554
     },
     {
-      "name": "1．货币贮藏",
-      "page_start": 554,
-      "page_end": 554
-    },
-    {
-      "name": "2．追加的不变资本",
-      "page_start": 559,
-      "page_end": 559
-    },
-    {
-      "name": "3．追加的可变资本",
-      "page_start": 565,
-      "page_end": 565
-    },
-    {
       "name": "．第部类的积累",
       "page_start": 566,
       "page_end": 566
@@ -292,21 +257,6 @@
       "name": "．用公式来说明积累",
       "page_start": 571,
       "page_end": 571
-    },
-    {
-      "name": "1．第一例",
-      "page_start": 576,
-      "page_end": 576
-    },
-    {
-      "name": "2．第二例",
-      "page_start": 581,
-      "page_end": 581
-    },
-    {
-      "name": "3．积累时ｃ的交换",
-      "page_start": 588,
-      "page_end": 588
     },
     {
       "name": "．补充说明",
@@ -337,21 +287,6 @@
       "name": "计量单位和货币名称表",
       "page_start": 649,
       "page_end": 649
-    },
-    {
-      "name": "《资本论》第二卷德文第一版的扉页",
-      "page_start": 5,
-      "page_end": 5
-    },
-    {
-      "name": "马克思《资本论》第二卷手稿的一页",
-      "page_start": 57,
-      "page_end": 57
-    },
-    {
-      "name": "恩格斯编辑和重抄的《资本论》第二卷手稿的一页",
-      "page_start": 61,
-      "page_end": 61
     }
   ]
 }

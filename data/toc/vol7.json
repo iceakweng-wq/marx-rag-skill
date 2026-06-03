@@ -4,14 +4,14 @@
   "_comment": "仅一级目录，从目录页自动生成，请人工检查",
   "sections": [
     {
-      "name": "第七卷说明",
-      "page_start": 7,
-      "page_end": 21
-    },
-    {
       "name": "卡·马克思和弗·恩格斯。“新莱茵报。政治经济评论”出版启事",
       "page_start": 3,
       "page_end": 4
+    },
+    {
+      "name": "“新莱茵报。政治经济评论”的封面",
+      "page_start": 5,
+      "page_end": 5
     },
     {
       "name": "弗·恩格斯。德国社会民主党人和“泰晤士报”",
@@ -19,54 +19,19 @@
       "page_end": 8
     },
     {
+      "name": "第七卷说明",
+      "page_start": 7,
+      "page_end": 21
+    },
+    {
       "name": "卡·马克思。1848年至1850年的法兰西阶级斗争",
       "page_start": 9,
       "page_end": 125
     },
     {
-      "name": "一 1848年的六月失败",
-      "page_start": 12,
-      "page_end": 12
-    },
-    {
-      "name": "二 1849年6月13日",
-      "page_start": 39,
-      "page_end": 39
-    },
-    {
-      "name": "三 1849年6月13日事件的后果",
-      "page_start": 74,
-      "page_end": 74
-    },
-    {
-      "name": "四 1850年普选权的废除",
-      "page_start": 111,
-      "page_end": 111
-    },
-    {
       "name": "弗·恩格斯。德国维护帝国宪法的运动",
       "page_start": 127,
       "page_end": 235
-    },
-    {
-      "name": "一 莱茵普鲁士",
-      "page_start": 134,
-      "page_end": 134
-    },
-    {
-      "name": "二 卡尔斯户厄",
-      "page_start": 155,
-      "page_end": 155
-    },
-    {
-      "name": "三 普法尔茨",
-      "page_start": 171,
-      "page_end": 171
-    },
-    {
-      "name": "四 为共和国捐躯！",
-      "page_start": 190,
-      "page_end": 190
     },
     {
       "name": "卡·马克思和弗·恩格斯。“新莱茵报。政治经济评论”第2期上发表的书评",
@@ -219,6 +184,11 @@
       "page_end": 577
     },
     {
+      "name": "弗·恩格斯的“1852年神圣同盟对法战争的可能性与展望”手稿的第一页",
+      "page_start": 547,
+      "page_end": 547
+    },
+    {
       "name": "卡·马克思。1848年11月4通日过的法兰西共和国宪法",
       "page_start": 578,
       "page_end": 592
@@ -317,16 +287,6 @@
       "name": "译后记",
       "page_start": 741,
       "page_end": 741
-    },
-    {
-      "name": "“新莱茵报。政治经济评论”的封面",
-      "page_start": 5,
-      "page_end": 5
-    },
-    {
-      "name": "弗·恩格斯的“1852年神圣同盟对法战争的可能性与展望”手稿的第一页",
-      "page_start": 547,
-      "page_end": 547
     }
   ]
 }
