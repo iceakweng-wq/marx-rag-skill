@@ -669,9 +669,19 @@
       "page_end": 821
     },
     {
+      "name": "地名索引",
+      "page_start": 822,
+      "page_end": 826
+    },
+    {
       "name": "译后记",
       "page_start": 827,
       "page_end": 827
+    },
+    {
+      "name": "美国内战的进程图（1861—186）",
+      "page_start": 521,
+      "page_end": 828
     }
   ]
 }
