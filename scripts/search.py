@@ -378,7 +378,22 @@ def print_db_info():
         print(f"\n⚠ 统计失败: {e}")
 
 
+def _ensure_utf8_stream():
+    """强制 stdout/stderr 使用 UTF-8，防止中文乱码。"""
+    for name in ("stdout", "stderr"):
+        stream = getattr(sys, name, None)
+        if stream is None:
+            continue
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
+        elif hasattr(stream, "detach"):
+            import io
+            setattr(sys, name,
+                    io.TextIOWrapper(stream.detach(), encoding="utf-8", line_buffering=True))
+
+
 def main():
+    _ensure_utf8_stream()
     parser = argparse.ArgumentParser(description="马恩全集 RAG 检索")
     parser.add_argument("query", type=str, nargs="?", default=None, help="查询文本")
     parser.add_argument("--top_k", type=int, default=10, help="返回结果数（默认10）")
