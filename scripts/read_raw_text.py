@@ -294,7 +294,7 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
     line-height: 1.6;
     color: #24292e;
     background: #ffffff;
-    display: flex;
+    padding-left: 210px;
   }}
 
   /* ── 侧边栏 ── */
@@ -340,9 +340,8 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
 
   /* ── 主内容区 ── */
   .main {{
-    margin-left: 210px;
-    flex: 1;
     max-width: 900px;
+    margin: 0 auto;
     padding: 40px 32px 80px;
   }}
 
@@ -397,7 +396,8 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
 
   @media (max-width: 768px) {{
     .sidebar {{ display: none; }}
-    .main {{ margin-left: 0; padding: 20px; }}
+    body {{ padding-left: 0; }}
+    .main {{ padding: 20px; }}
   }}
 </style>
 </head>
