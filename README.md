@@ -80,7 +80,7 @@ python scripts/search.py --info
 |-------|------|------|
 | **搜索 agent** | 语义检索 + 翻页扩展 | `(卷次, 页码)` 列表（无原文） |
 | **主 agent** | 汇总、去重、编排 | 页码范围传给评审 agent |
-| **评审 agent** | 拉取原文阅读、判断是否足够、补充搜索 | 结构化摘要 |
+| **评审 agent** | 拉取原文阅读、判断是否足够、补充搜索（按主题持久化 session） | 结构化摘要 |
 
 ### 按页码取页
 
@@ -124,6 +124,7 @@ mega-rag-skill/
 ├── chroma_db/           # 向量数据库（从 Release 下载）
 ├── data/
 │   ├── toc/             # 60 卷目录文件
+│   └── review_sessions/ # 评审 agent session（按主题持久化）
 ├── README.md            # 本文件
 └── SKILL.md             # Claude Code Skill 配置
 ```
