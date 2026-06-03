@@ -111,24 +111,22 @@ def lookup_chapter(volume_slug: str, page: int) -> str:
     if toc is None:
         return ""
 
-    # 精确匹配
-    matches = []
-    for section in toc.get("sections", []):
-        if section["page_start"] <= page <= section["page_end"]:
-            matches.append(section)
+    sections = toc.get("sections", [])
 
+    # 精确匹配
+    matches = [s for s in sections if s["page_start"] <= page <= s["page_end"]]
     if matches:
-        # 返回页码范围最窄的匹配
         best = min(matches, key=lambda s: s["page_end"] - s["page_start"])
         return best["name"]
 
     # 退而求其次：找最近的前一个 section
-    preceding = [s for s in toc.get("sections", []) if s["page_start"] <= page]
+    preceding = [s for s in sections if s["page_start"] <= page]
     if preceding:
         nearest = max(preceding, key=lambda s: s["page_end"])
         return nearest["name"]
 
-    return ""
+    # 最后回退：使用卷标题
+    return toc.get("title", "")
 
 
 # ── 相似度计算 ──

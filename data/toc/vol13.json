@@ -1,7 +1,7 @@
 {
   "volume": "第13卷",
   "title": "第13卷",
-  "_comment": "从目录页自动生成，请人工检查",
+  "_comment": "仅一级目录，从目录页自动生成，请人工检查",
   "sections": [
     {
       "name": "卡·马克思。政治经济学批判",
@@ -9,22 +9,17 @@
       "page_end": 177
     },
     {
-      "name": "序言",
-      "page_start": 7,
-      "page_end": 11
+      "name": "77（）商品的形态变化ａ88（）货币的流通ｂ97（）铸币。价值符号ｃ      3．货币",
+      "page_start": 112,
+      "page_end": 112
     },
     {
-      "name": "第一册 资本",
-      "page_start": 13,
-      "page_end": 177
-    },
-    {
-      "name": "4．贵金属",
+      "name": "115（）货币贮藏ａ127（）支付手段ｂ139（）世界货币ｃ      4．贵金属",
       "page_start": 143,
       "page_end": 143
     },
     {
-      "name": "卡·马克思。欧洲的战争前景",
+      "name": "178—184卡·马克思。意大利的统一问题卡·马克思。欧洲的战争前景",
       "page_start": 185,
       "page_end": 188
     },
@@ -79,26 +74,6 @@
       "page_end": 299
     },
     {
-      "name": "一",
-      "page_start": 249,
-      "page_end": 252
-    },
-    {
-      "name": "二",
-      "page_start": 253,
-      "page_end": 281
-    },
-    {
-      "name": "三",
-      "page_start": 282,
-      "page_end": 292
-    },
-    {
-      "name": "四",
-      "page_start": 293,
-      "page_end": 299
-    },
-    {
       "name": "卡·马克思。和平还是战争？",
       "page_start": 300,
       "page_end": 301
@@ -139,11 +114,6 @@
       "page_end": 329
     },
     {
-      "name": "二",
-      "page_start": 330,
-      "page_end": 333
-    },
-    {
       "name": "弗·恩格斯。战争的不可避免性",
       "page_start": 334,
       "page_end": 337
@@ -154,7 +124,7 @@
       "page_end": 342
     },
     {
-      "name": "德国的扩军备战",
+      "name": "卡·马克思和弗·恩格斯。战争逼近的征兆。—— 德国的扩军备战",
       "page_start": 343,
       "page_end": 346
     },
@@ -179,12 +149,7 @@
       "page_end": 364
     },
     {
-      "name": "弗·恩格斯。战争",
-      "page_start": 365,
-      "page_end": 307
-    },
-    {
-      "name": "卡·马克思。维也纳要闻",
+      "name": "弗·恩格斯。战争365—307卡·马克思。维也纳要闻",
       "page_start": 371,
       "page_end": 377
     },
@@ -299,21 +264,6 @@
       "page_end": 409
     },
     {
-      "name": "一",
-      "page_start": 477,
-      "page_end": 481
-    },
-    {
-      "name": "二",
-      "page_start": 482,
-      "page_end": 486
-    },
-    {
-      "name": "三",
-      "page_start": 487,
-      "page_end": 409
-    },
-    {
       "name": "卡·马克思。被证实了的真理",
       "page_start": 491,
       "page_end": 495
@@ -334,28 +284,8 @@
       "page_end": 523
     },
     {
-      "name": "一",
-      "page_start": 503,
-      "page_end": 507
-    },
-    {
-      "name": "二",
-      "page_start": 508,
-      "page_end": 523
-    },
-    {
       "name": "弗。恩格斯。卡尔·马克思“政治经济学批判”",
       "page_start": 524,
-      "page_end": 535
-    },
-    {
-      "name": "一",
-      "page_start": 524,
-      "page_end": 528
-    },
-    {
-      "name": "二",
-      "page_start": 529,
       "page_end": 535
     },
     {
@@ -391,26 +321,6 @@
     {
       "name": "卡·马克思。新的对华战争",
       "page_start": 568,
-      "page_end": 585
-    },
-    {
-      "name": "一",
-      "page_start": 568,
-      "page_end": 571
-    },
-    {
-      "name": "二",
-      "page_start": 572,
-      "page_end": 576
-    },
-    {
-      "name": "三",
-      "page_start": 577,
-      "page_end": 581
-    },
-    {
-      "name": "四",
-      "page_start": 582,
       "page_end": 585
     },
     {
@@ -462,26 +372,6 @@
       "name": "弗·恩格斯。萨瓦、尼斯与莱茵",
       "page_start": 633,
       "page_end": 68
-    },
-    {
-      "name": "一",
-      "page_start": 635,
-      "page_end": 643
-    },
-    {
-      "name": "一",
-      "page_start": 644,
-      "page_end": 659
-    },
-    {
-      "name": "二",
-      "page_start": 660,
-      "page_end": 669
-    },
-    {
-      "name": "四",
-      "page_start": 670,
-      "page_end": 680
     },
     {
       "name": "“人民报”编辑部的声明",
@@ -539,34 +429,9 @@
       "page_end": 611
     },
     {
-      "name": "马克思恩格斯全集第十三卷收集了1859年1月至1860年",
+      "name": "第十三卷说明  马克思恩格斯全集第十三卷收集了1859年1月至1860年",
       "page_start": 2,
       "page_end": 2
-    },
-    {
-      "name": "始材料。马克思准备把这部著作分册出版。第一分册于1859年",
-      "page_start": 1,
-      "page_end": 1
-    },
-    {
-      "name": "成为统一的和强大的，那样我们就会做得好一些。”（见本卷第",
-      "page_start": 281,
-      "page_end": 281
-    },
-    {
-      "name": "的小册子“福格特先生”（见“马克思恩格斯全集”俄文第2版第",
-      "page_start": 14,
-      "page_end": 14
-    },
-    {
-      "name": "议会改革的新法案”一文中，马克思分析了迪斯累里于1859年",
-      "page_start": 2,
-      "page_end": 2
-    },
-    {
-      "name": "方工业。马克思在谈到英国殖民主义者残酷镇压1857—18年5印",
-      "page_start": 9,
-      "page_end": 9
     }
   ]
 }

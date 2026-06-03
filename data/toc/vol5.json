@@ -1,7 +1,7 @@
 {
   "volume": "第5卷",
   "title": "第5卷",
-  "_comment": "从目录页自动生成，请人工检查",
+  "_comment": "仅一级目录，从目录页自动生成，请人工检查",
   "sections": [
     {
       "name": "卡·马克思和弗·恩格斯。共产党在德国的要求",
@@ -9,7 +9,7 @@
       "page_end": 5
     },
     {
-      "name": "——反对巴黎德意志民主协会的声明",
+      "name": "卡·马克思和弗·恩格斯。给埃蒂耶纳·卡贝的信 ——反对巴黎德意志民主协会的声明",
       "page_start": 6,
       "page_end": 7
     },
@@ -19,7 +19,7 @@
       "page_end": 9
     },
     {
-      "name": "“新莱茵报”编辑部的声明",
+      "name": "卡·马克思和弗·恩格斯发表在“新莱茵报”上的文章六  月“新莱茵报”编辑部的声明",
       "page_start": 13,
       "page_end": 13
     },
@@ -117,26 +117,6 @@
       "name": "柏林关于革命的辩论",
       "page_start": 72,
       "page_end": 89
-    },
-    {
-      "name": "一",
-      "page_start": 72,
-      "page_end": 72
-    },
-    {
-      "name": "二",
-      "page_start": 75,
-      "page_end": 75
-    },
-    {
-      "name": "三",
-      "page_start": 79,
-      "page_end": 79
-    },
-    {
-      "name": "四",
-      "page_start": 85,
-      "page_end": 85
     },
     {
       "name": "科伦各党派的状况",
@@ -264,16 +244,6 @@
       "page_end": 176
     },
     {
-      "name": "一",
-      "page_start": 167,
-      "page_end": 167
-    },
-    {
-      "name": "二",
-      "page_start": 171,
-      "page_end": 171
-    },
-    {
       "name": "德国的对外政策",
       "page_start": 177,
       "page_end": 179
@@ -384,21 +354,6 @@
       "page_end": 285
     },
     {
-      "name": "一",
-      "page_start": 274,
-      "page_end": 274
-    },
-    {
-      "name": "二",
-      "page_start": 278,
-      "page_end": 278
-    },
-    {
-      "name": "三",
-      "page_start": 282,
-      "page_end": 282
-    },
-    {
       "name": "“祖国报”论和丹麦的休战",
       "page_start": 286,
       "page_end": 288
@@ -427,16 +382,6 @@
       "name": "强制公债法案及其说明",
       "page_start": 307,
       "page_end": 317
-    },
-    {
-      "name": "一",
-      "page_start": 307,
-      "page_end": 307
-    },
-    {
-      "name": "二",
-      "page_start": 312,
-      "page_end": 312
     },
     {
       "name": "关于区等级会议的妥协辩论（7月18日的妥协会议）",
@@ -499,49 +444,9 @@
       "page_end": 414
     },
     {
-      "name": "一",
-      "page_start": 371,
-      "page_end": 371
-    },
-    {
-      "name": "二",
-      "page_start": 381,
-      "page_end": 381
-    },
-    {
-      "name": "三",
-      "page_start": 389,
-      "page_end": 389
-    },
-    {
-      "name": "四",
-      "page_start": 394,
-      "page_end": 394
-    },
-    {
-      "name": "六",
-      "page_start": 409,
-      "page_end": 409
-    },
-    {
       "name": "法兰克福关于波兰问题的辩论",
       "page_start": 415,
       "page_end": 431
-    },
-    {
-      "name": "七",
-      "page_start": 415,
-      "page_end": 415
-    },
-    {
-      "name": "八",
-      "page_start": 419,
-      "page_end": 419
-    },
-    {
-      "name": "九",
-      "page_start": 426,
-      "page_end": 426
     },
     {
       "name": "德国公民权和普鲁士警察",
@@ -599,26 +504,6 @@
       "page_end": 478
     },
     {
-      "name": "一",
-      "page_start": 469,
-      "page_end": 469
-    },
-    {
-      "name": "二",
-      "page_start": 471,
-      "page_end": 471
-    },
-    {
-      "name": "三",
-      "page_start": 474,
-      "page_end": 474
-    },
-    {
-      "name": "四",
-      "page_start": 478,
-      "page_end": 478
-    },
-    {
       "name": "柏林的辩论自由",
       "page_start": 479,
       "page_end": 481
@@ -632,16 +517,6 @@
       "name": "法兰克福起义",
       "page_start": 485,
       "page_end": 489
-    },
-    {
-      "name": "一",
-      "page_start": 485,
-      "page_end": 485
-    },
-    {
-      "name": "二",
-      "page_start": 487,
-      "page_end": 487
     },
     {
       "name": "反革命内阁",
@@ -674,7 +549,7 @@
       "page_end": 500
     },
     {
-      "name": "的演说",
+      "name": "梯也尔关于采用强制比价证券的全国抵押银行 的演说",
       "page_start": 501,
       "page_end": 505
     },
@@ -744,12 +619,7 @@
       "page_end": 571
     },
     {
-      "name": "一 塞纳河和罗亚尔河",
-      "page_start": 549,
-      "page_end": 564
-    },
-    {
-      "name": "告全体德国工人书",
+      "name": "附  录告全体德国工人书",
       "page_start": 575,
       "page_end": 576
     },
@@ -779,6 +649,11 @@
       "page_end": 581
     },
     {
+      "name": "1848年8月11日科伦民主协会全体会议记录摘要",
+      "page_start": 582,
+      "page_end": 583
+    },
+    {
       "name": "科伦民主协会抗议将波兹南并入德意志联邦",
       "page_start": 584,
       "page_end": 585
@@ -794,7 +669,7 @@
       "page_end": 587
     },
     {
-      "name": "的演说",
+      "name": "关于1848年8月30日马克思在第一届维也纳工人联合会上 的演说",
       "page_start": 588,
       "page_end": 588
     },
@@ -809,9 +684,29 @@
       "page_end": 590
     },
     {
+      "name": "民众大会和安全委员会",
+      "page_start": 591,
+      "page_end": 594
+    },
+    {
+      "name": "沃林根民众大会",
+      "page_start": 595,
+      "page_end": 596
+    },
+    {
+      "name": "科伦民众大会关于法兰克福起义的决议",
+      "page_start": 597,
+      "page_end": 597
+    },
+    {
       "name": "“新莱茵报”负责发行人关于报纸停刊的通知",
       "page_start": 598,
       "page_end": 598
+    },
+    {
+      "name": "呼吁订阅“新莱茵报，民主派机关报”",
+      "page_start": 599,
+      "page_end": 599
     },
     {
       "name": "通缉弗里德里希·恩格斯的命令",
@@ -824,9 +719,19 @@
       "page_end": 601
     },
     {
-      "name": "10月16日科伦工人联合会委员会会议记录）",
+      "name": "马克思就当选科伦工人联合会主席发表的演说（摘自1848年 10月16日科伦工人联合会委员会会议记录）",
       "page_start": 602,
       "page_end": 603
+    },
+    {
+      "name": "1848年10月22日科伦工人联合会全体会议记录摘要",
+      "page_start": 604,
+      "page_end": 604
+    },
+    {
+      "name": "马克思就维也纳事件发表的谈话",
+      "page_start": 605,
+      "page_end": 605
     },
     {
       "name": "注释",
@@ -887,16 +792,6 @@
       "name": "弗·恩格斯画的从奥克萨里到洛克尔的路线草图",
       "page_start": 564,
       "page_end": 565
-    },
-    {
-      "name": "了一系列文章和短评，其中有“6月23日事件的详情”，“6月",
-      "page_start": 23,
-      "page_end": 23
-    },
-    {
-      "name": "章，以及其他的一些著作，为阐明马克思和恩格斯在",
-      "page_start": 1848,
-      "page_end": 1849
     }
   ]
 }

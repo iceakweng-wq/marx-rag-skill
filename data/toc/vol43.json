@@ -1,52 +1,22 @@
 {
   "volume": "第43卷",
   "title": "第43卷",
-  "_comment": "从目录页自动生成，请人工检查",
+  "_comment": "仅一级目录，从目录页自动生成，请人工检查",
   "sections": [
     {
-      "name": "德国军队在松德维特的失败",
+      "name": "卡·马克思和弗·恩格斯发表在《新莱茵报》上的文章一八四八年六月 德国军队在松德维特的失败",
       "page_start": 5,
       "page_end": 6
     },
     {
-      "name": "合并问题",
-      "page_start": 7,
-      "page_end": 7
-    },
-    {
-      "name": "康普豪森内阁的垮台",
-      "page_start": 8,
-      "page_end": 8
-    },
-    {
-      "name": "赖辛施佩格",
-      "page_start": 9,
-      "page_end": 9
-    },
-    {
-      "name": "休战“谈判”",
+      "name": "七  月 休战“谈判”",
       "page_start": 10,
       "page_end": 10
     },
     {
-      "name": "和丹麦休战谈判的破裂",
-      "page_start": 11,
-      "page_end": 11
-    },
-    {
-      "name": "杂闻",
+      "name": "八  月 杂闻",
       "page_start": 12,
       "page_end": 12
-    },
-    {
-      "name": "米兰公告",
-      "page_start": 13,
-      "page_end": 14
-    },
-    {
-      "name": "哥特沙克医生",
-      "page_start": 15,
-      "page_end": 16
     },
     {
       "name": "同丹麦的休战和汉泽曼",
@@ -54,44 +24,9 @@
       "page_end": 17
     },
     {
-      "name": "查理－阿尔伯特的叛卖",
-      "page_start": 18,
-      "page_end": 19
-    },
-    {
-      "name": "驱逐沙佩尔的企图",
-      "page_start": 20,
-      "page_end": 22
-    },
-    {
-      "name": "盖格尔和沙佩尔",
-      "page_start": 23,
-      "page_end": 24
-    },
-    {
       "name": "附在《左翼的财政方案》一文后面的编者按",
       "page_start": 25,
       "page_end": 25
-    },
-    {
-      "name": "他的继任者",
-      "page_start": 26,
-      "page_end": 26
-    },
-    {
-      "name": "逮捕",
-      "page_start": 27,
-      "page_end": 27
-    },
-    {
-      "name": "半官方评论",
-      "page_start": 28,
-      "page_end": 29
-    },
-    {
-      "name": "《祖国报》论休战协定",
-      "page_start": 30,
-      "page_end": 31
     },
     {
       "name": "科伦安全委员会的任务和地方当局",
@@ -114,21 +49,6 @@
       "page_end": 36
     },
     {
-      "name": "来自“模范国家”的最新消息",
-      "page_start": 37,
-      "page_end": 39
-    },
-    {
-      "name": "我们的资产阶级和尼克尔博士",
-      "page_start": 40,
-      "page_end": 40
-    },
-    {
-      "name": "维也纳消息",
-      "page_start": 41,
-      "page_end": 41
-    },
-    {
       "name": "柏林国民议会的决议",
       "page_start": 42,
       "page_end": 43
@@ -144,19 +64,9 @@
       "page_end": 46
     },
     {
-      "name": "来自瑞士的各种消息",
-      "page_start": 47,
-      "page_end": 47
-    },
-    {
       "name": "国民院的选举结果",
       "page_start": 48,
       "page_end": 48
-    },
-    {
-      "name": "选举。——济多",
-      "page_start": 49,
-      "page_end": 52
     },
     {
       "name": "国民议会中左派的立场",
@@ -174,24 +84,9 @@
       "page_end": 57
     },
     {
-      "name": "联邦委员会和联邦院的会议",
-      "page_start": 58,
-      "page_end": 58
-    },
-    {
-      "name": "两院的联席会议。——联邦委员会",
-      "page_start": 59,
-      "page_end": 60
-    },
-    {
       "name": "——帝国的谷物禁运。——瓦勒州大会议",
       "page_start": 61,
       "page_end": 63
-    },
-    {
-      "name": "国民院会议",
-      "page_start": 64,
-      "page_end": 64
     },
     {
       "name": "被拆的信件",
@@ -199,27 +94,12 @@
       "page_end": 65
     },
     {
-      "name": "伯尔尼被宣布为瑞士联邦首都。——弗兰西尼",
-      "page_start": 66,
-      "page_end": 66
-    },
-    {
       "name": "来自瑞士的各种新闻",
       "page_start": 67,
       "page_end": 68
     },
     {
-      "name": "贝格和鲁维尼的决斗",
-      "page_start": 69,
-      "page_end": 69
-    },
-    {
-      "name": "德国边境封锁。——帝国。——军事会议",
-      "page_start": 70,
-      "page_end": 72
-    },
-    {
-      "name": "帝国军队一名指挥官的道歉",
+      "name": "委员会。——邮政机构的集中。——德意志帝国军队一名指挥官的道歉",
       "page_start": 73,
       "page_end": 74
     },
@@ -229,84 +109,14 @@
       "page_end": 77
     },
     {
-      "name": "对德国流亡者的措施",
-      "page_start": 78,
-      "page_end": 79
-    },
-    {
-      "name": "——“市民公社”。——统一关税率委员会",
-      "page_start": 80,
-      "page_end": 81
-    },
-    {
       "name": "德利加尔斯基的免职",
       "page_start": 82,
       "page_end": 82
     },
     {
-      "name": "回。——贵族公社",
-      "page_start": 83,
-      "page_end": 85
-    },
-    {
-      "name": "瑞士和意大利的事件",
-      "page_start": 86,
-      "page_end": 88
-    },
-    {
-      "name": "联邦委员会。——洛鲍威尔",
-      "page_start": 89,
-      "page_end": 91
-    },
-    {
-      "name": "最后的志愿兵",
-      "page_start": 92,
-      "page_end": 92
-    },
-    {
-      "name": "预算",
-      "page_start": 93,
-      "page_end": 93
-    },
-    {
-      "name": "牧师造反",
-      "page_start": 94,
-      "page_end": 95
-    },
-    {
-      "name": "保护关税的宣传。——那不勒斯军队的征兵",
-      "page_start": 96,
-      "page_end": 97
-    },
-    {
-      "name": "弥勒。——夫赖堡州当局。——奥克辛本",
-      "page_start": 98,
-      "page_end": 99
-    },
-    {
       "name": "恩格斯上校的回答",
       "page_start": 100,
       "page_end": 100
-    },
-    {
-      "name": "匈牙利的斗争",
-      "page_start": 101,
-      "page_end": 106
-    },
-    {
-      "name": "巴纳特消息",
-      "page_start": 107,
-      "page_end": 108
-    },
-    {
-      "name": "第十九号军事公报及其评注",
-      "page_start": 109,
-      "page_end": 112
-    },
-    {
-      "name": "战争。——政府同南方斯拉夫人之间的龃龉",
-      "page_start": 113,
-      "page_end": 115
     },
     {
       "name": "匈牙利的战争",
@@ -319,59 +129,9 @@
       "page_end": 120
     },
     {
-      "name": "三星反对三角",
-      "page_start": 121,
-      "page_end": 122
-    },
-    {
-      "name": "第二十二号公报",
-      "page_start": 123,
-      "page_end": 128
-    },
-    {
-      "name": "匈牙利的克罗地亚人和斯洛伐克人",
-      "page_start": 129,
-      "page_end": 131
-    },
-    {
-      "name": "帝国皇家军队的军事艺术",
-      "page_start": 132,
-      "page_end": 133
-    },
-    {
-      "name": "文迪施格雷茨。——犹太人和南方斯拉夫人",
-      "page_start": 134,
-      "page_end": 136
-    },
-    {
-      "name": "第二十三号公报。——战地新闻",
-      "page_start": 137,
-      "page_end": 140
-    },
-    {
-      "name": "——奥地利人的暴行。——战争的概况",
-      "page_start": 141,
-      "page_end": 144
-    },
-    {
       "name": "再谈马扎尔人",
       "page_start": 145,
       "page_end": 146
-    },
-    {
-      "name": "俄国人在特兰西瓦尼亚",
-      "page_start": 147,
-      "page_end": 156
-    },
-    {
-      "name": "人的前途。——战地新闻",
-      "page_start": 157,
-      "page_end": 162
-    },
-    {
-      "name": "特兰西瓦尼亚和匈牙利战地新闻",
-      "page_start": 163,
-      "page_end": 167
     },
     {
       "name": "欧洲大战不可避免",
@@ -379,39 +139,9 @@
       "page_end": 169
     },
     {
-      "name": "战地新闻",
-      "page_start": 170,
-      "page_end": 174
-    },
-    {
-      "name": "匈牙利战争",
-      "page_start": 175,
-      "page_end": 179
-    },
-    {
       "name": "匈牙利战地新闻",
       "page_start": 180,
       "page_end": 182
-    },
-    {
-      "name": "拉萨尔案件",
-      "page_start": 183,
-      "page_end": 185
-    },
-    {
-      "name": "马扎尔人的胜利",
-      "page_start": 186,
-      "page_end": 190
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 191,
-      "page_end": 194
-    },
-    {
-      "name": "《科伦日报》关于战况的报道",
-      "page_start": 195,
-      "page_end": 201
     },
     {
       "name": "奥军司令部第二十六号公报",
@@ -424,21 +154,6 @@
       "page_end": 208
     },
     {
-      "name": "第二十七号公报。——战况报道",
-      "page_start": 209,
-      "page_end": 214
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 215,
-      "page_end": 218
-    },
-    {
-      "name": "奥格斯堡《总汇报》上的奥地利通讯",
-      "page_start": 219,
-      "page_end": 221
-    },
-    {
       "name": "战地新闻",
       "page_start": 222,
       "page_end": 224
@@ -449,19 +164,9 @@
       "page_end": 227
     },
     {
-      "name": "模范共和国",
-      "page_start": 228,
-      "page_end": 231
-    },
-    {
       "name": "战地新闻",
       "page_start": 232,
       "page_end": 232
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 233,
-      "page_end": 235
     },
     {
       "name": "战地新闻",
@@ -470,38 +175,8 @@
     },
     {
       "name": "战地新闻",
-      "page_start": 238,
-      "page_end": 241
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 242,
-      "page_end": 249
-    },
-    {
-      "name": "战地新闻",
       "page_start": 250,
       "page_end": 252
-    },
-    {
-      "name": "匈牙利的战事报道",
-      "page_start": 253,
-      "page_end": 261
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 262,
-      "page_end": 264
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 265,
-      "page_end": 266
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 267,
-      "page_end": 267
     },
     {
       "name": "战地新闻",
@@ -509,42 +184,12 @@
       "page_end": 268
     },
     {
-      "name": "战地新闻。——塞尔维亚的混乱局面",
-      "page_start": 269,
-      "page_end": 273
-    },
-    {
-      "name": "战场",
-      "page_start": 274,
-      "page_end": 278
-    },
-    {
-      "name": "意大利。战地新闻",
-      "page_start": 279,
-      "page_end": 280
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 281,
-      "page_end": 287
-    },
-    {
-      "name": "意大利。战地新闻",
-      "page_start": 288,
-      "page_end": 291
-    },
-    {
       "name": "来自匈牙利的最新消息",
       "page_start": 292,
       "page_end": 292
     },
     {
-      "name": "战地新闻。——俄军增兵",
-      "page_start": 293,
-      "page_end": 293
-    },
-    {
-      "name": "战地新闻",
+      "name": "四  月战地新闻",
       "page_start": 294,
       "page_end": 297
     },
@@ -554,64 +199,9 @@
       "page_end": 301
     },
     {
-      "name": "战地新闻",
-      "page_start": 302,
-      "page_end": 305
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 306,
-      "page_end": 308
-    },
-    {
-      "name": "南方斯拉夫人和奥地利君主国",
-      "page_start": 309,
-      "page_end": 310
-    },
-    {
-      "name": "匈牙利的战争",
-      "page_start": 311,
-      "page_end": 316
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 317,
-      "page_end": 322
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 323,
-      "page_end": 328
-    },
-    {
       "name": "战地新闻。——匈牙利",
       "page_start": 329,
       "page_end": 330
-    },
-    {
-      "name": "奥地利人的悲叹",
-      "page_start": 331,
-      "page_end": 332
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 333,
-      "page_end": 336
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 337,
-      "page_end": 338
-    },
-    {
-      "name": "战地新闻。——德国舰队",
-      "page_start": 339,
-      "page_end": 341
-    },
-    {
-      "name": "战地新闻。——文迪施格雷茨评钦定宪法",
-      "page_start": 342,
-      "page_end": 345
     },
     {
       "name": "关于起义者被歼灭的谣言",
@@ -629,17 +219,7 @@
       "page_end": 351
     },
     {
-      "name": "奥地利人的失败",
-      "page_start": 352,
-      "page_end": 357
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 358,
-      "page_end": 362
-    },
-    {
-      "name": "劳的特务活动",
+      "name": "对议会权力的蔑视。——为曼托伊费尔效劳的特务活动",
       "page_start": 363,
       "page_end": 363
     },
@@ -649,29 +229,9 @@
       "page_end": 367
     },
     {
-      "name": "战地新闻",
-      "page_start": 368,
-      "page_end": 369
-    },
-    {
       "name": "战地新闻。——布柯维纳的农民战争",
       "page_start": 370,
       "page_end": 372
-    },
-    {
-      "name": "埃尔凯曼",
-      "page_start": 373,
-      "page_end": 373
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 374,
-      "page_end": 377
-    },
-    {
-      "name": "斯洛伐克人。——所谓邓宾斯基公报",
-      "page_start": 378,
-      "page_end": 380
     },
     {
       "name": "战地新闻",
@@ -679,44 +239,9 @@
       "page_end": 385
     },
     {
-      "name": "邮件尚未送到",
-      "page_start": 386,
-      "page_end": 386
-    },
-    {
-      "name": "新克罗地亚—斯拉窝尼亚—达尔马戚亚强盗国",
-      "page_start": 387,
-      "page_end": 390
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 391,
-      "page_end": 394
-    },
-    {
       "name": "战地新闻",
       "page_start": 395,
       "page_end": 397
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 398,
-      "page_end": 400
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 401,
-      "page_end": 402
-    },
-    {
-      "name": "匈牙利的斗争",
-      "page_start": 403,
-      "page_end": 406
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 407,
-      "page_end": 411
     },
     {
       "name": "匈牙利人的胜利",
@@ -724,29 +249,14 @@
       "page_end": 413
     },
     {
-      "name": "战地新闻",
-      "page_start": 414,
-      "page_end": 415
-    },
-    {
       "name": "匈牙利人的成就。——维也纳的动荡",
       "page_start": 416,
       "page_end": 416
     },
     {
-      "name": "马扎尔人的成就",
-      "page_start": 417,
-      "page_end": 421
-    },
-    {
       "name": "战地新闻",
       "page_start": 422,
       "page_end": 426
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 427,
-      "page_end": 428
     },
     {
       "name": "战地新闻",
@@ -769,11 +279,6 @@
       "page_end": 436
     },
     {
-      "name": "来自匈牙利的消息",
-      "page_start": 437,
-      "page_end": 438
-    },
-    {
       "name": "匈牙利的局势",
       "page_start": 439,
       "page_end": 440
@@ -787,11 +292,6 @@
       "name": "科苏特的布告",
       "page_start": 442,
       "page_end": 444
-    },
-    {
-      "name": "战地新闻",
-      "page_start": 445,
-      "page_end": 446
     },
     {
       "name": "革命正在临近",
@@ -819,7 +319,7 @@
       "page_end": 454
     },
     {
-      "name": "境的札记",
+      "name": "27日—3月1日逮捕、殴打和驱逐威廉·沃尔弗出境的札记",
       "page_start": 457,
       "page_end": 458
     },
@@ -829,32 +329,7 @@
       "page_end": 459
     },
     {
-      "name": "卡·马克思。《资产阶级和反革命》一文的草稿片断",
-      "page_start": 460,
-      "page_end": 460
-    },
-    {
-      "name": "卡·马克思。《新莱茵报》审判案发言初稿",
-      "page_start": 461,
-      "page_end": 466
-    },
-    {
-      "name": "弗·恩格斯。论奥地利的军事专政",
-      "page_start": 467,
-      "page_end": 471
-    },
-    {
-      "name": "弗·恩格斯。关于普鲁士后备军的动员",
-      "page_start": 472,
-      "page_end": 473
-    },
-    {
-      "name": "弗·恩格斯。辟谣声明",
-      "page_start": 474,
-      "page_end": 476
-    },
-    {
-      "name": "比利时国王莱奥波德一世驱逐马克思出比利时的命令",
+      "name": "附  录比利时国王莱奥波德一世驱逐马克思出比利时的命令",
       "page_start": 479,
       "page_end": 480
     },
@@ -889,22 +364,22 @@
       "page_end": 499
     },
     {
-      "name": "全体会议上讲话的报道",
+      "name": "关于马克思和恩格斯1848年8月日4在科伦民主协会全体会议上讲话的报道",
       "page_start": 500,
       "page_end": 501
     },
     {
-      "name": "会上的讲话记录。摘自报纸报道",
+      "name": "恩格斯1848年8月31日在科伦第一届莱茵民主主义者代表大会的公众大会上的讲话记录。摘自报纸报道",
       "page_start": 502,
       "page_end": 502
     },
     {
-      "name": "话的报纸报道",
+      "name": "关于马克思1848年8月28日在维也纳民主联合会上讲话的报纸报道",
       "page_start": 503,
       "page_end": 504
     },
     {
-      "name": "会议上就雇佣劳动与资本所作演说的报道",
+      "name": "关于马克思1848年9月2日在维也纳第一届工人联合会会议上就雇佣劳动与资本所作演说的报道",
       "page_start": 505,
       "page_end": 505
     },
@@ -919,7 +394,7 @@
       "page_end": 507
     },
     {
-      "name": "前往德国的记录",
+      "name": "登记簿上关于允许恩格斯在伯尔尼州居住以及关于他出境前往德国的记录",
       "page_start": 508,
       "page_end": 509
     },
@@ -939,22 +414,22 @@
       "page_end": 513
     },
     {
-      "name": "曼托伊费尔提出的报告",
+      "name": "科伦的王国行政机关就驱逐马克思出科伦一事给内务大臣曼托伊费尔提出的报告",
       "page_start": 514,
       "page_end": 515
     },
     {
-      "name": "沙佩尔和沃尔弗的邀请信",
+      "name": "佐林根民主联合会给马克思、弗莱里格拉特、恩格斯、沙佩尔和沃尔弗的邀请信",
       "page_start": 516,
       "page_end": 516
     },
     {
-      "name": "马克思一事给科伦的王国行政机关的指示副本",
+      "name": "内务大臣曼托伊费尔给莱茵省总督艾希曼的信，随附就驱逐马克思一事给科伦的王国行政机关的指示副本",
       "page_start": 517,
       "page_end": 518
     },
     {
-      "name": "马克思一事给警察局长盖格尔的指示副本",
+      "name": "科伦的王国行政机关给莱茵省总督艾希曼的信，随附就驱逐马克思一事给警察局长盖格尔的指示副本",
       "page_start": 519,
       "page_end": 520
     },
@@ -984,7 +459,7 @@
       "page_end": 532
     },
     {
-      "name": "的通知",
+      "name": "警察署长关于拒绝马克思申请取消驱逐其出境的政府命令的通知",
       "page_start": 533,
       "page_end": 533
     },

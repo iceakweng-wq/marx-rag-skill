@@ -1,22 +1,172 @@
 {
   "volume": "第8卷",
   "title": "第8卷",
-  "_comment": "从目录页自动生成，请人工检查",
+  "_comment": "仅一级目录，从目录页自动生成，请人工检查",
   "sections": [
     {
-      "name": "卡·马克思。声明 1851年10月4日 ",
-      "page_start": 116,
-      "page_end": 116
+      "name": "弗·恩格斯。德国的革命和反革命",
+      "page_start": 3,
+      "page_end": 115
+    },
+    {
+      "name": "一 革命前夕的德国",
+      "page_start": 5,
+      "page_end": 14
+    },
+    {
+      "name": "二 普鲁士邦",
+      "page_start": 15,
+      "page_end": 24
+    },
+    {
+      "name": "三 德国其他各邦",
+      "page_start": 25,
+      "page_end": 29
+    },
+    {
+      "name": "四 奥地利",
+      "page_start": 30,
+      "page_end": 36
+    },
+    {
+      "name": "五 维也纳起义",
+      "page_start": 37,
+      "page_end": 40
+    },
+    {
+      "name": "六 柏林起义",
+      "page_start": 41,
+      "page_end": 45
+    },
+    {
+      "name": "七 法兰克福国民议会",
+      "page_start": 46,
+      "page_end": 50
+    },
+    {
+      "name": "八 波兰人、捷克人和德意志人",
+      "page_start": 51,
+      "page_end": 55
+    },
+    {
+      "name": "九 泛斯拉夫主义。什列斯维希－霍尔施坦的战争",
+      "page_start": 56,
+      "page_end": 60
+    },
+    {
+      "name": "十 巴黎起义。法兰克福议会",
+      "page_start": 61,
+      "page_end": 64
+    },
+    {
+      "name": "十一 维也纳起义",
+      "page_start": 65,
+      "page_end": 70
+    },
+    {
+      "name": "十二 对维也纳的攻击。对维也纳的背叛",
+      "page_start": 71,
+      "page_end": 79
+    },
+    {
+      "name": "十三 普鲁士制宪议会。国民议会",
+      "page_start": 80,
+      "page_end": 84
+    },
+    {
+      "name": "十四 秩序的恢复。议会和议院",
+      "page_start": 85,
+      "page_end": 90
+    },
+    {
+      "name": "十五 普鲁士的胜利",
+      "page_start": 91,
+      "page_end": 95
+    },
+    {
+      "name": "十六 国民议会和各邦政府",
+      "page_start": 96,
+      "page_end": 99
+    },
+    {
+      "name": "十七 起义",
+      "page_start": 100,
+      "page_end": 104
+    },
+    {
+      "name": "十八 小资产阶级",
+      "page_start": 105,
+      "page_end": 109
+    },
+    {
+      "name": "十九 起义的终结",
+      "page_start": 110,
+      "page_end": 115
+    },
+    {
+      "name": "卡·马克思。声明 1851年10月4日 116卡·马克思。路易·波拿巴的雾月十八日（旧译“拿破仑第三政变记”）",
+      "page_start": 117,
+      "page_end": 227
+    },
+    {
+      "name": "一",
+      "page_start": 121,
+      "page_end": 131
+    },
+    {
+      "name": "二",
+      "page_start": 132,
+      "page_end": 144
+    },
+    {
+      "name": "三",
+      "page_start": 145,
+      "page_end": 160
+    },
+    {
+      "name": "四",
+      "page_start": 161,
+      "page_end": 171
+    },
+    {
+      "name": "五",
+      "page_start": 172,
+      "page_end": 190
+    },
+    {
+      "name": "六",
+      "page_start": 191,
+      "page_end": 211
+    },
+    {
+      "name": "七",
+      "page_start": 212,
+      "page_end": 227
     },
     {
       "name": "弗·恩格斯。英国",
       "page_start": 228,
-      "page_end": 240
+      "page_end": 236
     },
     {
       "name": "卡·马克思和弗·恩格斯。给“泰晤士报”编辑的信",
       "page_start": 241,
       "page_end": 243
+    },
+    {
+      "name": "一",
+      "page_start": 244,
+      "page_end": 284
+    },
+    {
+      "name": "二",
+      "page_start": 249,
+      "page_end": 251
+    },
+    {
+      "name": "三",
+      "page_start": 252,
+      "page_end": 256
     },
     {
       "name": "卡·马克思。致“科伦日报”编辑的部声明",
@@ -26,6 +176,81 @@
     {
       "name": "卡·马克思和弗·恩格斯。流亡中的大人物",
       "page_start": 259,
+      "page_end": 830
+    },
+    {
+      "name": "一",
+      "page_start": 261,
+      "page_end": 824
+    },
+    {
+      "name": "二",
+      "page_start": 285,
+      "page_end": 292
+    },
+    {
+      "name": "三",
+      "page_start": 293,
+      "page_end": 297
+    },
+    {
+      "name": "四",
+      "page_start": 298,
+      "page_end": 300
+    },
+    {
+      "name": "五",
+      "page_start": 301,
+      "page_end": 316
+    },
+    {
+      "name": "六",
+      "page_start": 317,
+      "page_end": 323
+    },
+    {
+      "name": "七 古斯达夫和斋戒移民区",
+      "page_start": 324,
+      "page_end": 324
+    },
+    {
+      "name": "八",
+      "page_start": 325,
+      "page_end": 382
+    },
+    {
+      "name": "九",
+      "page_start": 329,
+      "page_end": 336
+    },
+    {
+      "name": "十",
+      "page_start": 337,
+      "page_end": 342
+    },
+    {
+      "name": "十一",
+      "page_start": 343,
+      "page_end": 352
+    },
+    {
+      "name": "十二",
+      "page_start": 353,
+      "page_end": 359
+    },
+    {
+      "name": "十三",
+      "page_start": 360,
+      "page_end": 375
+    },
+    {
+      "name": "十四",
+      "page_start": 376,
+      "page_end": 387
+    },
+    {
+      "name": "十五",
+      "page_start": 379,
       "page_end": 830
     },
     {
@@ -49,12 +274,12 @@
       "page_end": 411
     },
     {
-      "name": "拿破仑的联盟。——帕麦斯顿",
+      "name": "卡·马克思。马志尼和科苏特的活动。——同路易－拿破仑的联盟。——帕麦斯顿",
       "page_start": 412,
       "page_end": 415
     },
     {
-      "name": "商业危机",
+      "name": "卡·马克思。贫困和贸易自由。——日益迫近的商业危机",
       "page_start": 416,
       "page_end": 423
     },
@@ -89,12 +314,22 @@
       "page_end": 444
     },
     {
-      "name": "最后声明",
+      "name": "卡·马克思和弗·恩格斯。关于最近的科伦案件的最后声明",
       "page_start": 445,
       "page_end": 485
     },
     {
-      "name": "迪斯累里的预算案",
+      "name": "典·恩格斯。最近的科伦案件",
+      "page_start": 449,
+      "page_end": 456
+    },
+    {
+      "name": "卡·马克思。揭露科伦共产党人案件",
+      "page_start": 457,
+      "page_end": 536
+    },
+    {
+      "name": "卡·马克思。议会。——11月26日的表决。——迪斯累里的预算案",
       "page_start": 537,
       "page_end": 544
     },
@@ -109,49 +344,79 @@
       "page_end": 552
     },
     {
-      "name": "其他553—……55",
-      "page_start": 8,
-      "page_end": 8
+      "name": "卡·马克思。衰老的政府。——联合内阁的前途及其他",
+      "page_start": 553,
+      "page_end": 558
     },
     {
-      "name": "事件559…—…56",
-      "page_start": 8,
-      "page_end": 8
+      "name": "卡·马克思。政局展望。——商业繁荣。——饿死事件",
+      "page_start": 559,
+      "page_end": 568
     },
     {
-      "name": "公爵夫人和奴隶制",
+      "name": "卡·马克思。选举。——财政困难。———萨特伦德公爵夫人和奴隶制",
       "page_start": 569,
       "page_end": 576
     },
     {
-      "name": "英格兰银行的措施577…—…5",
-      "page_start": 84,
-      "page_end": 84
+      "name": "卡·马克思。死刑。——科布顿先生的小册子。——英格兰银行的措施",
+      "page_start": 577,
+      "page_end": 584
     },
     {
-      "name": "政局",
+      "name": "卡·马克思。国防。——财政。——贵族的死绝。——政局",
       "page_start": 585,
       "page_end": 592
     },
     {
-      "name": "拿破仑的遗嘱",
+      "name": "卡·马克思。意大利起义。——不列颠的政策",
+      "page_start": 593,
+      "page_end": 589
+    },
+    {
+      "name": "卡·马克思。弗兰茨－约瑟夫遇刺。——米兰起义。——不列颠的政策。——迪斯累里的演说。——拿破仑的遗嘱",
       "page_start": 599,
       "page_end": 680
     },
     {
-      "name": "日的斗争。——饿死",
+      "name": "卡·马克思。议会辩论。——僧侣和争取十小时工作日的斗争。——饿死",
       "page_start": 609,
       "page_end": 615
     },
     {
-      "name": "报”和流亡者",
+      "name": "卡·马克思。强迫移民。——科苏特和马志尼。——流亡者问题。——英国选举中的贿赂行为。——科布顿先生",
+      "page_start": 616,
+      "page_end": 623
+    },
+    {
+      "name": "卡·马克思。科苏特和马志尼。——普鲁士政府的诡计。——奥地利和普鲁士的通商条约。——“泰晤士报”和流亡者",
       "page_start": 624,
       "page_end": 631
     },
     {
-      "name": "卡·马克思和弗·恩格斯生平事业年表711…—…72",
-      "page_start": 8,
-      "page_end": 8
+      "name": "1850年9月15日的中央委员会会议",
+      "page_start": 635,
+      "page_end": 641
+    },
+    {
+      "name": "关于救济科伦被判罪者的呼吁书",
+      "page_start": 642,
+      "page_end": 643
+    },
+    {
+      "name": "关于救济科伦被判罪的无产阶级代表及其家属的呼吁书",
+      "page_start": 644,
+      "page_end": 646
+    },
+    {
+      "name": "注释",
+      "page_start": 649,
+      "page_end": 710
+    },
+    {
+      "name": "卡·马克思和弗·恩格斯生平事业年表",
+      "page_start": 711,
+      "page_end": 728
     },
     {
       "name": "人名索引",
@@ -169,44 +434,24 @@
       "page_end": 777
     },
     {
-      "name": "治问题的无产阶级观点，发表对当前的重大事件的评论。从",
-      "page_start": 1851,
-      "page_end": 1851
+      "name": "插  图最先刊载“路易·波拿巴的雾月十八日”一书的“革命”杂志的扉页",
+      "page_start": 119,
+      "page_end": 119
     },
     {
-      "name": "义也正如战争或其他各种艺术一样，是一种艺术”（见本卷第",
-      "page_start": 102,
-      "page_end": 102
+      "name": "载有弗·恩格斯的“去年十二月法国无产者相对消极的真正原因”一文的“寄语人民”杂志的扉页",
+      "page_start": 253,
+      "page_end": 253
     },
     {
-      "name": "1850年的法兰西阶级斗争”（见“马克思恩格斯全集”中文版第",
-      "page_start": 7,
-      "page_end": 7
+      "name": "卡·马克思的“揭露科伦共产党人案件”一书的巴塞尔第一版的扉页",
+      "page_start": 459,
+      "page_end": 459
     },
     {
-      "name": "（“马克思恩格斯文选”两卷集1954年莫斯科中文版第1卷第",
-      "page_start": 221,
-      "page_end": 221
-    },
-    {
-      "name": "没有建立，革命就已经这样开起倒车来了。”（见本卷答",
-      "page_start": 145,
-      "page_end": 146
-    },
-    {
-      "name": "科伦共产党人案件，马克思、恩格斯和他们的战友在",
-      "page_start": 1851,
-      "page_end": 8152
-    },
-    {
-      "name": "2月27日，3月5、158日、1和",
-      "page_start": 19,
-      "page_end": 19
-    },
-    {
-      "name": "日，4月9、1日7和24日，7月",
-      "page_start": 27,
-      "page_end": 27
+      "name": "卡·马克思的“揭露科伦共产党人案件”一书的1853年波士顿版的扉页",
+      "page_start": 523,
+      "page_end": 523
     }
   ]
 }

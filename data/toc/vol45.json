@@ -1,133 +1,187 @@
 {
   "volume": "第45卷",
   "title": "第45卷",
-  "_comment": "自动生成，请人工检查修正",
+  "_comment": "仅一级目录，从目录页自动生成，请人工检查",
   "sections": [
     {
-      "name": "瑞典和丹麦旅游札记",
-      "page_start": 5,
-      "page_end": 9,
-      "pages": 5
+      "name": "说明Ⅰ—Ⅸ卡·马克思和弗·恩格斯笔记和文章（1867—1893年）弗·恩格斯。瑞典和丹麦旅游札记",
+      "page_start": 3,
+      "page_end": 9
     },
     {
-      "name": "从美国革命到 年合并的爱尔兰",
-      "page_start": 11,
-      "page_end": 115,
-      "pages": 105
+      "name": "卡·马克思。从美国革命到1801年合并的 爱尔兰。摘录和札记",
+      "page_start": 10,
+      "page_end": 116
     },
     {
-      "name": "蒲鲁东《战争与和平》一书的搞录",
-      "page_start": 161,
-      "page_end": 163,
-      "pages": 3
+      "name": "摘录和札记的概要",
+      "page_start": 98,
+      "page_end": 98
     },
     {
-      "name": "西班牙的共和制",
-      "page_start": 167,
-      "page_end": 169,
-      "pages": 3
+      "name": "弗·恩格斯。高德文·斯密斯《爱尔兰历史和 爱尔兰性格》一书札记",
+      "page_start": 117,
+      "page_end": 139
     },
     {
-      "name": "关于德国的札记",
-      "page_start": 173,
-      "page_end": 177,
-      "pages": 5
+      "name": "弗·恩格斯。有关爱尔兰没收土地历史的材料",
+      "page_start": 140,
+      "page_end": 155
     },
     {
-      "name": "帝国国会关于反社会党人法的辩论",
-      "page_start": 187,
-      "page_end": 197,
-      "pages": 11
+      "name": "卡·马克思。公社和达尔布瓦大主教",
+      "page_start": 156,
+      "page_end": 158
     },
     {
-      "name": "单本位制或复本位制",
-      "page_start": 199,
-      "page_end": 205,
-      "pages": 7
+      "name": "弗·恩格斯。蒲鲁东《战争与和平》一书的摘录",
+      "page_start": 159,
+      "page_end": 164
     },
     {
-      "name": "马·柯瓦列夫斯基《公社土地占有制》一书摘要",
-      "page_start": 211,
-      "page_end": 327,
-      "pages": 117
+      "name": "弗·恩格斯。西班牙的共和制",
+      "page_start": 165,
+      "page_end": 169
     },
     {
-      "name": "路易斯·亨·摩尔根《古代社会》一书摘要",
-      "page_start": 329,
-      "page_end": 465,
-      "pages": 137
+      "name": "弗·恩格斯。关于厄·勒南《反基督者》一书书评的短评",
+      "page_start": 170,
+      "page_end": 170
     },
     {
-      "name": "路易斯·亨·摩尔根《古代社会》一书摘要",
-      "page_start": 467,
-      "page_end": 493,
-      "pages": 27
+      "name": "弗·恩格斯。关于德国的札记（178—91873）",
+      "page_start": 171,
+      "page_end": 177
     },
     {
-      "name": "路易斯·亨·摩尔根《古代社会》一书摘要",
-      "page_start": 495,
-      "page_end": 539,
-      "pages": 45
+      "name": "弗·恩格斯。英国农民要求参加国内政治斗争",
+      "page_start": 178,
+      "page_end": 180
     },
     {
-      "name": "路易斯·亨·摩尔根《古代社会》一书摘要",
-      "page_start": 541,
-      "page_end": 571,
-      "pages": 31
+      "name": "弗·恩格斯。英国农业工人联合会和农村的集体 主义运动",
+      "page_start": 181,
+      "page_end": 182
     },
     {
-      "name": "亨利·萨姆纳·梅恩《古代法制史讲演录》一书摘要",
-      "page_start": 573,
-      "page_end": 659,
-      "pages": 87
+      "name": "弗·恩格斯。英国女工状况",
+      "page_start": 183,
+      "page_end": 184
     },
     {
-      "name": "约·拉伯克《文明的起源和人的原始状态》一书摘要",
-      "page_start": 661,
-      "page_end": 681,
-      "pages": 21
+      "name": "卡·马克思。帝国国会关于反社会党人法的辩论 （文章草稿）",
+      "page_start": 185,
+      "page_end": 197
     },
     {
-      "name": "“不许通奸”",
-      "page_start": 683,
-      "page_end": 685,
-      "pages": 3
+      "name": "卡·马克思。单本位制或复本位制",
+      "page_start": 198,
+      "page_end": 206
     },
     {
-      "name": "宪章运动纪事",
-      "page_start": 689,
-      "page_end": 701,
-      "pages": 13
+      "name": "卡·马克思。马·柯瓦列夫斯基《公社土地占有制， 莫斯科版）一书摘要",
+      "page_start": 207,
+      "page_end": 327
     },
     {
-      "name": "附  录",
-      "page_start": 706,
-      "page_end": 708,
-      "pages": 3
+      "name": "卡·马克思。路易斯·亨·摩尔根《古代社会》 一书摘要",
+      "page_start": 328,
+      "page_end": 571
     },
     {
-      "name": "附  录",
-      "page_start": 718,
-      "page_end": 720,
-      "pages": 3
+      "name": "卡·马克思。亨利·萨姆纳·梅恩《古代法制史 讲演录》（1587年伦敦版）一书摘要",
+      "page_start": 572,
+      "page_end": 659
     },
     {
-      "name": "附   录",
-      "page_start": 722,
-      "page_end": 724,
-      "pages": 3
+      "name": "卡·马克思。约·拉伯克《文明的起源和人的原始 状态》（1087年伦敦版）一书摘要",
+      "page_start": 660,
+      "page_end": 681
     },
     {
-      "name": "人 名 索 引",
-      "page_start": 789,
-      "page_end": 855,
-      "pages": 67
+      "name": "弗·恩格斯。“不许通奸”",
+      "page_start": 682,
+      "page_end": 686
+    },
+    {
+      "name": "弗·恩格斯。关于《平等报》停刊的声明",
+      "page_start": 687,
+      "page_end": 687
+    },
+    {
+      "name": "弗·恩格斯。宪章运动纪事",
+      "page_start": 688,
+      "page_end": 688
+    },
+    {
+      "name": "卡·马克思加入英国国籍的声明",
+      "page_start": 705,
+      "page_end": 706
+    },
+    {
+      "name": "卡·马克思同《芝加哥论坛报》通讯员谈话记",
+      "page_start": 707,
+      "page_end": 718
+    },
+    {
+      "name": "卡尔·马克思同《太阳报》通讯员约翰·斯温顿谈话记",
+      "page_start": 719,
+      "page_end": 722
+    },
+    {
+      "name": "对格奥尔格·阿德勒《德国早期社会政治工人运动史》 一书的评论",
+      "page_start": 723,
+      "page_end": 732
+    },
+    {
+      "name": "关于弗·恩格斯在海伦·德穆特葬礼上的悼词的报道",
+      "page_start": 733,
+      "page_end": 733
+    },
+    {
+      "name": "记弗·恩格斯在纪念巴黎公社的集会上的讲话",
+      "page_start": 734,
+      "page_end": 734
+    },
+    {
+      "name": "注释",
+      "page_start": 737,
+      "page_end": 786
+    },
+    {
+      "name": "人名索引",
+      "page_start": 787,
+      "page_end": 855
     },
     {
       "name": "本卷中引用和提到的著作索引",
-      "page_start": 857,
-      "page_end": 895,
-      "pages": 39
+      "page_start": 856,
+      "page_end": 895
+    },
+    {
+      "name": "期刊索引",
+      "page_start": 896,
+      "page_end": 897
+    },
+    {
+      "name": "弗·恩格斯画的瑞典卡尔斯堡要塞平面图",
+      "page_start": 7,
+      "page_end": 7
+    },
+    {
+      "name": "卡·马克思爱尔兰历史手稿的一页",
+      "page_start": 82,
+      "page_end": 83
+    },
+    {
+      "name": "马·柯瓦列夫斯基原书的扉页，上有作者的赠书题词： “赠给卡尔·马克思以表友谊和尊敬”",
+      "page_start": 210,
+      "page_end": 211
+    },
+    {
+      "name": "卡·马克思所做的摩尔根《古代社会》一书摘要的一页",
+      "page_start": 370,
+      "page_end": 371
     }
   ]
 }

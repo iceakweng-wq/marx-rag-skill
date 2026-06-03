@@ -1,10 +1,20 @@
 {
   "volume": "第20卷",
   "title": "第20卷",
-  "_comment": "从目录页自动生成，请人工检查",
+  "_comment": "仅一级目录，从目录页自动生成，请人工检查",
   "sections": [
     {
-      "name": "三版序言",
+      "name": "弗·恩格斯像（1888年）",
+      "page_start": 2,
+      "page_end": 2
+    },
+    {
+      "name": "弗·恩格斯《反杜林论》一书第三版的扉页",
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "name": "反 杜 林 论（欧根·杜林先生在科学中实行的变革）三版序言",
       "page_start": 7,
       "page_end": 18
     },
@@ -14,9 +24,24 @@
       "page_end": 7
     },
     {
+      "name": "二",
+      "page_start": 10,
+      "page_end": 10
+    },
+    {
+      "name": "三",
+      "page_start": 17,
+      "page_end": 17
+    },
+    {
       "name": "引论",
       "page_start": 19,
       "page_end": 36
+    },
+    {
+      "name": "二、杜林先生许下了什么诺言",
+      "page_start": 31,
+      "page_end": 31
     },
     {
       "name": "第一编 哲学",
@@ -24,14 +49,84 @@
       "page_end": 159
     },
     {
+      "name": "四、世界模式论",
+      "page_start": 45,
+      "page_end": 45
+    },
+    {
+      "name": "五、自然哲学。时间和空间",
+      "page_start": 51,
+      "page_end": 51
+    },
+    {
+      "name": "六、自然哲学。天体演化学，物理学，化学",
+      "page_start": 62,
+      "page_end": 62
+    },
+    {
+      "name": "七、自然哲学。有机界",
+      "page_start": 72,
+      "page_end": 72
+    },
+    {
+      "name": "八、自然哲学。有机界（续完）",
+      "page_start": 83,
+      "page_end": 83
+    },
+    {
+      "name": "九、道德和法。永恒真理",
+      "page_start": 92,
+      "page_end": 92
+    },
+    {
+      "name": "十、道德和法。平等",
+      "page_start": 105,
+      "page_end": 105
+    },
+    {
+      "name": "十一、道德和法。自由和必然",
+      "page_start": 119,
+      "page_end": 119
+    },
+    {
+      "name": "十二、辩证法。量和质",
+      "page_start": 131,
+      "page_end": 131
+    },
+    {
       "name": "十三、辩证法。否定的否定",
       "page_start": 142,
       "page_end": 142
     },
     {
-      "name": "政治经济学第二编 ",
+      "name": "十四、结论",
+      "page_start": 157,
+      "page_end": 157
+    },
+    {
+      "name": "第二编 政治经济学",
       "page_start": 160,
       "page_end": 280
+    },
+    {
+      "name": "二、暴力论",
+      "page_start": 173,
+      "page_end": 173
+    },
+    {
+      "name": "三、暴力论（续）",
+      "page_start": 181,
+      "page_end": 181
+    },
+    {
+      "name": "四、暴力论（续完）",
+      "page_start": 190,
+      "page_end": 190
+    },
+    {
+      "name": "五、价值论",
+      "page_start": 201,
+      "page_end": 201
     },
     {
       "name": "六、简单劳动和复杂劳动",
@@ -44,9 +139,19 @@
       "page_end": 220
     },
     {
+      "name": "八、资本和剩余价值（续完）",
+      "page_start": 230,
+      "page_end": 230
+    },
+    {
       "name": "九、经济的自然规律。地租",
       "page_start": 240,
       "page_end": 240
+    },
+    {
+      "name": "卡·马克思《评杜林〈国民经济学批判史〉》手稿的第一页",
+      "page_start": 247,
+      "page_end": 247
     },
     {
       "name": "十、《批判史》论述",
@@ -54,14 +159,19 @@
       "page_end": 249
     },
     {
-      "name": "社会主义第三编 ",
+      "name": "弗·魁奈的《经济表》",
+      "page_start": 277,
+      "page_end": 277
+    },
+    {
+      "name": "第三编 社会主义",
       "page_start": 281,
       "page_end": 351
     },
     {
-      "name": "一、历史",
-      "page_start": 281,
-      "page_end": 281
+      "name": "二、理论",
+      "page_start": 292,
+      "page_end": 292
     },
     {
       "name": "三、生产",
@@ -79,14 +189,14 @@
       "page_end": 339
     },
     {
+      "name": "《自然辩证法》的总计划草案",
+      "page_start": 355,
+      "page_end": 355
+    },
+    {
       "name": "［计划草案］",
       "page_start": 357,
       "page_end": 359
-    },
-    {
-      "name": "［总计划草案］",
-      "page_start": 357,
-      "page_end": 357
     },
     {
       "name": "［局部计划草案］",
@@ -97,6 +207,31 @@
       "name": "［论文］",
       "page_start": 360,
       "page_end": 522
+    },
+    {
+      "name": "导言",
+      "page_start": 360,
+      "page_end": 360
+    },
+    {
+      "name": "《反杜林论》旧序。论辩证法",
+      "page_start": 380,
+      "page_end": 380
+    },
+    {
+      "name": "神灵世界中的自然科学",
+      "page_start": 389,
+      "page_end": 389
+    },
+    {
+      "name": "辩证法",
+      "page_start": 401,
+      "page_end": 401
+    },
+    {
+      "name": "运动的基本形式",
+      "page_start": 408,
+      "page_end": 408
     },
     {
       "name": "运动的量度。——功",
@@ -129,19 +264,24 @@
       "page_end": 655
     },
     {
-      "name": "［科学历史摘要］",
-      "page_start": 523,
-      "page_end": 523
-    },
-    {
       "name": "［自然科学和哲学］",
       "page_start": 542,
       "page_end": 542
     },
     {
+      "name": "《自然辩证法》第一束材料的第一页",
+      "page_start": 543,
+      "page_end": 543
+    },
+    {
       "name": "［辩证法］",
       "page_start": 553,
       "page_end": 553
+    },
+    {
+      "name": "［（Ｂ）辩证逻辑和认识论。关于“认识的界限”］",
+      "page_start": 564,
+      "page_end": 564
     },
     {
       "name": "［物质的运动形式。科学分类］",
@@ -184,12 +324,17 @@
       "page_end": 688
     },
     {
+      "name": "第二部分",
+      "page_start": 680,
+      "page_end": 680
+    },
+    {
       "name": "步兵战术及其物质基础",
       "page_start": 689,
       "page_end": 695
     },
     {
-      "name": "对《反杜林论》正文所作的补充和修改",
+      "name": "恩格斯在《社会主义从空想到科学的发展》这本小册子中对《反杜林论》正文所作的补充和修改",
       "page_start": 696,
       "page_end": 710
     },
@@ -227,36 +372,6 @@
       "name": "名目索引",
       "page_start": 859,
       "page_end": 893
-    },
-    {
-      "name": "弗·恩格斯像（1888年）",
-      "page_start": 2,
-      "page_end": 2
-    },
-    {
-      "name": "弗·恩格斯《反杜林论》一书第三版的扉页",
-      "page_start": 5,
-      "page_end": 5
-    },
-    {
-      "name": "卡·马克思《评杜林〈国民经济学批判史〉》手稿的第一页",
-      "page_start": 247,
-      "page_end": 247
-    },
-    {
-      "name": "弗·魁奈的《经济表》",
-      "page_start": 277,
-      "page_end": 277
-    },
-    {
-      "name": "《自然辩证法》的总计划草案",
-      "page_start": 355,
-      "page_end": 355
-    },
-    {
-      "name": "《自然辩证法》第一束材料的第一页",
-      "page_start": 543,
-      "page_end": 543
     }
   ]
 }

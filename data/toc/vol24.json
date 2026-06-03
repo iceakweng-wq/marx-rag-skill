@@ -1,7 +1,7 @@
 {
   "volume": "第24卷",
   "title": "第24卷",
-  "_comment": "从目录页自动生成，请人工检查",
+  "_comment": "仅一级目录，从目录页自动生成，请人工检查",
   "sections": [
     {
       "name": "弗·恩格斯。序言",
@@ -14,14 +14,54 @@
       "page_end": 28
     },
     {
-      "name": "第一章 货币资本的循环",
+      "name": "第二卷资本的流通过程第一篇资本形态变化及其循环第一章 货币资本的循环",
       "page_start": 31,
       "page_end": 74
+    },
+    {
+      "name": "．第一阶段 Ｇ—Ｗ",
+      "page_start": 32,
+      "page_end": 32
+    },
+    {
+      "name": "．第二阶段 生产资本的职能",
+      "page_start": 41,
+      "page_end": 41
+    },
+    {
+      "name": "．第三阶段 Ｗ′—Ｇ′",
+      "page_start": 46,
+      "page_end": 46
+    },
+    {
+      "name": "．总循环",
+      "page_start": 60,
+      "page_end": 60
     },
     {
       "name": "第二章 生产资本的循环",
       "page_start": 75,
       "page_end": 100
+    },
+    {
+      "name": "．简单再生产",
+      "page_start": 76,
+      "page_end": 76
+    },
+    {
+      "name": "．积累和规模扩大的再生产",
+      "page_start": 91,
+      "page_end": 91
+    },
+    {
+      "name": "．货币积累",
+      "page_start": 96,
+      "page_end": 96
+    },
+    {
+      "name": "．准备金",
+      "page_start": 99,
+      "page_end": 99
     },
     {
       "name": "第三章 商品资本的循环",
@@ -54,17 +94,12 @@
       "page_end": 203
     },
     {
-      "name": "．形式区别",
-      "page_start": 176,
-      "page_end": 176
-    },
-    {
       "name": "第九章 预付资本的总周转。周转的周期",
       "page_start": 204,
       "page_end": 210
     },
     {
-      "name": "和亚当·斯密",
+      "name": "第十章 关于固定资本和流动资本的理论。重农学派　　和亚当·斯密",
       "page_start": 211,
       "page_end": 239
     },
@@ -94,34 +129,9 @@
       "page_end": 326
     },
     {
-      "name": "．结论",
-      "page_start": 310,
-      "page_end": 310
-    },
-    {
-      "name": "．价格变动的影响",
-      "page_start": 317,
-      "page_end": 317
-    },
-    {
       "name": "第十六章 可变资本的周转",
       "page_start": 327,
       "page_end": 354
-    },
-    {
-      "name": "．年剩余价值率",
-      "page_start": 327,
-      "page_end": 327
-    },
-    {
-      "name": "．单个可变资本的周转",
-      "page_start": 343,
-      "page_end": 343
-    },
-    {
-      "name": "．从社会的角度考察的可变资本的周转",
-      "page_start": 348,
-      "page_end": 348
     },
     {
       "name": "第十七章 剩余价值的流通",
@@ -134,29 +144,14 @@
       "page_end": 397
     },
     {
-      "name": "．研究的对象",
-      "page_start": 389,
-      "page_end": 389
-    },
-    {
       "name": "第十九章 前人对这个问题的阐述",
       "page_start": 398,
       "page_end": 434
     },
     {
-      "name": "．重农学派",
-      "page_start": 398,
-      "page_end": 398
-    },
-    {
-      "name": "．亚当·斯密",
-      "page_start": 401,
-      "page_end": 401
-    },
-    {
-      "name": "．斯密的一般观点",
-      "page_start": 401,
-      "page_end": 401
+      "name": "2．斯密把交换价值分解为ｖ＋ｍ",
+      "page_start": 410,
+      "page_end": 410
     },
     {
       "name": "3．不变资本部分",
@@ -194,14 +189,44 @@
       "page_end": 438
     },
     {
+      "name": "．两个部类之间的交换：（ｖ＋ｍ）和ｃ的交换",
+      "page_start": 442,
+      "page_end": 442
+    },
+    {
+      "name": "．第部类内部的交换。必要生活资料和奢侈品",
+      "page_start": 447,
+      "page_end": 447
+    },
+    {
+      "name": "．货币流通在交换中的媒介作用",
+      "page_start": 458,
+      "page_end": 458
+    },
+    {
+      "name": "．第部类的不变资本",
+      "page_start": 470,
+      "page_end": 470
+    },
+    {
       "name": "．两个部类的可变资本和剩余价值",
       "page_start": 474,
       "page_end": 474
     },
     {
+      "name": "．两个部类的不变资本",
+      "page_start": 478,
+      "page_end": 478
+    },
+    {
       "name": "．对于亚·斯密、施托尔希和拉姆赛的回顾",
       "page_start": 484,
       "page_end": 484
+    },
+    {
+      "name": "．资本和收入：可变资本和工资",
+      "page_start": 488,
+      "page_end": 488
     },
     {
       "name": "．固定资本的补偿",
@@ -224,6 +249,11 @@
       "page_end": 524
     },
     {
+      "name": "．货币材料的再生产",
+      "page_start": 527,
+      "page_end": 527
+    },
+    {
       "name": "．德斯杜特·德·特拉西的再生产理论",
       "page_start": 540,
       "page_end": 540
@@ -234,9 +264,34 @@
       "page_end": 592
     },
     {
+      "name": "．第部类的积累",
+      "page_start": 554,
+      "page_end": 554
+    },
+    {
       "name": "1．货币贮藏",
       "page_start": 554,
       "page_end": 554
+    },
+    {
+      "name": "2．追加的不变资本",
+      "page_start": 559,
+      "page_end": 559
+    },
+    {
+      "name": "3．追加的可变资本",
+      "page_start": 565,
+      "page_end": 565
+    },
+    {
+      "name": "．第部类的积累",
+      "page_start": 566,
+      "page_end": 566
+    },
+    {
+      "name": "．用公式来说明积累",
+      "page_start": 571,
+      "page_end": 571
     },
     {
       "name": "1．第一例",
@@ -247,6 +302,11 @@
       "name": "2．第二例",
       "page_start": 581,
       "page_end": 581
+    },
+    {
+      "name": "3．积累时ｃ的交换",
+      "page_start": 588,
+      "page_end": 588
     },
     {
       "name": "．补充说明",
