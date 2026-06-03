@@ -196,8 +196,8 @@ def escape_html(text: str) -> str:
 
 
 def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
-    """生成带左侧目录的 HTML，多卷次合并。"""
-    # ── 构建页面整体标题 ──
+    """生成带左侧目录的 HTML，多卷次合并，参考 GitHub Markdown 预览风格。"""
+    # ── 整体标题 ──
     page_titles = []
     for vol, pages in volumes_data:
         vol_label = format_volume_label(vol)
@@ -214,14 +214,13 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
     full_title = " | ".join(page_titles)
 
     # ── 构建侧边栏和正文 ──
-    toc_parts = []
-    content_parts = []
+    toc_list = []
+    content_blocks = []
     first_vol = True
 
     for vol_idx, (vol, pages) in enumerate(volumes_data):
         vol_label = format_volume_label(vol)
         vol_id = f"vol-{vol_idx}"
-        vol_anchor = f"vol-{vol}"
 
         chapter = ""
         for p in pages:
@@ -230,58 +229,53 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
                 if chapter:
                     break
 
-        vol_title = vol_label
-        if chapter:
-            vol_title += f" — {chapter}"
+        vol_title = f"{vol_label} — {chapter}" if chapter else vol_label
 
-        # 侧边栏：卷标题
-        toc_parts.append(f'<li class="vol-header"><a href="#{vol_id}">{escape_html(vol_label)}</a></li>')
+        # ── 侧边栏条目 ──
+        toc_list.append(f'<li class="vol-header"><a href="#{vol_id}">{escape_html(vol_label)}</a></li>')
 
-        # 正文：卷首标题区域
+        # ── 正文块 ──
         if not first_vol:
-            content_parts.append('<div class="vol-divider"></div>')
+            content_blocks.append('<hr />')
         first_vol = False
 
-        vol_header = f'<div class="vol-section" id="{vol_id}"><h1>{escape_html(vol_title)}</h1></div>'
+        content_blocks.append(f'<h1 id="{vol_id}" style="margin-top:0;">{escape_html(vol_title)}</h1>')
 
-        # 页面卡片
-        page_cards = []
         prev_pn = None
         for p in pages:
             pn = p["page_number"]
             anchor = f"p-{vol}-{pn}"
 
-            toc_parts.append(f'<li><a href="#{anchor}">第{pn}页</a></li>')
-
-            card = []
+            toc_list.append(f'<li><a href="#{anchor}">第{pn}页</a></li>')
 
             # 页码不连续提示
             if prev_pn is not None and pn != prev_pn + 1:
-                card.append(
-                    f'<div class="gap-hint">— 页码不连续（第{prev_pn}页 → 第{pn}页）—</div>'
+                content_blocks.append(
+                    f'<p style="color:#586069;font-size:0.85em;text-align:center;'
+                    f'border-top:1px dashed #d0d7de;border-bottom:1px dashed #d0d7de;'
+                    f'padding:6px 0;">— 页码不连续（第{prev_pn}页 → 第{pn}页）—</p>'
                 )
 
-            card.append(f'<h2 id="{anchor}">第{pn}页</h2>')
+            # 页码标记（类似参考中的 .page-marker）
+            content_blocks.append(
+                f'<p class="page-marker" id="{anchor}">{vol_label}，第{pn}页</p>'
+            )
 
             if not p["exists"]:
-                card.append('<p class="missing">（未收录）</p>')
+                content_blocks.append('<p style="color:#aaa;font-style:italic;">（未收录）</p>')
             else:
                 header = p.get("header_title", "")
                 if header:
-                    card.append(f'<p class="header-title">{escape_html(header)}</p>')
+                    content_blocks.append(f'<p style="color:#586069;font-style:italic;font-size:0.9em;">{escape_html(header)}</p>')
 
                 text = p.get("text", "").strip()
                 if text:
-                    card.append(f'<div class="raw-text">{escape_html(text)}</div>')
+                    content_blocks.append(f'<div class="raw-text">{escape_html(text)}</div>')
 
             prev_pn = pn
-            page_cards.append('<div class="page-card">' + "\n".join(card) + '</div>')
 
-        vol_content = vol_header + "\n" + "\n".join(page_cards)
-        content_parts.append(vol_content)
-
-    toc_html = "\n".join(toc_parts)
-    content_html = "\n".join(content_parts)
+    toc_html = "\n".join(toc_list)
+    content_html = "\n".join(content_blocks)
 
     html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -292,138 +286,113 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
 <style>
   *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
   html {{ scroll-behavior: smooth; }}
+
+  /* ── 整体布局 ── */
   body {{
-    font-family: "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", "FangSong", serif;
-    background: #f5f5f0;
-    color: #2c2c2c;
-    line-height: 1.9;
-    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC",
+                 "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #24292e;
+    background: #ffffff;
     display: flex;
-    justify-content: center;
   }}
 
   /* ── 侧边栏 ── */
   .sidebar {{
     position: fixed;
     top: 0; left: 0;
-    width: 200px;
+    width: 210px;
     height: 100vh;
-    background: #fff;
-    border-right: 1px solid #ddd;
+    background: #f6f8fa;
+    border-right: 1px solid #e1e4e8;
     overflow-y: auto;
     padding: 16px 0;
     z-index: 100;
   }}
   .sidebar-title {{
     font-size: 14px;
-    font-weight: 700;
-    padding: 0 14px 10px;
-    border-bottom: 1px solid #eee;
-    color: #8b0000;
+    font-weight: 600;
+    padding: 0 16px 12px;
+    margin: 0 8px 8px;
+    border-bottom: 1px solid #e1e4e8;
+    color: #24292e;
   }}
-  .sidebar ul {{ list-style: none; padding: 6px 0; }}
+  .sidebar ul {{ list-style: none; }}
   .sidebar li {{ padding: 0; }}
   .sidebar li.vol-header {{
-    margin-top: 8px;
-    padding-top: 8px;
-    border-top: 1px solid #eee;
-  }}
-  .sidebar li.vol-header:first-child {{
-    margin-top: 0;
-    padding-top: 0;
-    border-top: none;
+    margin-top: 4px;
   }}
   .sidebar li.vol-header a {{
     font-weight: 600;
-    color: #8b0000;
+    color: #0969da;
     font-size: 13px;
+    padding: 4px 16px 2px;
   }}
   .sidebar a {{
     display: block;
-    padding: 4px 14px;
-    color: #555;
+    padding: 2px 16px 2px 24px;
+    color: #57606a;
     text-decoration: none;
     font-size: 13px;
-    transition: background 0.12s, color 0.12s;
+    transition: color 0.12s;
   }}
-  .sidebar a:hover {{
-    background: #f0f0eb;
-    color: #8b0000;
-  }}
+  .sidebar a:hover {{ color: #0969da; }}
 
   /* ── 主内容区 ── */
   .main {{
-    margin-left: 200px;
-    width: 100%;
+    margin-left: 210px;
+    flex: 1;
     max-width: 900px;
-    padding: 40px 20px 80px 50px;
+    padding: 40px 32px 80px;
   }}
 
+  /* ── GitHub Markdown 风格排版 ── */
   .main h1 {{
-    font-size: 24px;
-    font-weight: 700;
-    color: #8b0000;
-    border-bottom: 2px solid #8b0000;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-  }}
-
-  .vol-divider {{
-    height: 2px;
-    background: #ddd;
-    margin: 32px 0;
-  }}
-
-  .page-card {{
-    background: #fff;
-    border-radius: 4px;
-    padding: 20px 24px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-  }}
-
-  .page-card h2 {{
-    font-size: 17px;
+    font-size: 2em;
     font-weight: 600;
-    color: #333;
-    border-left: 3px solid #8b0000;
-    padding-left: 10px;
-    margin-bottom: 10px;
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: 8px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }}
+  .main h2 {{
+    font-size: 1.5em;
+    font-weight: 600;
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: 6px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }}
+  hr {{
+    border: 0;
+    border-top: 1px solid #e1e4e8;
+    margin: 24px 0;
   }}
 
-  .header-title {{
-    font-size: 14px;
-    color: #888;
-    margin-bottom: 6px;
-    font-style: italic;
+  /* ── 页码标记 ── */
+  .page-marker {{
+    background: #f1f8ff;
+    border: 1px solid #c8e1ff;
+    border-radius: 3px;
+    padding: 4px 8px;
+    margin: 16px 0 8px 0;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #0969da;
   }}
 
-  .page-card p {{
-    margin-bottom: 4px;
-    text-align: justify;
-  }}
-
+  /* ── 原文正文 ── */
   .raw-text {{
+    font-family: "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", serif;
+    font-size: 16px;
+    line-height: 1.8;
     white-space: pre-wrap;
-    font-family: inherit;
-    line-height: inherit;
-    text-align: justify;
-  }}
-
-  .missing {{
-    color: #aaa;
-    text-indent: 0 !important;
-    font-style: italic;
-  }}
-
-  .gap-hint {{
-    text-align: center;
-    color: #999;
-    font-size: 13px;
-    padding: 6px 0;
-    border-top: 1px dashed #ddd;
-    border-bottom: 1px dashed #ddd;
-    margin-bottom: 10px;
+    word-wrap: break-word;
+    background: #f6f8fa;
+    padding: 16px 20px;
+    border-radius: 6px;
+    border: 1px solid #e1e4e8;
+    margin-bottom: 16px;
   }}
 
   @media (max-width: 768px) {{
@@ -434,7 +403,7 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
 </head>
 <body>
 <nav class="sidebar">
-  <div class="sidebar-title">目录</div>
+  <div class="sidebar-title">📖 目录</div>
   <ul>
     {toc_html}
   </ul>
