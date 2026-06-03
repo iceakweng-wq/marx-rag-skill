@@ -4,59 +4,9 @@
   "_comment": "仅一级目录，从目录页自动生成，请人工检查",
   "sections": [
     {
-      "name": "（ａ）Ｇ—Ｗ—Ｇ。资本的最一般形式",
-      "page_start": 3,
-      "page_end": 3
-    },
-    {
       "name": "说明Ⅰ—Ⅴ经济学手稿（1861—1863）年第一篇资本的生产过程第一章 货币转化为资本",
       "page_start": 3,
       "page_end": 194
-    },
-    {
-      "name": "（ｂ）由价值的本性产生的困难等等",
-      "page_start": 16,
-      "page_end": 16
-    },
-    {
-      "name": "（ｃ）资本与劳动力之间的交换",
-      "page_start": 32,
-      "page_end": 32
-    },
-    {
-      "name": "（ｄ）劳动能力的价值。最低限度的工资或平均工资",
-      "page_start": 41,
-      "page_end": 41
-    },
-    {
-      "name": "（ｅ）劳动过程",
-      "page_start": 54,
-      "page_end": 54
-    },
-    {
-      "name": "（ｆ）价值增殖过程",
-      "page_start": 68,
-      "page_end": 68
-    },
-    {
-      "name": "（ｇ）劳动过程和价值增殖过程的统一（资本主义生产过程）",
-      "page_start": 99,
-      "page_end": 99
-    },
-    {
-      "name": "（ｈ）货币转化为资本这一过程的两个组成部分",
-      "page_start": 112,
-      "page_end": 112
-    },
-    {
-      "name": "增补",
-      "page_start": 153,
-      "page_end": 153
-    },
-    {
-      "name": "（ａ）应当把剩余价值看成只是同一定的、即用于工资的资本部分的关系",
-      "page_start": 195,
-      "page_end": 195
     },
     {
       "name": "第二章 绝对剩余价值",
@@ -64,59 +14,9 @@
       "page_end": 263
     },
     {
-      "name": "（ｂ）剩余劳动与必要劳动的比例。剩余劳动量",
-      "page_start": 203,
-      "page_end": 203
-    },
-    {
-      "name": "（ｃ）过度劳动的利益",
-      "page_start": 209,
-      "page_end": 209
-    },
-    {
-      "name": "（ｄ）同时并存的工作日",
-      "page_start": 209,
-      "page_end": 209
-    },
-    {
-      "name": "（ｅ）剩余劳动的性质",
-      "page_start": 215,
-      "page_end": 215
-    },
-    {
-      "name": "增补",
-      "page_start": 218,
-      "page_end": 218
-    },
-    {
       "name": "第三章 相对剩余价值",
       "page_start": 264,
       "page_end": 602
-    },
-    {
-      "name": "（α）协作",
-      "page_start": 290,
-      "page_end": 290
-    },
-    {
-      "name": "（β）分工",
-      "page_start": 301,
-      "page_end": 301
-    },
-    {
-      "name": "（γ）机器。自然力和科学的应用（蒸汽、电、机械的和化学的因素）",
-      "page_start": 359,
-      "page_end": 359
-    },
-    {
-      "name": "分工和机械工厂。工具和机器",
-      "page_start": 410,
-      "page_end": 410
-    },
-    {
-      "name": "机器代替劳动",
-      "page_start": 542,
-      "page_end": 542
     },
     {
       "name": "第四章 相对剩余价值和绝对剩余价值",

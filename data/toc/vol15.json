@@ -34,21 +34,6 @@
       "page_end": 44
     },
     {
-      "name": "一",
-      "page_start": 31,
-      "page_end": 35
-    },
-    {
-      "name": "二",
-      "page_start": 36,
-      "page_end": 40
-    },
-    {
-      "name": "三",
-      "page_start": 41,
-      "page_end": 44
-    },
-    {
       "name": "卡·马克思。柏林的情绪",
       "page_start": 45,
       "page_end": 48
@@ -61,16 +46,6 @@
     {
       "name": "卡·马克思。为拿破仑在莱茵河上的未来战争作准备",
       "page_start": 53,
-      "page_end": 62
-    },
-    {
-      "name": "一",
-      "page_start": 53,
-      "page_end": 57
-    },
-    {
-      "name": "二",
-      "page_start": 58,
       "page_end": 62
     },
     {
@@ -237,6 +212,11 @@
       "name": "弗·恩格斯。毕若元帅论战斗中的精神因素",
       "page_start": 262,
       "page_end": 270
+    },
+    {
+      "name": "“志愿兵读物”一书的扉页",
+      "page_start": 271,
+      "page_end": 271
     },
     {
       "name": "弗·恩格斯。“志愿兵读物”单行本序言",
@@ -609,6 +589,11 @@
       "page_end": 609
     },
     {
+      "name": "卡·马克思给“柏林改革报”编辑部的信",
+      "page_start": 611,
+      "page_end": 611
+    },
+    {
       "name": "卡·马克思。给“柏林改革报”编辑部的信",
       "page_start": 613,
       "page_end": 613
@@ -684,49 +669,9 @@
       "page_end": 821
     },
     {
-      "name": "期刊索引",
-      "page_start": 813,
-      "page_end": 816
-    },
-    {
-      "name": "地名索引",
-      "page_start": 817,
-      "page_end": 286
-    },
-    {
       "name": "译后记",
       "page_start": 827,
       "page_end": 827
-    },
-    {
-      "name": "加里波第向南意大利进军图（1860年）",
-      "page_start": 166,
-      "page_end": 167
-    },
-    {
-      "name": "“志愿兵读物”一书的扉页",
-      "page_start": 271,
-      "page_end": 271
-    },
-    {
-      "name": "内战前夕的美利坚合众国图（1861—186年5）",
-      "page_start": 358,
-      "page_end": 359
-    },
-    {
-      "name": "美国内战的进程图（1861—186）",
-      "page_start": 2520,
-      "page_end": 521
-    },
-    {
-      "name": "卡·马克思给“柏林改革报”编辑部的信",
-      "page_start": 611,
-      "page_end": 611
-    },
-    {
-      "name": "弗·恩格斯“英国军队”一文手稿的第一页",
-      "page_start": 645,
-      "page_end": 645
     }
   ]
 }
