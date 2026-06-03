@@ -6,32 +6,27 @@
     {
       "name": "第一部分卡·马克思和弗·恩格斯之间的书信（1860年1月—1864年9月）1860年1．马克思致恩格（斯1月11日左右）",
       "page_start": 5,
-      "page_end": 5
-    },
-    {
-      "name": "2．马克思致恩格（斯1月25日）",
-      "page_start": 8,
-      "page_end": 8
+      "page_end": 7
     },
     {
       "name": "3．恩格斯致马克（思1月26日）",
       "page_start": 8,
-      "page_end": 8
+      "page_end": 10
     },
     {
       "name": "4．马克思致恩格（斯1月28日）",
       "page_start": 11,
-      "page_end": 11
+      "page_end": 13
     },
     {
       "name": "5．恩格斯致马克（思1月31日）",
       "page_start": 14,
-      "page_end": 14
+      "page_end": 16
     },
     {
       "name": "6．马克思致恩格（斯1月31日）",
       "page_start": 17,
-      "page_end": 17
+      "page_end": 18
     },
     {
       "name": "7．恩格斯致马克（思2月1日）",
@@ -41,17 +36,17 @@
     {
       "name": "8．恩格斯致马克（思2月2日）",
       "page_start": 20,
-      "page_end": 20
+      "page_end": 21
     },
     {
       "name": "9．马克思致恩格（斯2月3日）",
       "page_start": 22,
-      "page_end": 22
+      "page_end": 24
     },
     {
       "name": "10．恩格斯致马克（思2月4日）",
       "page_start": 25,
-      "page_end": 25
+      "page_end": 26
     },
     {
       "name": "11．马克思致恩格（斯2月4日）",
@@ -71,7 +66,7 @@
     {
       "name": "14．马克思致恩格（斯2月9日）",
       "page_start": 30,
-      "page_end": 30
+      "page_end": 37
     },
     {
       "name": "15．恩格斯致马克（思2月9日）",
@@ -86,7 +81,7 @@
     {
       "name": "17．马克思致恩格（斯2月13日）",
       "page_start": 40,
-      "page_end": 40
+      "page_end": 41
     },
     {
       "name": "18．马克思致恩格（斯2月14日）",
@@ -101,7 +96,7 @@
     {
       "name": "20．恩格斯致马克（思4月8日）",
       "page_start": 44,
-      "page_end": 44
+      "page_end": 45
     },
     {
       "name": "21．马克思致恩格（斯4月9日）",
@@ -116,12 +111,12 @@
     {
       "name": "23．马克思致恩格（斯4月16日）",
       "page_start": 48,
-      "page_end": 48
+      "page_end": 49
     },
     {
       "name": "24．马克思致恩格（斯4月17日）",
       "page_start": 50,
-      "page_end": 50
+      "page_end": 51
     },
     {
       "name": "25．马克思致恩格（斯4月24日）",
@@ -136,7 +131,7 @@
     {
       "name": "27．恩格斯致马克（思5月7日）",
       "page_start": 54,
-      "page_end": 54
+      "page_end": 55
     },
     {
       "name": "28．马克思致恩格（斯5月8日）",
@@ -161,7 +156,7 @@
     {
       "name": "32．恩格斯致马克（思5月31日）",
       "page_start": 60,
-      "page_end": 60
+      "page_end": 61
     },
     {
       "name": "33．马克思致恩格（斯6月2日）",
@@ -181,17 +176,12 @@
     {
       "name": "36．恩格斯致马克（思6月20日）",
       "page_start": 65,
-      "page_end": 65
-    },
-    {
-      "name": "37．恩格斯致马克（思6月25日左右）",
-      "page_start": 69,
-      "page_end": 69
+      "page_end": 68
     },
     {
       "name": "38．马克思致恩格（斯6月25日）",
       "page_start": 69,
-      "page_end": 69
+      "page_end": 70
     },
     {
       "name": "39．马克思致恩格（斯6月26日）",
@@ -286,12 +276,12 @@
     {
       "name": "57．马克思致恩格（斯9月15日）",
       "page_start": 89,
-      "page_end": 89
+      "page_end": 90
     },
     {
       "name": "58．恩格斯致马克（思9月15日）",
       "page_start": 91,
-      "page_end": 91
+      "page_end": 92
     },
     {
       "name": "59．马克思致恩格（斯9月20日）",
@@ -301,22 +291,22 @@
     {
       "name": "60．马克思致恩格（斯9月25日）",
       "page_start": 94,
-      "page_end": 94
+      "page_end": 96
     },
     {
       "name": "61．恩格斯致马克（思10月1日）",
       "page_start": 97,
-      "page_end": 97
+      "page_end": 99
     },
     {
       "name": "62．马克思致恩格（斯10月2日）",
       "page_start": 100,
-      "page_end": 100
+      "page_end": 102
     },
     {
       "name": "63．恩格斯致马克（思10月5日）",
       "page_start": 103,
-      "page_end": 103
+      "page_end": 104
     },
     {
       "name": "64．马克思致恩格（斯10月11日）",
@@ -336,7 +326,7 @@
     {
       "name": "67．马克思致恩格（斯11月13日）",
       "page_start": 108,
-      "page_end": 108
+      "page_end": 109
     },
     {
       "name": "68．马克思致恩格（斯11月14日）",
@@ -356,12 +346,12 @@
     {
       "name": "71．马克思致恩格（斯11月26日）",
       "page_start": 113,
-      "page_end": 113
+      "page_end": 115
     },
     {
       "name": "72．马克思致恩格（斯11月28日）",
       "page_start": 116,
-      "page_end": 116
+      "page_end": 117
     },
     {
       "name": "73．恩格斯致马克（思12月3日）",
@@ -376,22 +366,22 @@
     {
       "name": "75．马克思致恩格（斯12月5日）",
       "page_start": 120,
-      "page_end": 120
+      "page_end": 121
     },
     {
       "name": "76．马克思致恩格（斯12月6日）",
       "page_start": 122,
-      "page_end": 122
+      "page_end": 123
     },
     {
       "name": "77．马克思致恩格（斯12月12日）",
       "page_start": 124,
-      "page_end": 124
+      "page_end": 125
     },
     {
       "name": "78．恩格斯致马克（思12月18日）",
       "page_start": 126,
-      "page_end": 126
+      "page_end": 127
     },
     {
       "name": "79．马克思致恩格（斯12月18日）",
@@ -399,29 +389,19 @@
       "page_end": 128
     },
     {
-      "name": "80．恩格斯致马克（思12月19日）",
-      "page_start": 129,
-      "page_end": 129
-    },
-    {
       "name": "81．马克思致恩格（斯12月19日）",
       "page_start": 129,
-      "page_end": 129
-    },
-    {
-      "name": "82．马克思致恩格（斯12月23日）",
-      "page_start": 132,
-      "page_end": 132
+      "page_end": 131
     },
     {
       "name": "83．马克思致恩格（斯12月26日）",
       "page_start": 132,
-      "page_end": 132
+      "page_end": 135
     },
     {
       "name": "84．马克思致恩格（斯12月27日）",
       "page_start": 136,
-      "page_end": 136
+      "page_end": 137
     },
     {
       "name": "85．马克思致恩格（斯1月3日）",
@@ -431,12 +411,12 @@
     {
       "name": "86．恩格斯致马克（思1月7日）",
       "page_start": 139,
-      "page_end": 139
+      "page_end": 140
     },
     {
       "name": "87．马克思致恩格（斯1月8日）",
       "page_start": 141,
-      "page_end": 141
+      "page_end": 142
     },
     {
       "name": "88．马克思致恩格（斯1月11日）",
@@ -446,17 +426,17 @@
     {
       "name": "89．马克思致恩格（斯1月18日）",
       "page_start": 144,
-      "page_end": 144
+      "page_end": 145
     },
     {
       "name": "90．马克思致恩格（斯1月22日）",
       "page_start": 146,
-      "page_end": 146
+      "page_end": 147
     },
     {
       "name": "91．马克思致恩格（斯1月29日）",
       "page_start": 148,
-      "page_end": 148
+      "page_end": 149
     },
     {
       "name": "92．马克思致恩格（斯1月31日）",
@@ -481,27 +461,27 @@
     {
       "name": "96．恩格斯致马克（思2月6日）",
       "page_start": 154,
-      "page_end": 154
+      "page_end": 155
     },
     {
       "name": "97．马克思致恩格（斯2月14日）",
       "page_start": 156,
-      "page_end": 156
+      "page_end": 157
     },
     {
       "name": "98．马克思致恩格（斯2月27日）",
       "page_start": 158,
-      "page_end": 158
+      "page_end": 159
     },
     {
       "name": "99．马克思致恩格（斯5月7日）",
       "page_start": 160,
-      "page_end": 160
+      "page_end": 164
     },
     {
       "name": "100．马克思致恩格（斯5月10日）",
       "page_start": 165,
-      "page_end": 165
+      "page_end": 170
     },
     {
       "name": "101．马克思致恩格（斯5月16日）",
@@ -516,37 +496,37 @@
     {
       "name": "103．恩格斯致马克（思6月12日）",
       "page_start": 173,
-      "page_end": 173
+      "page_end": 175
     },
     {
       "name": "104．马克思致恩格（斯6月19日）",
       "page_start": 176,
-      "page_end": 176
+      "page_end": 179
     },
     {
       "name": "105．马克思致恩格（斯7月1日）",
       "page_start": 180,
-      "page_end": 180
+      "page_end": 182
     },
     {
       "name": "106．恩格斯致马克（思7月3日）",
       "page_start": 183,
-      "page_end": 183
+      "page_end": 184
     },
     {
       "name": "107．马克思致恩格（斯7月5日）",
       "page_start": 185,
-      "page_end": 185
+      "page_end": 189
     },
     {
       "name": "108．马克思致恩格（斯7月12日）",
       "page_start": 190,
-      "page_end": 190
+      "page_end": 192
     },
     {
       "name": "109．马克思致恩（格7斯月20日）",
       "page_start": 193,
-      "page_end": 193
+      "page_end": 194
     },
     {
       "name": "110．马克思致恩（格8斯月3日）",
@@ -556,12 +536,12 @@
     {
       "name": "111．马克思致恩（格9斯月28日）",
       "page_start": 196,
-      "page_end": 196
+      "page_end": 197
     },
     {
       "name": "112．马克思致恩（格1斯0月30日）",
       "page_start": 198,
-      "page_end": 198
+      "page_end": 200
     },
     {
       "name": "113．马克思致恩（格1斯1月6日）",
@@ -571,7 +551,7 @@
     {
       "name": "114．马克思致恩（格1斯1月18日）",
       "page_start": 202,
-      "page_end": 202
+      "page_end": 203
     },
     {
       "name": "115．马克思致恩（格1斯1月20日）",
@@ -596,7 +576,7 @@
     {
       "name": "119．马克思致恩格（斯12月9日）",
       "page_start": 208,
-      "page_end": 208
+      "page_end": 209
     },
     {
       "name": "120．马克思致恩格（斯12月13日）",
@@ -606,17 +586,17 @@
     {
       "name": "121．马克思致恩格（斯12月19日）",
       "page_start": 211,
-      "page_end": 211
+      "page_end": 213
     },
     {
       "name": "122．马克思致恩格（斯12月27日）",
       "page_start": 214,
-      "page_end": 214
+      "page_end": 215
     },
     {
       "name": "123．马克思致恩格（斯2月25日）",
       "page_start": 216,
-      "page_end": 216
+      "page_end": 217
     },
     {
       "name": "124．恩格斯致马克（思2月28日）",
@@ -626,7 +606,7 @@
     {
       "name": "125．马克思致恩格（斯3月3日）",
       "page_start": 219,
-      "page_end": 219
+      "page_end": 220
     },
     {
       "name": "126．恩格斯致马克（思3月5日）",
@@ -636,7 +616,7 @@
     {
       "name": "127．马克思致恩格（斯3月6日）",
       "page_start": 222,
-      "page_end": 222
+      "page_end": 226
     },
     {
       "name": "128．恩格斯致马克（思3月8日左右）",
@@ -651,17 +631,17 @@
     {
       "name": "130．马克思致恩格（斯4月28日）",
       "page_start": 229,
-      "page_end": 229
+      "page_end": 231
     },
     {
       "name": "131．恩格斯致马克（思5月5日）",
       "page_start": 232,
-      "page_end": 232
+      "page_end": 235
     },
     {
       "name": "132．马克思致恩格（斯5月6日）",
       "page_start": 236,
-      "page_end": 236
+      "page_end": 237
     },
     {
       "name": "133．恩格斯致马（克5思月12日）",
@@ -681,12 +661,12 @@
     {
       "name": "136．恩格斯致马（克5思月23日）",
       "page_start": 240,
-      "page_end": 240
+      "page_end": 243
     },
     {
       "name": "137．马克思致恩（格5斯月27日）",
       "page_start": 244,
-      "page_end": 244
+      "page_end": 245
     },
     {
       "name": "138．恩格斯致马（克5思月29日）",
@@ -696,27 +676,17 @@
     {
       "name": "139．恩格斯致马（克6思月4日）",
       "page_start": 247,
-      "page_end": 247
-    },
-    {
-      "name": "140．马克思致恩（格6斯月6日左右）",
-      "page_start": 250,
-      "page_end": 250
+      "page_end": 249
     },
     {
       "name": "141．马克思致恩（格6斯月18日）",
       "page_start": 250,
-      "page_end": 250
-    },
-    {
-      "name": "142．恩格斯致马克（思7月3日左右）",
-      "page_start": 253,
-      "page_end": 253
+      "page_end": 252
     },
     {
       "name": "143．马克思致恩格（斯7月5日）",
       "page_start": 253,
-      "page_end": 253
+      "page_end": 254
     },
     {
       "name": "144．马克思致恩格（斯7月11日）",
@@ -731,12 +701,12 @@
     {
       "name": "146．恩格斯致马克（思7月30日）",
       "page_start": 256,
-      "page_end": 256
+      "page_end": 258
     },
     {
       "name": "147．马克思致恩格（斯7月30日）",
       "page_start": 259,
-      "page_end": 259
+      "page_end": 261
     },
     {
       "name": "148．恩格斯致马克（思7月31日）",
@@ -746,27 +716,27 @@
     {
       "name": "149．恩格斯致马克（思8月1日）",
       "page_start": 263,
-      "page_end": 263
+      "page_end": 264
     },
     {
       "name": "150．马克思致恩格（斯8月2日）",
       "page_start": 265,
-      "page_end": 265
+      "page_end": 270
     },
     {
       "name": "151．马克思致恩格（斯8月7日）",
       "page_start": 271,
-      "page_end": 271
+      "page_end": 272
     },
     {
       "name": "152．恩格斯致马克（思8月8日）",
       "page_start": 273,
-      "page_end": 273
+      "page_end": 274
     },
     {
       "name": "153．马克思致恩格（斯8月9日）",
       "page_start": 275,
-      "page_end": 275
+      "page_end": 277
     },
     {
       "name": "154．恩格斯致马克（思8月12日左右）",
@@ -786,7 +756,7 @@
     {
       "name": "157．马克思致恩（格8斯月20日）",
       "page_start": 280,
-      "page_end": 280
+      "page_end": 282
     },
     {
       "name": "158．恩格斯致马（克8思月21日）",
@@ -801,22 +771,22 @@
     {
       "name": "160．恩格斯致马（克9思月9日）",
       "page_start": 284,
-      "page_end": 284
+      "page_end": 285
     },
     {
       "name": "161．马克思致恩（格9斯月10日）",
       "page_start": 286,
-      "page_end": 286
+      "page_end": 287
     },
     {
       "name": "162．恩格斯致马（克1思0月16日）",
       "page_start": 288,
-      "page_end": 288
+      "page_end": 289
     },
     {
       "name": "163．马克思致恩（格1斯0月29日）",
       "page_start": 290,
-      "page_end": 290
+      "page_end": 291
     },
     {
       "name": "164．马克思致恩（格1斯1月4日）",
@@ -826,7 +796,7 @@
     {
       "name": "165．恩格斯致马（克1思1月5日）",
       "page_start": 293,
-      "page_end": 293
+      "page_end": 294
     },
     {
       "name": "166．马克思致恩（格1斯1月9日）",
@@ -841,12 +811,12 @@
     {
       "name": "168．恩格斯致马克（思11月15日）",
       "page_start": 296,
-      "page_end": 296
+      "page_end": 297
     },
     {
       "name": "169．马克思致恩格（斯11月17日）",
       "page_start": 298,
-      "page_end": 298
+      "page_end": 299
     },
     {
       "name": "170．马克思致恩格（斯11月20日）",
@@ -866,22 +836,17 @@
     {
       "name": "173．恩格斯致马克（思12月30日）",
       "page_start": 303,
-      "page_end": 303
+      "page_end": 304
     },
     {
       "name": "174．马克思致恩格（斯1月2日）",
       "page_start": 305,
-      "page_end": 305
-    },
-    {
-      "name": "175．恩格斯致马克（思1月7日）",
-      "page_start": 308,
-      "page_end": 308
+      "page_end": 307
     },
     {
       "name": "176．马克思致恩格（斯1月8日）",
       "page_start": 308,
-      "page_end": 308
+      "page_end": 309
     },
     {
       "name": "177．恩格斯致马克（思1月13日）",
@@ -891,22 +856,22 @@
     {
       "name": "178．马克思致恩格（斯1月24日）",
       "page_start": 311,
-      "page_end": 311
+      "page_end": 313
     },
     {
       "name": "179．恩格斯致马克（思1月26日）",
       "page_start": 314,
-      "page_end": 314
+      "page_end": 315
     },
     {
       "name": "180．马克思致恩格（斯1月28日）",
       "page_start": 316,
-      "page_end": 316
+      "page_end": 320
     },
     {
       "name": "181．马克思致恩（格2斯月13日）",
       "page_start": 321,
-      "page_end": 321
+      "page_end": 322
     },
     {
       "name": "182．马克思致恩（格2斯月17日）",
@@ -916,7 +881,7 @@
     {
       "name": "183．恩格斯致马（克2思月17日）",
       "page_start": 324,
-      "page_end": 324
+      "page_end": 325
     },
     {
       "name": "184．恩格斯致马（克2思月19日）",
@@ -941,17 +906,17 @@
     {
       "name": "188．马克思致恩（格3斯月24日）",
       "page_start": 330,
-      "page_end": 330
+      "page_end": 332
     },
     {
       "name": "189．恩格斯致马（克4思月8日）",
       "page_start": 333,
-      "page_end": 333
+      "page_end": 335
     },
     {
       "name": "190．马克思致恩格（斯4月9日）",
       "page_start": 336,
-      "page_end": 336
+      "page_end": 338
     },
     {
       "name": "191．马克思致恩格（斯4月18日）",
@@ -961,17 +926,17 @@
     {
       "name": "192．恩格斯致马克（思4月21日）",
       "page_start": 340,
-      "page_end": 340
+      "page_end": 341
     },
     {
       "name": "193．恩格斯致马克（思5月20日）",
       "page_start": 342,
-      "page_end": 342
+      "page_end": 345
     },
     {
       "name": "194．马克思致恩格（斯5月29日）",
       "page_start": 346,
-      "page_end": 346
+      "page_end": 347
     },
     {
       "name": "195．马克思致恩格（斯6月10日）",
@@ -981,12 +946,12 @@
     {
       "name": "196．恩格斯致马克（思6月11日）",
       "page_start": 349,
-      "page_end": 349
+      "page_end": 350
     },
     {
       "name": "197．马克思致恩格（斯6月12日）",
       "page_start": 351,
-      "page_end": 351
+      "page_end": 353
     },
     {
       "name": "198．马克思致恩格（斯6月22日）",
@@ -1001,32 +966,27 @@
     {
       "name": "200．马克思致恩格（斯7月6日）",
       "page_start": 356,
-      "page_end": 356
+      "page_end": 362
     },
     {
       "name": "201．马克思致恩格（斯8月15日）",
       "page_start": 363,
-      "page_end": 363
+      "page_end": 366
     },
     {
       "name": "202．马克思致恩格（斯9月12日）",
       "page_start": 367,
-      "page_end": 367
+      "page_end": 368
     },
     {
       "name": "203．恩格斯致马克（思11月24日）",
       "page_start": 369,
-      "page_end": 369
-    },
-    {
-      "name": "204．马克思致恩（格1斯2月2日）",
-      "page_start": 371,
-      "page_end": 371
+      "page_end": 370
     },
     {
       "name": "205．恩格斯致马（克1思2月3日）",
       "page_start": 371,
-      "page_end": 371
+      "page_end": 372
     },
     {
       "name": "206．马克思致恩（格1斯2月4日）",
@@ -1036,22 +996,22 @@
     {
       "name": "207．马克思致恩（格1斯2月22日）",
       "page_start": 374,
-      "page_end": 374
+      "page_end": 375
     },
     {
       "name": "208．马克思致恩（格1斯2月27日）",
       "page_start": 376,
-      "page_end": 376
+      "page_end": 377
     },
     {
       "name": "1864年209．恩格斯致马（克1思月3日）",
       "page_start": 378,
-      "page_end": 378
+      "page_end": 379
     },
     {
       "name": "210．马克思致恩（格1斯月20日）",
       "page_start": 380,
-      "page_end": 380
+      "page_end": 381
     },
     {
       "name": "211．马克思致恩（格2斯月25日）",
@@ -1059,19 +1019,14 @@
       "page_end": 382
     },
     {
-      "name": "212．马克思致恩（格3斯月11日）",
-      "page_start": 383,
-      "page_end": 383
-    },
-    {
       "name": "213．马克思致恩（格4斯月19日）",
       "page_start": 383,
-      "page_end": 383
+      "page_end": 384
     },
     {
       "name": "214．恩格斯致马克（思4月29日）",
       "page_start": 385,
-      "page_end": 385
+      "page_end": 387
     },
     {
       "name": "215．恩格斯致马克（思5月1日）",
@@ -1101,32 +1056,32 @@
     {
       "name": "220．恩格斯致马克（思5月30日）",
       "page_start": 393,
-      "page_end": 393
+      "page_end": 394
     },
     {
       "name": "221．马克思致恩格（斯6月3日）",
       "page_start": 395,
-      "page_end": 395
+      "page_end": 397
     },
     {
       "name": "222．恩格斯致马克（思6月3日）",
       "page_start": 398,
-      "page_end": 398
+      "page_end": 399
     },
     {
       "name": "223．马克思致恩格（斯6月7日）",
       "page_start": 400,
-      "page_end": 400
+      "page_end": 401
     },
     {
       "name": "224．恩格斯致马克（思6月9日）",
       "page_start": 402,
-      "page_end": 402
+      "page_end": 405
     },
     {
       "name": "225．马克思致恩格（斯6月16日）",
       "page_start": 406,
-      "page_end": 406
+      "page_end": 407
     },
     {
       "name": "226．马克思致恩格（斯7月1日）",
@@ -1136,7 +1091,7 @@
     {
       "name": "227．马克思致恩格（斯7月4日）",
       "page_start": 409,
-      "page_end": 409
+      "page_end": 410
     },
     {
       "name": "228．恩格斯致马克（思7月5日）",
@@ -1146,7 +1101,7 @@
     {
       "name": "229．马克思致恩（格7斯月25日）",
       "page_start": 412,
-      "page_end": 412
+      "page_end": 413
     },
     {
       "name": "230．马克思致恩（格8斯月31日）",
@@ -1156,22 +1111,22 @@
     {
       "name": "231．恩格斯致马（克9思月2日）",
       "page_start": 415,
-      "page_end": 415
+      "page_end": 416
     },
     {
       "name": "232．马克思致恩（格9斯月2日）",
       "page_start": 417,
-      "page_end": 417
+      "page_end": 418
     },
     {
       "name": "233．恩格斯致马（克9思月4日）",
       "page_start": 419,
-      "page_end": 419
+      "page_end": 421
     },
     {
       "name": "234．马克思致恩（格9斯月7日）",
       "page_start": 422,
-      "page_end": 422
+      "page_end": 425
     }
   ]
 }

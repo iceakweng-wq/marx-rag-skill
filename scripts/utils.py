@@ -119,14 +119,7 @@ def lookup_chapter(volume_slug: str, page: int) -> str:
         best = min(matches, key=lambda s: s["page_end"] - s["page_start"])
         return best["name"]
 
-    # 退而求其次：找最近的前一个 section
-    preceding = [s for s in sections if s["page_start"] <= page]
-    if preceding:
-        nearest = max(preceding, key=lambda s: s["page_end"])
-        return nearest["name"]
-
-    # 最后回退：使用卷标题
-    return toc.get("title", "")
+    return ""
 
 
 # ── 相似度计算 ──
