@@ -128,10 +128,10 @@ def generate_markdown(volumes_data: list[tuple[str, list[dict]]]) -> str:
     """生成 Markdown，多卷次合并。
 
     结构：
-      # 卷名（仅首个连续块的第一页）
-      ## 篇章名（每个连续块开始处）
-      ### 第X页
-      原文（原样）
+      # 第X卷
+      ## 第X页
+      *header_title*（如有）
+      原文
     """
     lines = []
     first_vol = True
@@ -139,76 +139,34 @@ def generate_markdown(volumes_data: list[tuple[str, list[dict]]]) -> str:
     for vol, pages in volumes_data:
         vol_label = format_volume_label(vol)
 
-        # 按连续性分组，每组内页码连续
-        blocks = []
-        cur = []
-        prev = None
+        if not first_vol:
+            lines.append("")
+            lines.append("---")
+            lines.append("")
+        first_vol = False
+
+        lines.append(f"# {vol_label}")
+        lines.append("")
+
         for p in pages:
             pn = p["page_number"]
-            if prev is not None and pn != prev + 1:
-                if cur:
-                    blocks.append(cur)
-                cur = [p]
-            else:
-                cur.append(p)
-            prev = pn
-        if cur:
-            blocks.append(cur)
-
-        vol_h1_emitted = False
-
-        for block in blocks:
-            # 首块的第一页标记卷的 H1
-            if not vol_h1_emitted:
-                # 查第一篇的篇章名辅助卷标题
-                ch = ""
-                for p in block:
-                    if p.get("exists") and p.get("page_number"):
-                        ch = get_chapter_name(vol, p["page_number"])
-                        if ch:
-                            break
-                title = vol_label
-                if ch:
-                    title += f" — {ch}"
-
-                if not first_vol:
-                    lines.append("")
-                    lines.append("---")
-                    lines.append("")
-                first_vol = False
-
-                lines.append(f"# {title}")
-                lines.append("")
-                vol_h1_emitted = True
-
-            # 查当前块的篇章名（从第一页往后找，直到找到为止）
-            ch_name = ""
-            for p in block:
-                if p.get("exists") and p.get("page_number"):
-                    ch_name = get_chapter_name(vol, p["page_number"])
-                    if ch_name:
-                        break
-            if not ch_name:
-                ch_name = vol_label
-
-            lines.append(f"## {ch_name}")
+            lines.append(f"## 第{pn}页")
             lines.append("")
 
-            # 块内每页
-            for p in block:
-                pn = p["page_number"]
-                lines.append(f"### 第{pn}页")
+            if not p["exists"]:
+                lines.append("（未收录）")
+                lines.append("")
+                continue
+
+            header = p.get("header_title", "")
+            if header:
+                lines.append(f"*{header}*")
                 lines.append("")
 
-                if not p["exists"]:
-                    lines.append("（未收录）")
-                    lines.append("")
-                    continue
-
-                text = p.get("text", "").strip()
-                if text:
-                    lines.append(text)
-                    lines.append("")
+            text = p.get("text", "").strip()
+            if text:
+                lines.append(text)
+                lines.append("")
 
     return "\n".join(lines)
 
@@ -224,23 +182,7 @@ def escape_html(text: str) -> str:
 
 
 def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
-    """生成带左侧目录的 HTML，多卷次合并，参考 GitHub Markdown 预览风格。"""
-    # ── 整体标题 ──
-    page_titles = []
-    for vol, pages in volumes_data:
-        vol_label = format_volume_label(vol)
-        chapter = ""
-        for p in pages:
-            if p.get("exists") and p.get("page_number"):
-                chapter = get_chapter_name(vol, p["page_number"])
-                if chapter:
-                    break
-        if chapter:
-            page_titles.append(f"{vol_label} — {chapter}")
-        else:
-            page_titles.append(vol_label)
-    full_title = " | ".join(page_titles)
-
+    """生成带左侧目录的 HTML，多卷次合并。"""
     # ── 构建侧边栏和正文 ──
     toc_list = []
     content_blocks = []
@@ -250,15 +192,6 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
         vol_label = format_volume_label(vol)
         vol_id = f"vol-{vol_idx}"
 
-        chapter = ""
-        for p in pages:
-            if p.get("exists") and p.get("page_number"):
-                chapter = get_chapter_name(vol, p["page_number"])
-                if chapter:
-                    break
-
-        vol_title = f"{vol_label} — {chapter}" if chapter else vol_label
-
         # ── 侧边栏条目 ──
         toc_list.append(f'<li class="vol-header"><a href="#{vol_id}">{escape_html(vol_label)}</a></li>')
 
@@ -267,7 +200,7 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
             content_blocks.append('<hr />')
         first_vol = False
 
-        content_blocks.append(f'<h1 id="{vol_id}" style="margin-top:0;">{escape_html(vol_title)}</h1>')
+        content_blocks.append(f'<h1 id="{vol_id}" style="margin-top:0;">{escape_html(vol_label)}</h1>')
 
         prev_pn = None
         for p in pages:
@@ -284,7 +217,7 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
                     f'padding:6px 0;">— 页码不连续（第{prev_pn}页 → 第{pn}页）—</p>'
                 )
 
-            # 页码标记（类似参考中的 .page-marker）
+            # 页码标记
             content_blocks.append(
                 f'<p class="page-marker" id="{anchor}">{vol_label}，第{pn}页</p>'
             )
@@ -292,6 +225,9 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
             if not p["exists"]:
                 content_blocks.append('<p style="color:#aaa;font-style:italic;">（未收录）</p>')
             else:
+                header = p.get("header_title", "")
+                if header:
+                    content_blocks.append(f'<p class="header-title">{escape_html(header)}</p>')
                 text = p.get("text", "").strip()
                 if text:
                     content_blocks.append(f'<div class="raw-text-wrap"><div class="raw-text">{escape_html(text)}</div></div>')
@@ -306,7 +242,7 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{escape_html(full_title)}</title>
+<title>马恩全集原文阅读</title>
 <style>
   *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
   html {{ scroll-behavior: smooth; }}
@@ -406,6 +342,14 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
 
   /* ── 原文正文 ── */
   /* ── 原文正文容器（居中） ── */
+  .header-title {{
+    font-size: 14px;
+    color: #586069;
+    font-style: italic;
+    margin: 4px 0;
+    text-align: center;
+  }}
+
   .raw-text-wrap {{
     text-align: center;
     margin-bottom: 16px;
