@@ -52,6 +52,10 @@ python scripts/search.py --page 42 125 126 127
 
 # 数据库统计
 python scripts/search.py --info
+
+# 浏览器阅读原文
+python scripts/read_raw_text.py 42 127 128 129 130
+python scripts/read_raw_text.py 23 100-105 110-115    # 支持页码范围
 ```
 
 ---
@@ -85,6 +89,10 @@ python scripts/search.py --info
 ### 按页码取页
 
 已知具体页码时，直接取指定页的原文，不走语义检索，瞬间返回。
+
+### 浏览器阅读原文
+
+用 `read_raw_text.py` 按卷次+页码拉取原文，生成带左侧目录的 HTML 页面并在浏览器中打开。支持连续页码和页码范围（`100-105`），每次查询覆盖上一次的临时文件，不留痕迹。
 
 ---
 
@@ -120,6 +128,7 @@ python scripts/search.py --info
 mega-rag-skill/
 ├── scripts/
 │   ├── search.py        # 检索工具（核心文件）
+│   ├── read_raw_text.py # 浏览器阅读原文
 │   └── utils.py         # 卷次解析、篇章名查询
 ├── chroma_db/           # 向量数据库（从 Release 下载）
 ├── data/

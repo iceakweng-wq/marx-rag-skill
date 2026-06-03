@@ -45,6 +45,10 @@ python scripts/search.py "查询内容" --volume 23     # 限定卷次
 python scripts/search.py "查询内容" --with-footnotes
 python scripts/search.py --info                     # 数据库统计
 python scripts/search.py --page 46上 207 208 209   # 按页码取页
+
+# 浏览器阅读原文
+python scripts/read_raw_text.py 42 127 128 129 130
+python scripts/read_raw_text.py 23 100-105 110-115  # 支持页码范围
 ```
 
 ### 检索流程（三 agent 架构）
