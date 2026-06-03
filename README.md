@@ -133,12 +133,16 @@ mega-rag-skill/
 │   ├── search.py        # 检索工具（核心文件）
 │   ├── read_raw_text.py # 浏览器阅读原文
 │   └── utils.py         # 卷次解析、篇章名查询
+├── sub_agent/
+│   ├── search_agent.md  # 搜索子 agent 任务
+│   ├── summarize_agent.md # 总结子 agent 任务
+│   └── read_txt.md      # 阅读原文子 agent 任务
 ├── chroma_db/           # 向量数据库（从 Release 下载）
 ├── data/
 │   ├── toc/             # 60 卷目录文件
-│   └── review_sessions.json # 评审 agent session（按主题持久化）
-├── README.md            # 本文件
-└── SKILL.md             # Claude Code Skill 配置
+│   └── review_sessions.json # 评审 agent session
+├── README.md
+└── SKILL.md
 ```
 
 ---
