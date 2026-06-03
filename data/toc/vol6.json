@@ -1,10 +1,10 @@
 {
   "volume": "第6卷",
   "title": "第6卷",
-  "_comment": "仅一级目录，从目录页自动生成，请人工检查",
+  "_comment": "报刊卷：保留同名条目",
   "sections": [
     {
-      "name": "第六卷说明ＸＩＩＸＩＸＸＩ卡·马克思和弗·恩格斯发表在“新莱茵报”上的文章一八四八年十一月柏林的危机",
+      "name": "柏林的危机",
       "page_start": 5,
       "page_end": 6
     },
@@ -24,6 +24,26 @@
       "page_end": 23
     },
     {
+      "name": "一",
+      "page_start": 14,
+      "page_end": 14
+    },
+    {
+      "name": "二",
+      "page_start": 18,
+      "page_end": 18
+    },
+    {
+      "name": "三",
+      "page_start": 21,
+      "page_end": 21
+    },
+    {
+      "name": "卡芬雅克和六月革命",
+      "page_start": 23,
+      "page_end": 23
+    },
+    {
       "name": "莱茵省民主主义者区域委员会的呼吁书",
       "page_start": 24,
       "page_end": 24
@@ -34,8 +54,8 @@
       "page_end": 26
     },
     {
-      "name": "插  图载有“内阁在被告席上”一文的“新莱茵报号”外的一页",
-      "page_start": 26,
+      "name": "声明",
+      "page_start": 27,
       "page_end": 27
     },
     {
@@ -79,11 +99,6 @@
       "page_end": 44
     },
     {
-      "name": "评勃兰登堡—曼托伊费尔内阁就拒绝纳税问题发布的 公告",
-      "page_start": 45,
-      "page_end": 45
-    },
-    {
       "name": "检察长和“新莱茵报”",
       "page_start": 46,
       "page_end": 47
@@ -91,7 +106,12 @@
     {
       "name": "柏林和科伦的检察机关",
       "page_start": 48,
-      "page_end": 50
+      "page_end": 48
+    },
+    {
+      "name": "法兰克福议会",
+      "page_start": 49,
+      "page_end": 5
     },
     {
       "name": "到处戒严",
@@ -131,7 +151,7 @@
     {
       "name": "新闻数则",
       "page_start": 85,
-      "page_end": 88
+      "page_end": 86
     },
     {
       "name": "意大利的革命运动",
@@ -201,7 +221,12 @@
     {
       "name": "革命运动",
       "page_start": 173,
-      "page_end": 180
+      "page_end": 175
+    },
+    {
+      "name": "资产阶级的文件",
+      "page_start": 176,
+      "page_end": 108
     },
     {
       "name": "合众国的预算和基督教德意志的预算",
@@ -211,7 +236,12 @@
     {
       "name": "新年贺词",
       "page_start": 186,
-      "page_end": 207
+      "page_end": 192
+    },
+    {
+      "name": "匈牙利的斗争",
+      "page_start": 193,
+      "page_end": 27
     },
     {
       "name": "瑞士报刊",
@@ -224,6 +254,11 @@
       "page_end": 231
     },
     {
+      "name": "二",
+      "page_start": 225,
+      "page_end": 225
+    },
+    {
       "name": "普鲁士逮捕科苏特的命令",
       "page_start": 232,
       "page_end": 233
@@ -231,7 +266,22 @@
     {
       "name": "柏林“国民报”致初选人",
       "page_start": 234,
-      "page_end": 250
+      "page_end": 246
+    },
+    {
+      "name": "一",
+      "page_start": 234,
+      "page_end": 234
+    },
+    {
+      "name": "二",
+      "page_start": 241,
+      "page_end": 241
+    },
+    {
+      "name": "巴黎状况",
+      "page_start": 247,
+      "page_end": 205
     },
     {
       "name": "巴黎局势",
@@ -255,8 +305,23 @@
     },
     {
       "name": "马克思的发言",
+      "page_start": 262,
+      "page_end": 262
+    },
+    {
+      "name": "恩格斯的发言",
+      "page_start": 279,
+      "page_end": 279
+    },
+    {
+      "name": "对民主主义者莱茵区域委员会的审判",
       "page_start": 286,
-      "page_end": 306
+      "page_end": 36
+    },
+    {
+      "name": "马克思的发言",
+      "page_start": 286,
+      "page_end": 286
     },
     {
       "name": "拒绝纳税案",
@@ -279,9 +344,29 @@
       "page_end": 321
     },
     {
+      "name": "一",
+      "page_start": 316,
+      "page_end": 316
+    },
+    {
+      "name": "二",
+      "page_start": 319,
+      "page_end": 319
+    },
+    {
       "name": "民主的泛斯拉夫主义",
       "page_start": 322,
       "page_end": 342
+    },
+    {
+      "name": "一",
+      "page_start": 322,
+      "page_end": 322
+    },
+    {
+      "name": "二",
+      "page_start": 334,
+      "page_end": 334
     },
     {
       "name": "博德尔施文克及其伙伴治理下的普鲁士财政",
@@ -331,7 +416,12 @@
     {
       "name": "卢格",
       "page_start": 382,
-      "page_end": 390
+      "page_end": 384
+    },
+    {
+      "name": "经济状况",
+      "page_start": 385,
+      "page_end": 309
     },
     {
       "name": "英国士兵的誓言",
@@ -341,7 +431,12 @@
     {
       "name": "三月同盟",
       "page_start": 394,
-      "page_end": 400
+      "page_end": 396
+    },
+    {
+      "name": "维也纳和法兰克福",
+      "page_start": 397,
+      "page_end": 40
     },
     {
       "name": "三个新法案",
@@ -386,7 +481,12 @@
     {
       "name": "“新普鲁士报”论三月十八日",
       "page_start": 431,
-      "page_end": 440
+      "page_end": 431
+    },
+    {
+      "name": "霍亨索伦王朝的出版法案",
+      "page_start": 432,
+      "page_end": 44
     },
     {
       "name": "柏林关于奏折问题的辩论",
@@ -396,17 +496,42 @@
     {
       "name": "在意大利和匈牙利的战争",
       "page_start": 453,
-      "page_end": 460
+      "page_end": 457
+    },
+    {
+      "name": "皮蒙特军队的失败",
+      "page_start": 458,
+      "page_end": 406
     },
     {
       "name": "皮蒙特军队的失败",
       "page_start": 461,
-      "page_end": 470
+      "page_end": 468
+    },
+    {
+      "name": "一",
+      "page_start": 461,
+      "page_end": 461
+    },
+    {
+      "name": "二",
+      "page_start": 465,
+      "page_end": 465
+    },
+    {
+      "name": "法兰西共和国的对外政策",
+      "page_start": 469,
+      "page_end": 407
     },
     {
       "name": "皇冠喜剧",
       "page_start": 471,
-      "page_end": 506
+      "page_end": 472
+    },
+    {
+      "name": "雇佣劳动与资本",
+      "page_start": 473,
+      "page_end": 56
     },
     {
       "name": "政治流亡者的引渡",
@@ -426,12 +551,22 @@
     {
       "name": "俄国人",
       "page_start": 515,
-      "page_end": 530
+      "page_end": 517
+    },
+    {
+      "name": "关于招贴法的辩论",
+      "page_start": 518,
+      "page_end": 53
     },
     {
       "name": "拉萨尔",
       "page_start": 531,
       "page_end": 538
+    },
+    {
+      "name": "第二议院的解散",
+      "page_start": 534,
+      "page_end": 535
     },
     {
       "name": "波兹南",
@@ -491,7 +626,12 @@
     {
       "name": "问工人",
       "page_start": 568,
-      "page_end": 570
+      "page_end": 568
+    },
+    {
+      "name": "沙皇和他的藩臣们",
+      "page_start": 569,
+      "page_end": 507
     },
     {
       "name": "霍亨索伦王朝的丰功伟绩",
@@ -564,11 +704,6 @@
       "page_end": 619
     },
     {
-      "name": "“新莱茵报”最后一号的一页",
-      "page_start": 620,
-      "page_end": 622
-    },
-    {
       "name": "致“法兰克福报”编辑部",
       "page_start": 623,
       "page_end": 623
@@ -586,12 +721,12 @@
     {
       "name": "卡·马克思。致“新闻报”编辑",
       "page_start": 630,
-      "page_end": 632
+      "page_end": 630
     },
     {
-      "name": "卡·马克思的手稿“工资”的第一页",
-      "page_start": 633,
-      "page_end": 634
+      "name": "卡·马克思。工资",
+      "page_start": 635,
+      "page_end": 606
     },
     {
       "name": "［Ａ］",
@@ -606,7 +741,7 @@
     {
       "name": "ＩＩＩ麦克库洛赫",
       "page_start": 637,
-      "page_end": 638
+      "page_end": 637
     },
     {
       "name": "ＶＩＩ．罗西",
@@ -619,9 +754,14 @@
       "page_end": 640
     },
     {
+      "name": "［ＩＸ］布雷。储蓄银行",
+      "page_start": 641,
+      "page_end": 641
+    },
+    {
       "name": "［Ｃ］",
       "page_start": 641,
-      "page_end": 657
+      "page_end": 641
     },
     {
       "name": "ＶＩＩ工人联合会",
@@ -631,7 +771,7 @@
     {
       "name": "ＶＩＩＩ雇佣劳动的积极方面",
       "page_start": 659,
-      "page_end": 660
+      "page_end": 659
     },
     {
       "name": "弗·恩格斯。法国工人阶级和总统选举",
@@ -641,7 +781,7 @@
     {
       "name": "弗·恩格斯。蒲鲁东",
       "page_start": 668,
-      "page_end": 674
+      "page_end": 672
     },
     {
       "name": "卡尔·马克思",
@@ -691,7 +831,12 @@
     {
       "name": "科伦工人联合会委员会1849年1月15日会议记录摘要",
       "page_start": 687,
-      "page_end": 690
+      "page_end": 688
+    },
+    {
+      "name": "“新莱茵报”被宣判无罪",
+      "page_start": 689,
+      "page_end": 609
     },
     {
       "name": "对“新莱茵报”的两次审讯",
@@ -721,7 +866,12 @@
     {
       "name": "科伦工人联合会委员会1849年4月17日会议记录摘要",
       "page_start": 698,
-      "page_end": 701
+      "page_end": 698
+    },
+    {
+      "name": "科伦工人联合会第一分会的决议",
+      "page_start": 699,
+      "page_end": 71
     },
     {
       "name": "科伦工人联合会1849年4月23日全体会议的决议",
@@ -751,7 +901,7 @@
     {
       "name": "通缉弗里德里希·恩格斯的命令",
       "page_start": 708,
-      "page_end": 710
+      "page_end": 708
     },
     {
       "name": "注释",
@@ -762,6 +912,51 @@
       "name": "卡·马克思和弗·恩格斯生平事业年表",
       "page_start": 771,
       "page_end": 876
+    },
+    {
+      "name": "人名索引",
+      "page_start": 787,
+      "page_end": 818
+    },
+    {
+      "name": "期刊索引",
+      "page_start": 819,
+      "page_end": 823
+    },
+    {
+      "name": "译后记",
+      "page_start": 824,
+      "page_end": 824
+    },
+    {
+      "name": "载有“内阁在被告席上”一文的“新莱茵报号”外的一页",
+      "page_start": 26,
+      "page_end": 27
+    },
+    {
+      "name": "的一页",
+      "page_start": 128,
+      "page_end": 129
+    },
+    {
+      "name": "的小册子“两个政治审判案”的扉页",
+      "page_start": 263,
+      "page_end": 263
+    },
+    {
+      "name": "1848—1849年的匈牙利地图",
+      "page_start": 604,
+      "page_end": 605
+    },
+    {
+      "name": "“新莱茵报”最后一号的一页",
+      "page_start": 620,
+      "page_end": 621
+    },
+    {
+      "name": "卡·马克思的手稿“工资”的第一页",
+      "page_start": 633,
+      "page_end": 633
     }
   ]
 }
