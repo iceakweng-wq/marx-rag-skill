@@ -125,62 +125,90 @@ def escape_md(text: str) -> str:
 
 
 def generate_markdown(volumes_data: list[tuple[str, list[dict]]]) -> str:
-    """生成 Markdown，多卷次合并。"""
+    """生成 Markdown，多卷次合并。
+
+    结构：
+      # 卷名（仅首个连续块的第一页）
+      ## 篇章名（每个连续块开始处）
+      ### 第X页
+      原文（原样）
+    """
     lines = []
-    first = True
+    first_vol = True
 
     for vol, pages in volumes_data:
         vol_label = format_volume_label(vol)
 
-        # 篇章名
-        chapter = ""
-        for p in pages:
-            if p.get("exists") and p.get("page_number"):
-                chapter = get_chapter_name(vol, p["page_number"])
-                if chapter:
-                    break
-
-        title = vol_label
-        if chapter:
-            title += f" — {chapter}"
-
-        if not first:
-            lines.append("")
-            lines.append("---")
-            lines.append("")
-        first = False
-
-        lines.append(f"# {title}")
-        lines.append("")
-
-        previous_page = None
+        # 按连续性分组，每组内页码连续
+        blocks = []
+        cur = []
+        prev = None
         for p in pages:
             pn = p["page_number"]
+            if prev is not None and pn != prev + 1:
+                if cur:
+                    blocks.append(cur)
+                cur = [p]
+            else:
+                cur.append(p)
+            prev = pn
+        if cur:
+            blocks.append(cur)
 
-            if previous_page is not None and pn != previous_page + 1:
-                lines.append(f"**——— 页码不连续，以下为第{pn}页 ———**")
+        vol_h1_emitted = False
+
+        for block in blocks:
+            # 首块的第一页标记卷的 H1
+            if not vol_h1_emitted:
+                # 查第一篇的篇章名辅助卷标题
+                ch = ""
+                for p in block:
+                    if p.get("exists") and p.get("page_number"):
+                        ch = get_chapter_name(vol, p["page_number"])
+                        if ch:
+                            break
+                title = vol_label
+                if ch:
+                    title += f" — {ch}"
+
+                if not first_vol:
+                    lines.append("")
+                    lines.append("---")
+                    lines.append("")
+                first_vol = False
+
+                lines.append(f"# {title}")
                 lines.append("")
+                vol_h1_emitted = True
 
-            lines.append(f"## 第{pn}页")
+            # 查当前块的篇章名（从第一页往后找，直到找到为止）
+            ch_name = ""
+            for p in block:
+                if p.get("exists") and p.get("page_number"):
+                    ch_name = get_chapter_name(vol, p["page_number"])
+                    if ch_name:
+                        break
+            if not ch_name:
+                ch_name = vol_label
+
+            lines.append(f"## {ch_name}")
             lines.append("")
 
-            if not p["exists"]:
-                lines.append("（未收录）")
-                lines.append("")
-                previous_page = pn
-                continue
-
-            header = p.get("header_title", "")
-            if header:
-                lines.append(f"*{header}*")
+            # 块内每页
+            for p in block:
+                pn = p["page_number"]
+                lines.append(f"### 第{pn}页")
                 lines.append("")
 
-            text = p.get("text", "").strip()
-            if text:
-                lines.append(text)
-                lines.append("")
+                if not p["exists"]:
+                    lines.append("（未收录）")
+                    lines.append("")
+                    continue
 
-            previous_page = pn
+                text = p.get("text", "").strip()
+                if text:
+                    lines.append(text)
+                    lines.append("")
 
     return "\n".join(lines)
 
@@ -264,10 +292,6 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
             if not p["exists"]:
                 content_blocks.append('<p style="color:#aaa;font-style:italic;">（未收录）</p>')
             else:
-                header = p.get("header_title", "")
-                if header:
-                    content_blocks.append(f'<p style="color:#586069;font-style:italic;font-size:0.9em;">{escape_html(header)}</p>')
-
                 text = p.get("text", "").strip()
                 if text:
                     content_blocks.append(f'<div class="raw-text-wrap"><div class="raw-text">{escape_html(text)}</div></div>')
