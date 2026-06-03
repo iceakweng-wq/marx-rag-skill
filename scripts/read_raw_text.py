@@ -490,6 +490,22 @@ def main():
         page_data = fetch_pages(collection, vol, pages)
         fetched.append((vol, page_data))
 
+    # 排序：同卷合并，卷号从小到大，同卷内页码从小到大
+    merged = {}
+    for vol, pages in fetched:
+        if vol not in merged:
+            merged[vol] = []
+        merged[vol].extend(pages)
+    def _vol_sort_key(item):
+        v = item[0]
+        m = re.match(r"(\d+)", v)
+        num = int(m.group(1)) if m else 0
+        sub = v.replace(str(num), "", 1) if m else v
+        sub_order = {"上": 0, "中": 1, "下": 2}.get(sub, 3)
+        return (num, sub_order)
+    fetched = [(v, sorted(merged[v], key=lambda p: p["page_number"]))
+               for v in sorted(merged.keys(), key=_vol_sort_key)]
+
     # 生成 Markdown
     md_content = generate_markdown(fetched)
     os.makedirs(os.path.dirname(_TEMP_MD), exist_ok=True)
