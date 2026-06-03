@@ -36,46 +36,54 @@ import os; os.remove("chroma_db.zip")
 
 主 agent 是编排者，不直接执行任何搜索或阅读命令。所有具体操作通过子 agent 完成。
 
-### ① 发散搜索方向
+子 agent 的具体任务说明在 `sub_agent/` 下的文件中，启动子 agent 时读取并传入指令。
 
-根据用户问题，发散出 **3-5 个搜索方向**（不同关键词、不同表述），然后逐一启动 search_agent。
+---
 
-启动 search_agent 时，读取 `sub_agent/search_agent.md` 中的指令传给子 agent。
+### 一、查询任务工作流
 
-### ② 接收格式化总结
+当用户提出马恩理论、概念、原文相关的问题时，执行此工作流。
 
+**步骤 1：发散搜索方向**
+根据用户问题发散出 **3-5 个搜索方向**（不同关键词、不同表述），逐一启动 search_agent。
+启动时读取 `sub_agent/search_agent.md` 中的指令传给子 agent。
+
+**步骤 2：接收格式化总结**
 每个 search_agent 返回：
 - 卷次、页码范围
 - 100字以内的内容简述
 
 主 agent **只保留这些格式化总结**，不接触原文。
 
-### ③ 判断是否继续
-
-根据收到的格式化总结判断：
+**步骤 3：判断是否继续**
+根据格式化总结判断：
 - 是否覆盖了用户问题的各方面
 - 是否有多样性（不同卷次、不同时期）
 - 是否需要换关键词继续搜索
 
-如果需要，回到步骤①发散新的搜索方向。
-如果够了，进入步骤④。
+→ 如果需要，回到步骤 1 发散新的搜索方向。
+→ 如果够了，进入步骤 4。
 
-### ④ 启动 summarize_agent
+**步骤 4：启动 summarize_agent**
+读取 `sub_agent/summarize_agent.md`，把汇总后的 `(卷次, 页码)` 传给总结子 agent。
+总结子 agent 拉取原文、通读、输出结构化摘要。
 
-读取 `sub_agent/summarize_agent.md` 中的指令，把汇总后的 `(卷次, 页码)` 传给总结子 agent。
+**步骤 5：呈现给用户**
+直接呈现 summarize_agent 返回的结构化摘要。
 
-总结子 agent 会：
-1. 用 `python search.py --page {卷次} {页码1} {页码2} ...` 拉取原文
-2. 通读全部原文
-3. 输出结构化摘要（卷名、篇章名、页码范围、内容总结、重要引用）
+---
 
-### ⑤ 呈现给用户
+### 二、阅读原文工作流
 
-收到 summarize_agent 的结构化摘要后，直接呈现给用户。
+当用户说"看原文""展示原文""读一下原文"等时，执行此工作流。
 
-### 阅读原文
+**步骤 1：确定卷次和页码**
+- 如果用户指定了卷次+页码 → 直接用
+- 如果用户说想看某个主题的原文 → 查 `data/review_sessions.json` 中有没有该主题的 session，取 `covered_pages`
+- 如果都没有 → 展示已有 session 主题让用户选，或建议先用查询工作流搜索
 
-当用户要看原文时，读取 `sub_agent/read_txt.md`，启动子 agent 调用 `read_raw_text.py`。
+**步骤 2：启动 read_txt_agent**
+读取 `sub_agent/read_txt.md`，启动子 agent 调用 `read_raw_text.py`。
 
 ## 子 agent 文件
 
