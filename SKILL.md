@@ -47,12 +47,6 @@ python scripts/search.py --info                     # 数据库统计
 python scripts/search.py --page 46上 207 208 209   # 按页码取页
 ```
 
-### 检索流程
-
-1. **检查缓存**：先看 `data/search_cache/{关键词}_expand.json` 是否存在
-2. **有缓存** → 子 agent 读取缓存返回摘要
-3. **无缓存** → 启动子 agent 执行 expand 搜索，搜索完成后将结果保存到 `data/search_cache/{关键词}_expand.json`
-
 ### 翻页扩展算法
 
 子 agent 对每个命中块独立执行以下步骤：
@@ -77,23 +71,12 @@ python scripts/search.py --page 46上 207 208 209   # 按页码取页
 
 **⑥ 合并排序**：所有块完成后按卷次和页码排序。
 
-**⑦ 保存缓存**：将最终排序后的所有页面信息（卷次、页码范围、关键引文）保存到 `data/search_cache/{关键词}_expand.json`，下次遇到相同话题时直接读缓存，不用重新搜索。
-
 ### 搜索结果说明
 
 - 自动返回命中页及其前后各一页
 - `>>>` 标记命中的核心页
 - 子 agent 自动判断扩展边界，每块不超过20页
-- 扩展完成后的结果**必须保存到 `data/search_cache/{关键词}_expand.json`**，避免下次重复搜索
 - 如需更精准定位，可用 `--page` 手动取页
-
-### 缓存管理
-
-子 agent 的搜索结果保存到缓存文件中，缓存文件保存在 `data/search_cache/`，格式为 `{主题}_expand.json`。
-
-清除缓存：
-- `清除文献缓存` — 删除所有
-- `清除XX的缓存` — 删除指定文件
 
 ### 使用规则
 
