@@ -217,20 +217,22 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
                     f'padding:6px 0;">— 页码不连续（第{prev_pn}页 → 第{pn}页）—</p>'
                 )
 
-            # 页码标记
-            content_blocks.append(
-                f'<p class="page-marker" id="{anchor}">{vol_label}，第{pn}页</p>'
-            )
+            # 页面卡片
+            card_parts = [f'<div class="page-card" id="{anchor}">']
+            card_parts.append(f'<h2>第{pn}页</h2>')
 
             if not p["exists"]:
-                content_blocks.append('<p style="color:#aaa;font-style:italic;">（未收录）</p>')
+                card_parts.append('<p class="missing">（未收录）</p>')
             else:
                 header = p.get("header_title", "")
                 if header:
-                    content_blocks.append(f'<p class="header-title">{escape_html(header)}</p>')
+                    card_parts.append(f'<p class="header-title">{escape_html(header)}</p>')
                 text = p.get("text", "").strip()
                 if text:
-                    content_blocks.append(f'<div class="raw-text-wrap"><div class="raw-text">{escape_html(text)}</div></div>')
+                    card_parts.append(f'<div class="raw-text">{escape_html(text)}</div>')
+
+            card_parts.append('</div>')
+            content_blocks.append("\n".join(card_parts))
 
             prev_pn = pn
 
@@ -249,11 +251,11 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
 
   /* ── 整体布局 ── */
   body {{
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC",
-                 "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.6;
-    color: #24292e;
-    background: #ffffff;
+    font-family: "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", "FangSong", serif;
+    background: #f5f5f0;
+    color: #2c2c2c;
+    line-height: 1.9;
+    font-size: 16px;
     padding-left: 210px;
   }}
 
@@ -261,42 +263,50 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
   .sidebar {{
     position: fixed;
     top: 0; left: 0;
-    width: 210px;
+    width: 200px;
     height: 100vh;
-    background: #f6f8fa;
-    border-right: 1px solid #e1e4e8;
+    background: #fff;
+    border-right: 1px solid #ddd;
     overflow-y: auto;
     padding: 16px 0;
     z-index: 100;
   }}
   .sidebar-title {{
     font-size: 14px;
-    font-weight: 600;
-    padding: 0 16px 12px;
-    margin: 0 8px 8px;
-    border-bottom: 1px solid #e1e4e8;
+    font-weight: 700;
+    padding: 0 14px 10px;
+    border-bottom: 1px solid #eee;
     color: #8b0000;
   }}
-  .sidebar ul {{ list-style: none; }}
+  .sidebar ul {{ list-style: none; padding: 6px 0; }}
   .sidebar li {{ padding: 0; }}
   .sidebar li.vol-header {{
-    margin-top: 4px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #eee;
+  }}
+  .sidebar li.vol-header:first-child {{
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
   }}
   .sidebar li.vol-header a {{
     font-weight: 600;
     color: #8b0000;
     font-size: 13px;
-    padding: 4px 16px 2px;
   }}
   .sidebar a {{
     display: block;
-    padding: 2px 16px 2px 24px;
-    color: #57606a;
+    padding: 4px 14px;
+    color: #555;
     text-decoration: none;
     font-size: 13px;
-    transition: color 0.12s;
+    transition: background 0.12s, color 0.12s;
   }}
-  .sidebar a:hover {{ color: #8b0000; }}
+  .sidebar a:hover {{
+    background: #f0f0eb;
+    color: #8b0000;
+  }}
 
   /* ── 主内容区 ── */
   .main {{
@@ -305,69 +315,54 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
     padding: 40px 32px 80px;
   }}
 
-  /* ── GitHub Markdown 风格排版 ── */
   .main h1 {{
-    font-size: 2em;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 700;
+    color: #8b0000;
     border-bottom: 2px solid #8b0000;
-    padding-bottom: 8px;
-    margin-top: 24px;
-    margin-bottom: 16px;
-    color: #8b0000;
-  }}
-  .main h2 {{
-    font-size: 1.5em;
-    font-weight: 600;
-    border-bottom: 1px solid #eaecef;
-    padding-bottom: 6px;
-    margin-top: 24px;
-    margin-bottom: 16px;
-  }}
-  hr {{
-    border: 0;
-    border-top: 1px solid #e1e4e8;
-    margin: 24px 0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
   }}
 
-  /* ── 页码标记 ── */
-  .page-marker {{
-    background: #fff0f0;
-    border: 1px solid #e8c8c8;
-    border-radius: 3px;
-    padding: 4px 8px;
-    margin: 16px 0 8px 0;
-    font-weight: 600;
-    font-size: 0.9em;
-    color: #8b0000;
+  .page-card {{
+    background: #fff;
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }}
 
-  /* ── 原文正文 ── */
-  /* ── 原文正文容器（居中） ── */
+  .page-card h2 {{
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
+    border-left: 3px solid #8b0000;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }}
+
   .header-title {{
     font-size: 14px;
-    color: #586069;
+    color: #888;
+    margin-bottom: 6px;
     font-style: italic;
-    margin: 4px 0;
-    text-align: center;
   }}
 
-  .raw-text-wrap {{
-    text-align: center;
-    margin-bottom: 16px;
+  .page-card p {{
+    margin-bottom: 4px;
+    text-align: justify;
   }}
+
   .raw-text {{
-    display: inline-block;
-    text-align: left;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: 1.8;
     white-space: pre-wrap;
-    word-wrap: break-word;
-    background: #f6f8fa;
-    padding: 16px 24px;
-    border-radius: 6px;
-    border: 1px solid #e1e4e8;
-    max-width: 100%;
+    font-family: inherit;
+    line-height: inherit;
+  }}
+
+  hr {{
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 24px 0;
   }}
 
   @media (max-width: 768px) {{
