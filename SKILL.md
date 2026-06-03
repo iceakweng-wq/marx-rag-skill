@@ -42,31 +42,32 @@ import os; os.remove("chroma_db.zip")
 
 ### 一、查询任务工作流
 
-当用户提出马恩理论、概念、原文相关的问题时，执行此工作流。
+当用户提出马恩理论、概念、原文相关的搜索与查询问题时，执行此工作流。
 
 **步骤 1：发散搜索方向**
-根据用户问题发散出 **3-5 个搜索方向**（不同关键词、不同表述），逐一启动 search_agent。
-启动时读取 `sub_agent/search_agent.md` 中的指令传给子 agent。
+根据用户问题发散出 **3-5 个搜索方向**（不同关键词、不同表述），**每一个搜索方向启动一个**子agent作为 search_agent。
+每个search_agent启动时读取 `sub_agent/search_agent.md` 中的指令传给子 agent，并告知他们的搜索方向。
 
 **步骤 2：接收格式化总结**
-每个 search_agent 返回：
+每个将 search_agent 返回：
 - 卷次、页码范围
 - 100字以内的内容简述
 
 主 agent **只保留这些格式化总结**，不接触原文。
 
 **步骤 3：判断是否继续**
-根据格式化总结判断：
+接受完**所有**search_agent返回的结果后，根据当前已经收集到的格式化总结判断：
 - 是否覆盖了用户问题的各方面
 - 是否有多样性（不同卷次、不同时期）
 - 是否需要换关键词继续搜索
 
-→ 如果需要，回到步骤 1 发散新的搜索方向。
+→ 如果需要，回到步骤 1 发散新的搜索方向，并开启新一轮search_agent搜索。
 → 如果够了，进入步骤 4。
 
 **步骤 4：启动 summarize_agent**
-读取 `sub_agent/summarize_agent.md`，把汇总后的 `(卷次, 页码)` 传给总结子 agent。
-总结子 agent 拉取原文、通读、输出结构化摘要。
+汇总当前收集到的所有格式化总结的`(卷次, 页码)` ，有重叠的进行合并
+启动**一个**子agent作为summarize_agent，启动时读取 `sub_agent/summarize_agent.md`，然后把汇总后的所有 `(卷次, 页码)` 传给summarize_agent。
+summarize_agent 拉取原文、通读、输出结构化摘要。
 
 **步骤 5：呈现给用户**
 直接呈现 summarize_agent 返回的结构化摘要。
@@ -78,12 +79,13 @@ import os; os.remove("chroma_db.zip")
 当用户说"看原文""展示原文""读一下原文"等时，执行此工作流。
 
 **步骤 1：确定卷次和页码**
-- 如果用户指定了卷次+页码 → 直接用
-- 如果用户说想看某个主题的原文 → 查 `data/review_sessions.json` 中有没有该主题的 session，取 `covered_pages`
-- 如果都没有 → 展示已有 session 主题让用户选，或建议先用查询工作流搜索
+- 如果用户指定了卷次+页码 → 进入步骤2
+- 如果用户说想看某个主题的原文 → 查 `data/review_sessions.json` 中有没有该主题的 session，取 `covered_pages`→进入步骤2
+- 如果都没有 → 展示已有 session 主题让用户选，或建议先用查询工作流搜索。等待用户给出更明确的信息
 
 **步骤 2：启动 read_txt_agent**
-读取 `sub_agent/read_txt.md`，启动子 agent 调用 `read_raw_text.py`。
+启动子 agent 作为read_txt_agent，启动时读取 `sub_agent/read_txt.md`，并将用户要查询的内容的卷次页码传给read_txt_agent。
+read_txt_agent 将会读取原文并用HTML渲染。
 
 ## 子 agent 文件
 
@@ -92,29 +94,7 @@ import os; os.remove("chroma_db.zip")
 - `sub_agent/summarize_agent.md` — 总结子 agent 任务
 - `sub_agent/read_txt.md` — 阅读原文子 agent 任务
 
-## 翻页扩展算法
 
-搜索子 agent 对每个命中块执行以下步骤：
-
-**① 初始块**：语义搜索返回命中页及其±1页。
-
-**② 向上扩展**（往小页码）：
-- 通读当前块最前面一页的**全部内容**
-- 判断整页是否与查询主题相关（标准见下文）
-  - 相关 → 保留，再取前一页重复
-  - 不相关 → 去除，停止向上
-
-**③ 向下扩展**（往大页码）：
-- 通读当前块最后面一页的**全部内容**
-- 判断整页是否与查询主题相关
-  - 相关 → 保留，再取后一页重复
-  - 不相关 → 去除，停止向下
-
-**④ 去重**：用集合记录已保留的 `(卷次, 页码)`，扩展前检查避免重复。
-
-**⑤ 块上限**：每块不超过20页。达到上限停止。
-
-**⑥ 合并排序**：所有块完成后按卷次和页码排序。
 
 ### 判断标准
 
