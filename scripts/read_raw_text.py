@@ -177,8 +177,9 @@ def generate_markdown(volumes_data: list[tuple[str, list[dict]]]) -> str:
 
             text = p.get("text", "").strip()
             if text:
-                lines.append(text)
-                lines.append("")
+                for para in _split_paragraphs(text):
+                    lines.append(para)
+                    lines.append("")
 
             previous_page = pn
 
@@ -193,6 +194,40 @@ def escape_html(text: str) -> str:
                 .replace("<", "&lt;")
                 .replace(">", "&gt;")
                 .replace('"', "&quot;"))
+
+
+def _split_paragraphs(text: str) -> list[str]:
+    """将 OCR 原文按自然段分组，去除 PDF 机械换行。
+
+    PDF 抽取的文本中，\n 只是版面换行，并非段落结束。
+    真正的段落边界由以下标志识别：
+      - 以全角空格开头（　　）的行 → 新段落
+      - 空行 → 段落结束
+      - 其余行属于当前段落，直接拼接
+    """
+    lines = text.split("\n")
+    paragraphs = []
+    buf = []
+
+    for line in lines:
+        stripped = line.strip()
+        # 空行 → 段落结束
+        if not stripped:
+            if buf:
+                paragraphs.append("".join(buf))
+                buf = []
+            continue
+        # 全角空格开头 → 新段落
+        if stripped.startswith("　") and buf:
+            paragraphs.append("".join(buf))
+            buf = [stripped.lstrip("　")]
+        else:
+            buf.append(stripped)
+
+    if buf:
+        paragraphs.append("".join(buf))
+
+    return paragraphs if paragraphs else [text.strip()]
 
 
 def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
@@ -272,12 +307,9 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
 
                 text = p.get("text", "").strip()
                 if text:
-                    # 原文中的空格段落 = 自然段分隔
-                    paragraphs = text.split("\n")
-                    for para in paragraphs:
-                        stripped = para.strip()
-                        if stripped:
-                            card.append(f"<p>{escape_html(stripped)}</p>")
+                    # 将原文按自然段分组，去除 PDF 换行
+                    for para in _split_paragraphs(text):
+                        card.append(f"<p>{escape_html(para)}</p>")
 
             prev_pn = pn
             page_cards.append('<div class="page-card">' + "\n".join(card) + '</div>')
@@ -406,6 +438,7 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
   .page-card p {{
     text-indent: 2em;
     margin-bottom: 4px;
+    text-align: justify;
   }}
 
   .missing {{
