@@ -330,6 +330,7 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
     padding: 20px 24px;
     margin-bottom: 16px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    text-align: center;
   }}
 
   .page-card h2 {{
@@ -339,6 +340,7 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
     border-left: 3px solid #8b0000;
     padding-left: 10px;
     margin-bottom: 10px;
+    text-align: left;
   }}
 
   .header-title {{
@@ -348,12 +350,9 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
     font-style: italic;
   }}
 
-  .page-card p {{
-    margin-bottom: 4px;
-    text-align: justify;
-  }}
-
   .raw-text {{
+    display: inline-block;
+    text-align: left;
     white-space: pre-wrap;
     font-family: inherit;
     line-height: inherit;
