@@ -54,8 +54,9 @@ python scripts/search.py --page 42 125 126 127
 python scripts/search.py --info
 
 # 浏览器阅读原文
-python scripts/read_raw_text.py 42 127 128 129 130
-python scripts/read_raw_text.py 23 100-105 110-115    # 支持页码范围
+python scripts/read_raw_text.py -v 42 127 128 129 130
+python scripts/read_raw_text.py -v 23 100-105 110-115    # 支持页码范围
+python scripts/read_raw_text.py -v 3 3-6 48-51 -v 42 125-130 167-170  # 多卷次
 ```
 
 ---
