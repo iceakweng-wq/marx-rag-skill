@@ -355,8 +355,8 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
   .main {{
     margin-left: 200px;
     width: 100%;
-    max-width: 780px;
-    padding: 40px 50px 80px;
+    max-width: 900px;
+    padding: 40px 20px 80px 50px;
   }}
 
   .main h1 {{
