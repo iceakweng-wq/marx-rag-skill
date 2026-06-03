@@ -148,10 +148,15 @@ def generate_markdown(volumes_data: list[tuple[str, list[dict]]]) -> str:
         lines.append(f"# {vol_label}")
         lines.append("")
 
+        prev_pn = None
         for p in pages:
             pn = p["page_number"]
+            if prev_pn is not None and pn != prev_pn + 1:
+                lines.append(f"**— 页码不连续（第{prev_pn}页 → 第{pn}页）—**")
+                lines.append("")
             lines.append(f"## 第{pn}页")
             lines.append("")
+            prev_pn = pn
 
             if not p["exists"]:
                 lines.append("（未收录）")
