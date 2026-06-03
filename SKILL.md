@@ -173,26 +173,31 @@ data/review_sessions.json
 - 子 agent 自动判断扩展边界，每块不超过20页
 - 如需更精准定位，可用 `--page` 手动取页
 
-## ⚠️ 核心规则：所有操作必须通过子 agent 执行
-
-**主 agent 绝对不要直接运行任何命令或读取任何原文。** 所有与 search.py、read_raw_text.py、ChromaDB、session 文件相关的操作，都必须启动子 agent 去执行。主 agent 只负责编排和呈现最终结果。
-
-这条规则的目的是控制 context 消耗——子 agent 的上下文是独立的，不会被保留在主 agent 中。
-
-**具体来说：**
-- **搜索** → 启动搜索 agent 运行 `search.py`，只返回 `(卷次, 页码)` 给主 agent
-- **评审** → 主 agent 汇总页码后，启动评审 agent 拉取原文阅读、判断、输出摘要
-- **阅读原文** → 启动子 agent 运行 `read_raw_text.py`，主 agent 不接触原文
-
 ## 阅读原文
 
 当用户说想看原文时，启动子 agent 使用 `scripts/read_raw_text.py` 读取并展示原文。
 
 ### 判断流程
 
-1. **用户指定了卷次+页码** → 子 agent 运行 `python scripts/read_raw_text.py -v {卷次} {页码1} {页码2} ...`
-2. **用户说想看某个主题的原文** → 子 agent 查 `data/review_sessions.json` 中有没有该主题的 session，取其中的 `covered_pages` 调 read_raw_text.py
-3. **都没有** → 告诉用户目前支持的 session 主题（列出已保存的主题），或建议先用 `python scripts/search.py "主题"` 检索，等用户确认后再由子 agent 执行
+1. **用户指定了卷次+页码** → 直接用 `scripts/read_raw_text.py -v {卷次} {页码1} {页码2} ...`
+2. **用户说想看某个主题的原文** → 查 `data/review_sessions.json` 中有没有该主题的 session，取其中的 `covered_pages` 调 read_raw_text.py
+3. **都没有** → 告诉用户目前支持的 session 主题（列出已保存的主题），或建议先用 `python scripts/search.py "主题"` 检索，等用户确认后再行动
+
+### 示例
+
+```bash
+# 用户指定卷次页码
+python scripts/read_raw_text.py -v 42 128 129
+
+# 用户指定页码范围
+python scripts/read_raw_text.py -v 23 100-105
+
+# 多卷次混合
+python scripts/read_raw_text.py -v 3 3-6 48-51 -v 42 125-130 167-170
+
+# 从 session 取页码（如"感性活动"主题）
+python scripts/read_raw_text.py -v 42 127 128 129 130 -v 3 4 5 6
+```
 
 ## 使用规则
 
