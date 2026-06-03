@@ -173,6 +173,32 @@ data/review_sessions.json
 - 子 agent 自动判断扩展边界，每块不超过20页
 - 如需更精准定位，可用 `--page` 手动取页
 
+## 阅读原文
+
+当用户说想看原文时，启动子 agent 使用 `scripts/read_raw_text.py` 读取并展示原文。
+
+### 判断流程
+
+1. **用户指定了卷次+页码** → 直接用 `scripts/read_raw_text.py -v {卷次} {页码1} {页码2} ...`
+2. **用户说想看某个主题的原文** → 查 `data/review_sessions.json` 中有没有该主题的 session，取其中的 `covered_pages` 调 read_raw_text.py
+3. **都没有** → 告诉用户目前支持的 session 主题（列出已保存的主题），或建议先用 `python scripts/search.py "主题"` 检索，等用户确认后再行动
+
+### 示例
+
+```bash
+# 用户指定卷次页码
+python scripts/read_raw_text.py -v 42 128 129
+
+# 用户指定页码范围
+python scripts/read_raw_text.py -v 23 100-105
+
+# 多卷次混合
+python scripts/read_raw_text.py -v 3 3-6 48-51 -v 42 125-130 167-170
+
+# 从 session 取页码（如"感性活动"主题）
+python scripts/read_raw_text.py -v 42 127 128 129 130 -v 3 4 5 6
+```
+
 ### 使用规则
 
 1. **先检索再回答**：用户问到马恩理论、概念、原文表述时，先用 search.py 检索
