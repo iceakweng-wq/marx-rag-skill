@@ -270,7 +270,7 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
 
                 text = p.get("text", "").strip()
                 if text:
-                    content_blocks.append(f'<div class="raw-text">{escape_html(text)}</div>')
+                    content_blocks.append(f'<div class="raw-text-wrap"><div class="raw-text">{escape_html(text)}</div></div>')
 
             prev_pn = pn
 
@@ -381,17 +381,24 @@ def generate_html(volumes_data: list[tuple[str, list[dict]]]) -> str:
   }}
 
   /* ── 原文正文 ── */
+  /* ── 原文正文容器（居中） ── */
+  .raw-text-wrap {{
+    text-align: center;
+    margin-bottom: 16px;
+  }}
   .raw-text {{
+    display: inline-block;
+    text-align: left;
     font-family: "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", serif;
     font-size: 16px;
     line-height: 1.8;
     white-space: pre-wrap;
     word-wrap: break-word;
     background: #f6f8fa;
-    padding: 16px 20px;
+    padding: 16px 24px;
     border-radius: 6px;
     border: 1px solid #e1e4e8;
-    margin-bottom: 16px;
+    max-width: 100%;
   }}
 
   @media (max-width: 768px) {{
