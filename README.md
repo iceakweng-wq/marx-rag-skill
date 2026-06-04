@@ -134,7 +134,8 @@ mega-rag-skill/
 │   ├── read_raw_text.py # 浏览器阅读原文
 │   └── utils.py         # 卷次解析、篇章名查询
 ├── sub_agent/
-│   └── rag_agent.md     # RAG 子 agent（独立完成检索全流程）
+│   ├── rag_agent.md     # RAG 子 agent（查询任务）
+│   └── read_txt.md      # 阅读原文子 agent
 ├── chroma_db/           # 向量数据库（从 Release 下载）
 ├── data/
 │   ├── toc/             # 60 卷目录文件

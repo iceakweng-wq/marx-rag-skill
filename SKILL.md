@@ -60,15 +60,12 @@ RAG 子 agent 会自己完成：
    - 用户说某个主题 → 查 `data/review_sessions.json` 取页码
    - 都没有 → 让用户补充信息
 
-2. 启动子 agent 运行：
-```
-{python_path} scripts/read_raw_text.py -v {卷次} {页码1} {页码2} ...
-```
+2. 读取 `sub_agent/read_txt.md`，替换 `{python_path}` 后启动子 agent
 
 ## 子 agent 文件
 
 - `sub_agent/rag_agent.md` — RAG 子 agent（查询任务）
-- read_raw_text.py 由主 agent 直接启动子 agent 调用
+- `sub_agent/read_txt.md` — 阅读原文子 agent
 
 ## 翻页扩展算法
 
