@@ -18,17 +18,17 @@ del chroma_db.zip
 ```
 
 ### 2. 检测 Python 路径
-运行 `detect_python.py` 找到能用的 Python：
-```bash
-python scripts/detect_python.py
-```
-这会将 Python 路径写入 `data/config.json`。后续所有操作都从 config.json 读取路径。
-
-**如果已有 config.json 则跳过此步骤。**
+检查 `data/config.json`：
+- **有 `python_path`** → 跳过，直接用
+- **没有** → 主 agent 尝试以下步骤：
+  1. 运行 `python -c "import sentence_transformers; import chromadb"` 测试当前 python
+  2. 如果成功，将路径写入 `data/config.json`：`{"python_path": "当前python路径"}`
+  3. 如果失败，尝试常见路径（如 Anaconda 环境），测试成功则写入 config
+  4. 全部失败 → 提示用户安装 Python 环境并安装 sentence-transformers 和 chromadb
 
 ## Python 路径获取规则
 
-启动任何子 agent 时，从 `data/config.json` 读取 `python_path` 字段，替换 `{python_path}` 占位符。不再从记忆中猜测。
+启动任何子 agent 时，从 `data/config.json` 读取 `python_path` 字段，替换 `{python_path}` 占位符。
 
 ## 工作流
 
