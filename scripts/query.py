@@ -157,13 +157,14 @@ def parse_page_args(args: list) -> list[tuple[str, list[int]]]:
                 pages.append(int(cleaned))
             except ValueError:
                 print(f"⚠ 无效页码: {p}", file=sys.stderr)
+    # 去重 + 保险：如果起始=结束，只保留一页
+    pages = sorted(set(pages))
     if not pages:
         print(f"错误：未解析到有效页码。卷次={vol!r}, 参数={page_args}", file=sys.stderr)
         print("页码应为数字或用 - 连接的范围，如：128 或 128-130", file=sys.stderr)
         print("不要加 --page、--pages 等参数名，直接写数字", file=sys.stderr)
         print("示例: python query.py v42 p128 p129 p130", file=sys.stderr)
         sys.exit(1)
-    pages = sorted(set(pages))
     return [(vol, pages)]
 
 
