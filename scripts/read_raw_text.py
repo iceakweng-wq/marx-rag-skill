@@ -421,9 +421,19 @@ class VolumePageAction(argparse.Action):
     def __call__(self, parser, namespace, values, option_string=None):
         if not values:
             return
-        vol = values[0]
+        # 标准化：去掉 v/p 前缀
+        normalized = []
+        for a in values:
+            a = a.strip()
+            if a.startswith("v") or a.startswith("V"):
+                normalized.append(a[1:])
+            elif a.startswith("p") or a.startswith("P"):
+                normalized.append(a[1:])
+            else:
+                normalized.append(a)
+        vol = normalized[0]
         pages = []
-        for v in values[1:]:
+        for v in normalized[1:]:
             if "-" in v:
                 parts = v.split("-")
                 try:

@@ -103,6 +103,7 @@ def fetch_pages(collection, volume: str, page_numbers: list) -> list[dict]:
             results.append({
                 "page_number": pn,
                 "volume": volume,
+                "address": f"v{volume} p{pn}",
                 "exists": True,
                 "text": raw["documents"][0],
                 "chunk_id": meta.get("chunk_id", ""),
@@ -117,11 +118,29 @@ def fetch_pages(collection, volume: str, page_numbers: list) -> list[dict]:
 
 
 def parse_page_args(args: list) -> list[tuple[str, list[int]]]:
-    """解析命令行参数为 [(vol, [p1, p2, ...]), ...] 格式。"""
+    """解析命令行参数为 [(vol, [p1, p2, ...]), ...] 格式。
+
+    支持格式：
+      query.py 42 128 129        传统格式
+      query.py v42 p128 p129     地址格式
+      query.py v42 p128-p130     地址格式+范围
+    """
     if not args:
         return []
-    vol = args[0]
-    page_args = args[1:]
+
+    # 标准化：去掉 v/p 前缀
+    normalized = []
+    for a in args:
+        a = a.strip()
+        if a.startswith("v") or a.startswith("V"):
+            normalized.append(a[1:])  # v42 → 42
+        elif a.startswith("p") or a.startswith("P"):
+            normalized.append(a[1:])  # p128 → 128
+        else:
+            normalized.append(a)
+
+    vol = normalized[0]
+    page_args = normalized[1:]
     pages = []
     for p in page_args:
         if "-" in p:

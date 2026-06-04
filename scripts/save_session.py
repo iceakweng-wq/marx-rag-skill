@@ -35,14 +35,32 @@ def _ensure_utf8_stream():
 
 
 def parse_address(raw: str) -> list[tuple[str, int]]:
-    """解析地址字符串 '42 128 129 130' 或 '42 128-130' 为 [(vol, page), ...]"""
+    """解析地址字符串。
+
+    支持格式：
+      --address 42 128 129          传统格式
+      --address v42 p128 p129       地址格式
+      --address v42 p128-p130       地址格式+范围
+    """
     parts = raw.strip().split()
     if len(parts) < 2:
         print(f"⚠ 无效地址: {raw}", file=sys.stderr)
         return []
-    vol = parts[0]
+
+    # 标准化：去掉 v/p 前缀
+    normalized = []
+    for a in parts:
+        a = a.strip()
+        if a.startswith("v") or a.startswith("V"):
+            normalized.append(a[1:])
+        elif a.startswith("p") or a.startswith("P"):
+            normalized.append(a[1:])
+        else:
+            normalized.append(a)
+
+    vol = normalized[0]
     pages = []
-    for p in parts[1:]:
+    for p in normalized[1:]:
         if "-" in p:
             try:
                 s, e = p.split("-")
@@ -128,9 +146,15 @@ def main():
                     existing["search_keywords"].append(kw)
         existing["last_updated"] = time.strftime("%Y-%m-%d")
     else:
+        # 生成地址列表
+        addr_list = []
+        for v, pages in covered_pages.items():
+            for pn in sorted(pages):
+                addr_list.append(f"v{v} p{pn}")
         entry = {
             "last_updated": time.strftime("%Y-%m-%d"),
             "covered_pages": {v: sorted(p) for v, p in covered_pages.items()},
+            "addresses": addr_list,
             "search_keywords": [kw.strip() for kw in args.keywords.split(";") if kw.strip()] if args.keywords else [],
             "saturated": False,
         }

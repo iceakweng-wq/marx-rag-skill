@@ -115,10 +115,12 @@ def merge_results(all_results: list[dict]) -> list[dict]:
         blocks.append((start, prev))
 
         for s, e in blocks:
-            merged.append({
+            addr = f"v{vol}" if s == e else f"v{vol} p{s}-{e}"
+        merged.append({
                 "volume": vol,
                 "page_start": s,
                 "page_end": e,
+                "address": addr,
             })
 
     return merged

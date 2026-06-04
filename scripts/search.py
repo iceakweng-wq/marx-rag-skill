@@ -107,7 +107,7 @@ def search(query, top_k=10, volume=None, min_score=0.0):
         if key in seen:
             continue
         seen.add(key)
-        hits.append({"volume": vol, "page_number": pn, "score": round(score, 4)})
+        hits.append({"volume": vol, "page_number": pn, "address": f"v{vol} p{pn}", "score": round(score, 4)})
 
     hits.sort(key=lambda r: r["score"], reverse=True)
     return hits[:top_k]
