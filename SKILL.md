@@ -61,7 +61,7 @@ RAG 子 agent 会自己完成：
 4. 通读全部内容（已有+新增），判断是否足够
 5. 不够则继续发散搜索，够了则输出结构化摘要
 
-主 agent 等待子 agent 返回结构化摘要，直接呈现给用户。子 agent 返回后自动保存 session。
+主 agent 等待子 agent 返回结构化摘要，用 markdown 渲染后呈现给用户。子 agent 返回后自动保存 session。
 
 主 agent context 中只保留：用户问题、子 agent 返回的结构化摘要。
 

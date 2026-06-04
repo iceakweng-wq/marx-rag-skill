@@ -4,7 +4,7 @@
 根据主 agent 传来的卷次+页码，调用 read_raw_text.py 在浏览器中展示原文。
 
 ## 执行
-
+使用例子：
 ```bash
 # 单卷次（卷次数字即可，不用加 v 前缀；页码直接用数字）
 {python_path} scripts/read_raw_text.py -v 42 128 129 130
