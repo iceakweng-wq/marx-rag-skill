@@ -44,15 +44,18 @@ import os; os.remove("chroma_db.zip")
 当用户提到搜索、查询与马克思、恩格斯、马恩全集、资本论、政治经济学等与马克思主义经典文献相关概念时，使用此技能进行语义检索和原文阅读：
 
 **启动 RAG 子 agent**
-读取 `sub_agent/rag_agent.md`，把 `{python_path}` 替换为实际 Python 路径，然后启动一个子agent，将用户问题传给子 agent。
+读取 `sub_agent/rag_agent.md`，把 `{python_path}` 替换为实际 Python 路径。
+
+启动时从 `data/review_sessions.json` 查找该主题是否有已有内容（地址列表），如果有，一并传给子 agent 作为「已有内容」。
 
 RAG 子 agent 会自己完成：
-1. 发散 2-4 个搜索方向
-2. 逐一搜索 + 翻页扩展
-3. 汇总判断是否足够，不够则继续发散
-4. 够了则通读所有原文，输出结构化摘要
+1. 参考已有内容，发散 2-4 个搜索方向（聚焦未覆盖角度）
+2. 用 `multi_search.py` 并发搜索
+3. 翻页扩展
+4. 通读全部内容（已有+新增），判断是否足够
+5. 不够则继续发散搜索，够了则输出结构化摘要
 
-主 agent 等待子 agent 返回结构化摘要，直接呈现给用户。
+主 agent 等待子 agent 返回结构化摘要，直接呈现给用户。子 agent 返回后自动保存 session。
 
 主 agent context 中只保留：用户问题、子 agent 返回的结构化摘要。
 
