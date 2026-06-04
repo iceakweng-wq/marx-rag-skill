@@ -32,54 +32,43 @@ del chroma_db.zip
 - Windows CMD / PowerShell → 反斜杠，如 `D:\Program\Anaconda\envs\claude-env\python.exe`
 在config保存路径时请确保对应终端的格式正确。
 
-## Python 路径获取规则
+## Python 路径
 
-启动任何子 agent 时，从 `data/config.json` 读取 `python_path` 字段，替换 `{python_path}` 占位符。
+从 `data/config.json` 读取 `python_path`，所有命令用此路径执行。
 
 ## 工作流
 
-主 agent 只负责编排，不直接执行任何命令。所有脏活由 子 agent 独立完成。
+主 agent 直接执行命令，不启动子 agent。
 
 **工具分工：**
 - `search.py` — 单主题语义搜索，返回 `(卷次, 页码, 相关度)` 地址
 - `multi_search.py` — 多主题并发搜索，自动合并去重排序（用 `;` 分隔主题）
 - `query.py` — 根据卷次+页码拉取原文（含 header、脚注）
+- `save_session.py` — 保存/更新搜索记录到 `review_sessions.json`
 
 ### 一、查询任务
 
-当用户提到搜索、查询与马克思、恩格斯、马恩全集、资本论、政治经济学等与马克思主义经典文献相关概念时，使用此技能进行语义检索和原文阅读：
+**步骤 1：初始化已有内容**
+查 `data/review_sessions.json` 中该主题的地址列表，用 `query.py` 读取已有原文。
 
-**启动 RAG 子 agent**
-读取 `sub_agent/rag_agent.md`，把 `{python_path}` 替换为实际 Python 路径。
+**步骤 2：发散搜索方向**
+参考已有内容，发散 2-4 个搜索方向，用 `multi_search.py` 并发搜索。
 
-启动时从 `data/review_sessions.json` 查找该主题是否有已有内容（地址列表），如果有，一并传给子 agent 作为「初始已有内容」。
+**步骤 3：翻页扩展**
+对每个返回的地址块，用 `query.py` 逐页拉取原文，判断相关性。相关则继续扩展，不相关则停止。每块不超过 20 页。去重。
 
-RAG 子 agent 会自己完成：
-1. 参考已有内容，发散 2-4 个搜索方向（聚焦未覆盖角度）
-2. 用 `multi_search.py` 并发搜索
-3. 翻页扩展
-4. 通读全部内容（已有+新增），判断是否足够
-5. 不够则继续发散搜索，够了则输出结构化摘要
+**步骤 4：通读 + 判断**
+通读全部已有+新增内容，判断是否足够。不够则回到步骤 2。
 
-主 agent 等待子 agent 返回结构化摘要，用 markdown 渲染后呈现给用户。子 agent 返回后自动保存 session。
-
-主 agent context 中只保留：用户问题、子 agent 返回的结构化摘要。
+**步骤 5：保存 + 输出**
+用 `save_session.py` 保存结果，用 markdown 输出结构化摘要。
 
 ### 二、阅读原文
 
-当用户说"看原文""展示原文""读一下原文"时：
-
-1. 确定卷次和页码：
-   - 用户指定了 → 直接用
-   - 用户说某个主题 → 查 `data/review_sessions.json` 取页码
-   - 都没有 → 让用户补充信息
-
-2. 读取 `sub_agent/read_txt.md`，替换 `{python_path}` 后启动子 agent
-
-## 子 agent 文件
-
-- `sub_agent/rag_agent.md` — RAG 子 agent（查询任务）
-- `sub_agent/read_txt.md` — 阅读原文子 agent
+确定卷次页码后，直接运行：
+```bash
+{python_path} scripts/read_raw_text.py -v {卷次} {页码1} {页码2} ...
+```
 
 
 
