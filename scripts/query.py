@@ -143,16 +143,18 @@ def parse_page_args(args: list) -> list[tuple[str, list[int]]]:
     page_args = normalized[1:]
     pages = []
     for p in page_args:
-        if "-" in p:
-            parts = p.split("-")
+        # 去除每个部分可能残留的 v/p 前缀
+        cleaned = p.lstrip("vVpP")
+        if "-" in cleaned:
+            parts = cleaned.split("-")
             try:
-                start, end = int(parts[0]), int(parts[1])
+                start, end = int(parts[0].lstrip("vVpP")), int(parts[1].lstrip("vVpP"))
                 pages.extend(range(start, end + 1))
             except ValueError:
                 print(f"⚠ 页码范围格式无效: {p}", file=sys.stderr)
         else:
             try:
-                pages.append(int(p))
+                pages.append(int(cleaned))
             except ValueError:
                 print(f"⚠ 无效页码: {p}", file=sys.stderr)
     if not pages:

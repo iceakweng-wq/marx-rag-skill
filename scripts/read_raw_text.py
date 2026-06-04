@@ -434,16 +434,17 @@ class VolumePageAction(argparse.Action):
         vol = normalized[0]
         pages = []
         for v in normalized[1:]:
-            if "-" in v:
-                parts = v.split("-")
+            cleaned = v.lstrip("vVpP")
+            if "-" in cleaned:
+                parts = cleaned.split("-")
                 try:
-                    start, end = int(parts[0]), int(parts[1])
+                    start, end = int(parts[0].lstrip("vVpP")), int(parts[1].lstrip("vVpP"))
                     pages.extend(range(start, end + 1))
                 except ValueError:
                     print(f"⚠ 页码范围格式无效: {v}", file=sys.stderr)
             else:
                 try:
-                    pages.append(int(v))
+                    pages.append(int(cleaned))
                 except ValueError:
                     print(f"⚠ 无效页码: {v}", file=sys.stderr)
 

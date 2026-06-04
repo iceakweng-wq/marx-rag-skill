@@ -61,15 +61,17 @@ def parse_address(raw: str) -> list[tuple[str, int]]:
     vol = normalized[0]
     pages = []
     for p in normalized[1:]:
-        if "-" in p:
+        cleaned = p.lstrip("vVpP")
+        if "-" in cleaned:
+            parts = cleaned.split("-")
             try:
-                s, e = p.split("-")
-                pages.extend(range(int(s), int(e) + 1))
+                s, e = int(parts[0].lstrip("vVpP")), int(parts[1].lstrip("vVpP"))
+                pages.extend(range(s, e + 1))
             except ValueError:
                 print(f"⚠ 页码范围无效: {p}", file=sys.stderr)
         else:
             try:
-                pages.append(int(p))
+                pages.append(int(cleaned))
             except ValueError:
                 print(f"⚠ 无效页码: {p}", file=sys.stderr)
     return [(vol, pn) for pn in sorted(set(pages))]
