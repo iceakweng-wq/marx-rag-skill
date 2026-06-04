@@ -447,9 +447,12 @@ class VolumePageAction(argparse.Action):
                 except ValueError:
                     print(f"⚠ 无效页码: {v}", file=sys.stderr)
 
-        pages = sorted(set(pages))
         if not pages:
             print(f"⚠ 卷次 {vol} 未指定有效页码", file=sys.stderr)
+            print("  正确格式：-v 42 128 129 130", file=sys.stderr)
+            print("  页码范围：-v 42 128-130", file=sys.stderr)
+            print("  多卷次：-v 3 3-6 -v 42 125-130 167-170", file=sys.stderr)
+            print("  注意：不要用 --page 或 --address，用 -v 后面直接跟卷次和数字", file=sys.stderr)
             return
 
         entries = getattr(namespace, self.dest, None)
@@ -475,11 +478,19 @@ def main():
     no_browser = parsed.no_browser
 
     if not volumes_data:
-        print("用法:", file=sys.stderr)
+        print("错误：请提供卷次和页码", file=sys.stderr)
+        print("", file=sys.stderr)
+        print("正确格式：", file=sys.stderr)
         print("  python read_raw_text.py -v 42 127 128 129 130", file=sys.stderr)
         print("  python read_raw_text.py -v 46上 207 208 209", file=sys.stderr)
-        print("  python read_raw_text.py -v 23 100-105 110-115", file=sys.stderr)
-        print("  python read_raw_text.py -v 3 3-6 48-51 -v 42 125-130 167-170", file=sys.stderr)
+        print("  python read_raw_text.py -v 23 100-105 110-115          # 页码范围", file=sys.stderr)
+        print("  python read_raw_text.py -v 3 3-6 48-51 -v 42 125-130 167-170  # 多卷次", file=sys.stderr)
+        print("", file=sys.stderr)
+        print("注意：", file=sys.stderr)
+        print("  - 用 -v 参数，不用 --page 或 --address", file=sys.stderr)
+        print("  - 卷次直接写数字（如 42），不加 v 前缀", file=sys.stderr)
+        print("  - 页码直接用数字（如 128），不加 p 前缀", file=sys.stderr)
+        print("  - 连续页码用 - 连接（如 100-105）", file=sys.stderr)
         sys.exit(1)
 
     try:

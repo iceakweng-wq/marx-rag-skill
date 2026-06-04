@@ -110,6 +110,18 @@ def main():
 
     args = parser.parse_args()
 
+    if not args.queries or args.queries.startswith("-"):
+        print("错误：请提供搜索主题", file=sys.stderr)
+        print("", file=sys.stderr)
+        print("正确格式：", file=sys.stderr)
+        print('  python multi_search.py "感性活动;异化;类本质"', file=sys.stderr)
+        print('  python multi_search.py "世界市场 马克思;Weltmarkt" --top_k 3', file=sys.stderr)
+        print("", file=sys.stderr)
+        print("注意：", file=sys.stderr)
+        print("  - 多个主题用 ; 分隔，整体用双引号包裹", file=sys.stderr)
+        print("  - 不需要用 --query 或 --search 参数名，直接写搜索词", file=sys.stderr)
+        sys.exit(1)
+
     queries = [q.strip() for q in args.queries.split(";") if q.strip()]
     if not queries:
         print("请提供至少一个搜索主题", file=sys.stderr)

@@ -155,6 +155,12 @@ def parse_page_args(args: list) -> list[tuple[str, list[int]]]:
                 pages.append(int(p))
             except ValueError:
                 print(f"⚠ 无效页码: {p}", file=sys.stderr)
+    if not pages:
+        print(f"错误：未解析到有效页码。卷次={vol!r}, 参数={page_args}", file=sys.stderr)
+        print("页码应为数字或用 - 连接的范围，如：128 或 128-130", file=sys.stderr)
+        print("不要加 --page、--pages 等参数名，直接写数字", file=sys.stderr)
+        print("示例: python query.py v42 p128 p129 p130", file=sys.stderr)
+        sys.exit(1)
     pages = sorted(set(pages))
     return [(vol, pages)]
 
@@ -170,11 +176,24 @@ def main():
     args = parsed.args
     json_mode = parsed.json
 
+    if args and args[0].startswith("--"):
+        print(f"错误：未知参数 {args[0]}", file=sys.stderr)
+        print("query.py 不需要 --page 或 --address 参数名，直接写卷次和页码即可", file=sys.stderr)
+        sys.exit(1)
+
     if not args or len(args) < 2:
-        print("用法:", file=sys.stderr)
+        print("错误：需要提供卷次和页码", file=sys.stderr)
+        print("", file=sys.stderr)
+        print("正确格式：", file=sys.stderr)
         print("  python query.py 42 128 129 130", file=sys.stderr)
+        print("  python query.py v42 p128 p129 p130", file=sys.stderr)
         print("  python query.py 46上 207 208 209", file=sys.stderr)
+        print("  python query.py v46上 p207 p208 p209", file=sys.stderr)
         print("  python query.py 23 100-105 110-115", file=sys.stderr)
+        print("  python query.py v23 p100-p105 p110-p115", file=sys.stderr)
+        print("", file=sys.stderr)
+        print("注意：参数是字符串不是数字，卷次可加 v 前缀也可以不加，", file=sys.stderr)
+        print("页码可加 p 前缀也可以不加。连续页码用 - 连接。", file=sys.stderr)
         sys.exit(1)
 
     volume_pages = parse_page_args(args)

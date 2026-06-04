@@ -97,12 +97,19 @@ def main():
     parser = argparse.ArgumentParser(description="马恩全集 — 保存搜索记录")
     parser.add_argument("--topic", required=True, help="主题名称")
     parser.add_argument("--keywords", help="搜索关键词，多个用 ; 分隔")
-    parser.add_argument("--address", action="append", default=[], help="卷次+页码，可重复，如 --address 42 128 129")
+    parser.add_argument("--address", action="append", default=[], help="地址，可重复。格式：--address v42 p128 p129 或 --address 42 128 129")
 
     args = parser.parse_args()
 
     if not args.address:
-        print("请提供至少一个地址 (--address)", file=sys.stderr)
+        print("错误：请提供至少一个地址", file=sys.stderr)
+        print("", file=sys.stderr)
+        print("正确格式：", file=sys.stderr)
+        print('  python save_session.py --topic "感性活动" --keywords "关键词1;关键词2" --address v42 p128 p129', file=sys.stderr)
+        print('  python save_session.py --topic "异化" --address v42 p94-p100 --address v3 p317', file=sys.stderr)
+        print("", file=sys.stderr)
+        print("--address 的格式：卷次 页码1 页码2（不用加 = 号，直接空格隔开）", file=sys.stderr)
+        print("支持连续页码：--address v42 p128-p130", file=sys.stderr)
         sys.exit(1)
 
     # 解析所有地址
