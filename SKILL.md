@@ -24,7 +24,12 @@ del chroma_db.zip
   1. 运行 `python -c "import sentence_transformers; import chromadb"` 测试当前 python
   2. 如果成功，将路径写入 `data/config.json`：`{"python_path": "当前python路径"}`
   3. 如果失败，尝试常见路径（如 Anaconda 环境），测试成功则写入 config
-  4. 全部失败 → 提示用户安装 Python 环境并安装 sentence-transformers 和 chromadb
+  4. 全部失败 → 若存在可用的Python路径，但没有安装对应包（sentence-transformers 和 chromadb），则协助用户在该路径下安装对应包（sentence-transformers 和 chromadb）。安装前向用户询问是否在此路径下安装。
+  5. 如果没有可用的Python路径，提示用户安装 Python 环境
+
+**路径格式说明：**
+- Git Bash / Unix 终端 → 正斜杠，如 `/d/Program/Anaconda/envs/claude-env/python.exe`
+- Windows CMD / PowerShell → 反斜杠，如 `D:\Program\Anaconda\envs\claude-env\python.exe`
 
 ## Python 路径获取规则
 
