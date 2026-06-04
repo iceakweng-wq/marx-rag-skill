@@ -11,17 +11,26 @@
 ## 执行流程
 
 ### 第 0 步：初始化
-若存在**搜索历史**：从 `data/review_sessions.json` 中读取该主题的地址列表，并使用`query.py`读取原文作为**初始已有内容**。若不存在，则跳过。 
-  ```bash
-  {python_path} scripts/query.py {卷次} {页码} --json
-  ```
+若存在**搜索历史**：从 `data/review_sessions.json` 中读取该主题的地址列表，并使用`query.py`读取原文作为**初始已有内容**。若不存在，则跳过。
+
+例子：
+```bash
+# 读取单页
+{python_path} scripts/query.py v42 p128 --json
+# 读取多页（页码用空格隔开）
+{python_path} scripts/query.py v42 p128 p129 p130 --json
+# 读取页码范围
+{python_path} scripts/query.py v42 p128-p130 p167-p170 --json
+```
 
 ### 第 1 步：发散搜索方向
 参考已有内容（看看哪些角度已经覆盖了），发散 **2-4 个搜索方向**，聚焦在**尚未覆盖**的角度上。
 
 ### 第 2 步：并发搜索
 ```bash
-{python_path} scripts/multi_search.py "方向1;方向2;方向3" --top_k 3
+# 多个方向用 ; 分隔，整体用双引号包裹
+{python_path} scripts/multi_search.py "感性活动;异化;类本质" --top_k 3
+{python_path} scripts/multi_search.py "世界市场 马克思;Weltmarkt;世界贸易 资本主义" --top_k 5
 ```
 
 输出是 JSON 格式的地址块列表，每个包含 `address`、`volume`、`page_start`、`page_end`。
@@ -32,9 +41,12 @@
 **① 初始块**：取地址块的起始页和结束页。
 
 **② 向上扩展**（往小页码）：
-- 用 `query.py` 拉取该页原文：
+- 用 `query.py` 拉取该页原文（卷次用 `v` 开头，页码用 `p` 开头，都是字符串）：
   ```bash
-  {python_path} scripts/query.py {卷次} {页码} --json
+  # 读单页
+  {python_path} scripts/query.py v42 p128 --json
+  # 读多页
+  {python_path} scripts/query.py v42 p128 p129 p130 --json
   ```
 - 通读整页内容，判断是否与查询主题相关（标准见下文）
   - 相关 → 保留该页，再取前一页继续检查
@@ -63,7 +75,10 @@
 
 先保存本次检索结果到 review_sessions：
 ```bash
-{python_path} scripts/save_session.py --topic "{主题}" --keywords "{关键词1;关键词2}" --address v{卷次} p{页码1} p{页码2}
+# --topic 和 --keywords 是字符串，--address 是 v{卷次} p{页码} 格式
+{python_path} scripts/save_session.py --topic "感性活动" --keywords "感性活动;人的感性活动" --address v42 p128 p129 p130
+# 多卷次地址可以重复 --address
+{python_path} scripts/save_session.py --topic "异化" --keywords "异化;异化劳动" --address v42 p94-p100 --address v3 p317
 ```
 - 如果该主题已有 session，会自动合并更新
 - 如果没有，会创建新的

@@ -30,6 +30,7 @@ del chroma_db.zip
 **路径格式说明：**
 - Git Bash / Unix 终端 → 正斜杠，如 `/d/Program/Anaconda/envs/claude-env/python.exe`
 - Windows CMD / PowerShell → 反斜杠，如 `D:\Program\Anaconda\envs\claude-env\python.exe`
+在config保存路径时请确保对应终端的格式正确。
 
 ## Python 路径获取规则
 
