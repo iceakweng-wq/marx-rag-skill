@@ -113,6 +113,39 @@ def search(query, top_k=10, volume=None, min_score=0.0):
     return hits[:top_k]
 
 
+def save_history(query: str, results: list, top_k: int, volume=None, min_score=0.0):
+    """将本次查询记录保存到 data/search_history.json。"""
+    history_path = os.path.join(_PROJECT_ROOT, "data", "search_history.json")
+    os.makedirs(os.path.dirname(history_path), exist_ok=True)
+
+    record = {
+        "query": query,
+        "time": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "top_k": top_k,
+        "volume": volume,
+        "min_score": min_score,
+        "results": results,
+    }
+
+    try:
+        if os.path.exists(history_path):
+            with open(history_path, "r", encoding="utf-8") as f:
+                history = json.load(f)
+        else:
+            history = []
+    except Exception:
+        history = []
+
+    history.append(record)
+
+    # 只保留最近 100 条
+    if len(history) > 100:
+        history = history[-100:]
+
+    with open(history_path, "w", encoding="utf-8") as f:
+        json.dump(history, f, ensure_ascii=False, indent=2)
+
+
 def print_db_info():
     import chromadb
     from chromadb.errors import NotFoundError
@@ -204,6 +237,9 @@ def main():
     if not results:
         print("未找到相关内容。", file=sys.stderr)
         sys.exit(0)
+
+    # 保存查询记录
+    save_history(args.query, results, args.top_k, args.volume, args.min_score)
 
     # 输出 JSON 地址列表
     print(json.dumps(results, ensure_ascii=False, indent=2))
