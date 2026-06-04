@@ -7,32 +7,32 @@ description: >
 
 # 马克思恩格斯全集 RAG 检索技能
 
-## 首次使用：自动下载数据库
+## 首次使用：初始化
 
-如果本目录下没有 `chroma_db/` 目录，请先执行以下命令下载并解压：
-
+### 1. 下载数据库
+如果 `chroma_db/` 不存在，从 GitHub Release 下载约 900MB：
 ```bash
 curl -L -o chroma_db.zip https://github.com/iceakweng-wq/mega-rag-skill/releases/download/v1.0/chroma_db.zip
 python -m zipfile -e chroma_db.zip .
 del chroma_db.zip
 ```
 
-或者在 Python 中执行：
-```python
-import urllib.request, zipfile
-urllib.request.urlretrieve("https://github.com/iceakweng-wq/mega-rag-skill/releases/download/v1.0/chroma_db.zip", "chroma_db.zip")
-with zipfile.ZipFile("chroma_db.zip", "r") as zf:
-    zf.extractall(".")
-import os; os.remove("chroma_db.zip")
+### 2. 检测 Python 路径
+运行 `detect_python.py` 找到能用的 Python：
+```bash
+python scripts/detect_python.py
 ```
+这会将 Python 路径写入 `data/config.json`。后续所有操作都从 config.json 读取路径。
 
-数据库下载约 600MB，解压后约 900MB。
+**如果已有 config.json 则跳过此步骤。**
+
+## Python 路径获取规则
+
+启动任何子 agent 时，从 `data/config.json` 读取 `python_path` 字段，替换 `{python_path}` 占位符。不再从记忆中猜测。
 
 ## 工作流
 
 主 agent 只负责编排，不直接执行任何命令。所有脏活由 子 agent 独立完成。
-
-**实际Python路径**：运行Python需要用到的启动路径，该路径可能在你的长期记忆里（.CLAUDE.md）也可能在你的短期记忆里。请你确保你已经明确知道实际的Python路径。
 
 **工具分工：**
 - `search.py` — 单主题语义搜索，返回 `(卷次, 页码, 相关度)` 地址
