@@ -12,14 +12,21 @@
 import argparse
 import json
 import os
-import subprocess
 import sys
 import time
+import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from collections import defaultdict
 
+_search_lock = threading.Lock()
 
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 _PROJECT_ROOT = os.path.dirname(_SCRIPT_DIR) if os.path.basename(_SCRIPT_DIR) == "scripts" else _SCRIPT_DIR
+if _PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, _PROJECT_ROOT)
+
+# 直接导入 search 函数（模型全局缓存，只加载一次）
+from search import search as _search
 
 
 def _ensure_utf8_stream():
@@ -35,43 +42,15 @@ def _ensure_utf8_stream():
                     io.TextIOWrapper(stream.detach(), encoding="utf-8", line_buffering=True))
 
 
-def _get_python_path() -> str:
-    """获取当前 Python 路径。"""
-    return sys.executable
-
-
 def search_single(query: str, top_k: int, min_score: float, volume: str = None) -> list[dict]:
-    """调用 search.py 搜索单个主题，返回结果列表。"""
-    python_path = _get_python_path()
-    search_script = os.path.join(_PROJECT_ROOT, "search.py")
-
-    cmd = [python_path, "-X", "utf8", search_script, query,
-           "--top_k", str(top_k), "--min-score", str(min_score)]
-    if volume:
-        cmd.extend(["--volume", volume])
-
+    """直接调用 search() 函数，模型全局缓存，ChromaDB 串行访问。"""
     try:
-        result = subprocess.run(
-            cmd, capture_output=True, text=True, timeout=120,
-            env={**os.environ, "TRANSFORMERS_OFFLINE": "1", "HF_HUB_OFFLINE": "1"}
-        )
-        if result.returncode != 0:
-            print(f"[warn] 搜索 '{query[:20]}' 失败: {result.stderr.strip()}", file=sys.stderr)
-            return []
-
-        # 解析 JSON 输出（search.py 的 stdout 是 JSON）
-        output = result.stdout.strip()
-        if not output:
-            return []
-        # 找到 JSON 开始位置（跳过 info 日志）
-        json_start = output.find("[")
-        if json_start == -1:
-            return []
-        return json.loads(output[json_start:])
-
-    except subprocess.TimeoutExpired:
-        print(f"[warn] 搜索 '{query[:20]}' 超时", file=sys.stderr)
-        return []
+        import os as _os
+        _os.environ["TRANSFORMERS_OFFLINE"] = "1"
+        _os.environ["HF_HUB_OFFLINE"] = "1"
+        with _search_lock:
+            results = _search(query, top_k=top_k, volume=volume, min_score=min_score)
+        return results
     except Exception as e:
         print(f"[warn] 搜索 '{query[:20]}' 异常: {e}", file=sys.stderr)
         return []
@@ -79,7 +58,6 @@ def search_single(query: str, top_k: int, min_score: float, volume: str = None) 
 
 def merge_results(all_results: list[dict]) -> list[dict]:
     """合并去重，按卷排序，合并相邻页（间隔≤2合并）。"""
-    # 去重
     seen = set()
     unique = []
     for r in all_results:
@@ -88,25 +66,21 @@ def merge_results(all_results: list[dict]) -> list[dict]:
             seen.add(key)
             unique.append(r)
 
-    # 按卷分组，卷内按页码排序
-    from collections import defaultdict
     by_vol = defaultdict(list)
     for r in unique:
         by_vol[r["volume"]].append(r["page_number"])
 
-    # 每卷内排序 + 合并相邻页（间隔≤2）
     merged = []
     for vol in sorted(by_vol.keys(), key=lambda v: (
         int("".join(c for c in v if c.isdigit()) or 0),
         {"上": 0, "中": 1, "下": 2}.get("".join(c for c in v if not c.isdigit()), 3)
     )):
         pages = sorted(set(by_vol[vol]))
-        # 合并
         blocks = []
         start = pages[0]
         prev = pages[0]
         for p in pages[1:]:
-            if p - prev <= 2:  # 间隔≤2合并
+            if p - prev <= 2:
                 prev = p
             else:
                 blocks.append((start, prev))
@@ -115,12 +89,11 @@ def merge_results(all_results: list[dict]) -> list[dict]:
         blocks.append((start, prev))
 
         for s, e in blocks:
-            addr = f"v{vol}" if s == e else f"v{vol} p{s}-{e}"
-        merged.append({
+            merged.append({
+                "address": f"v{vol} p{s}-{e}" if s != e else f"v{vol} p{s}",
                 "volume": vol,
                 "page_start": s,
                 "page_end": e,
-                "address": addr,
             })
 
     return merged
@@ -137,7 +110,6 @@ def main():
 
     args = parser.parse_args()
 
-    # 按 ; 分割查询
     queries = [q.strip() for q in args.queries.split(";") if q.strip()]
     if not queries:
         print("请提供至少一个搜索主题", file=sys.stderr)
@@ -146,7 +118,6 @@ def main():
     print(f"[info] 共 {len(queries)} 个搜索主题，并发搜索中...", file=sys.stderr)
     start = time.time()
 
-    # 并发搜索
     all_results = []
     with ThreadPoolExecutor(max_workers=min(len(queries), 8)) as executor:
         futures = {
@@ -168,12 +139,10 @@ def main():
         print("未找到相关内容。", file=sys.stderr)
         sys.exit(0)
 
-    # 合并去重排序
     merged = merge_results(all_results)
 
     print(f"[用时: {elapsed:.2f}秒]", file=sys.stderr)
 
-    # 输出 JSON（子 agent 解析用）
     result = {
         "queries": queries,
         "total_blocks": len(merged),

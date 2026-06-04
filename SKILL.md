@@ -32,7 +32,7 @@ import os; os.remove("chroma_db.zip")
 
 主 agent 只负责编排，不直接执行任何命令。所有脏活由 子 agent 独立完成。
 
-实际Python路径：运行Python需要用到的启动路径，该路径可能在你的长期记忆里（.CLAUDE.md）也可能在你的短期记忆里。请你确保你已经明确知道实际的Python路径。
+**实际Python路径**：运行Python需要用到的启动路径，该路径可能在你的长期记忆里（.CLAUDE.md）也可能在你的短期记忆里。请你确保你已经明确知道实际的Python路径。
 
 **工具分工：**
 - `search.py` — 单主题语义搜索，返回 `(卷次, 页码, 相关度)` 地址
@@ -46,7 +46,7 @@ import os; os.remove("chroma_db.zip")
 **启动 RAG 子 agent**
 读取 `sub_agent/rag_agent.md`，把 `{python_path}` 替换为实际 Python 路径。
 
-启动时从 `data/review_sessions.json` 查找该主题是否有已有内容（地址列表），如果有，一并传给子 agent 作为「已有内容」。
+启动时从 `data/review_sessions.json` 查找该主题是否有已有内容（地址列表），如果有，一并传给子 agent 作为「初始已有内容」。
 
 RAG 子 agent 会自己完成：
 1. 参考已有内容，发散 2-4 个搜索方向（聚焦未覆盖角度）
@@ -83,7 +83,4 @@ RAG 子 agent 会自己完成：
 - 向量维度：1024
 - 分块策略：每页一个 chunk，34,540 页
 - 数据库路径：`chroma_db/`
-- Collection 名称：`marx_engels`
-- 目录文件：`data/toc/` 覆盖 60 卷
-- 评审 session 路径：`data/review_sessions.json`
 - 运行环境：Python 3.10+，需安装 `sentence-transformers`、`chromadb`
